@@ -64,7 +64,7 @@
 		2200543A18BC54F5002A6E8B /* TintedToolbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TintedToolbarViewController.swift; sourceTree = "<group>"; };
 		2200543B18BC54F5002A6E8B /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		221D43D318BF15EF00B9E8C9 /* UIColor+ApplicationSpecific.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+ApplicationSpecific.swift"; sourceTree = "<group>"; };
-		228DB9F318BC53F1002BA12A /* UICatalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UICatalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		228DB9F318BC53F1002BA12A /* XCatalogiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XCatalogiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		228DB9F718BC53F1002BA12A /* UICatalog-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UICatalog-Info.plist"; sourceTree = "<group>"; };
 		228DB9F918BC53F1002BA12A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		228DBA0718BC53F1002BA12A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -100,7 +100,7 @@
 		228DB9F418BC53F1002BA12A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				228DB9F318BC53F1002BA12A /* UICatalog.app */,
+				228DB9F318BC53F1002BA12A /* XCatalogiOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -113,8 +113,7 @@
 				228DBA0718BC53F1002BA12A /* Images.xcassets */,
 				228DB9F618BC53F1002BA12A /* Supporting Files */,
 			);
-			name = XCatalogiOS;
-			path = UICatalog;
+			path = XCatalogiOS;
 			sourceTree = "<group>";
 		};
 		228DB9F618BC53F1002BA12A /* Supporting Files */ = {
@@ -226,7 +225,7 @@
 			);
 			name = XCatalogiOS;
 			productName = UICatalog;
-			productReference = 228DB9F318BC53F1002BA12A /* UICatalog.app */;
+			productReference = 228DB9F318BC53F1002BA12A /* XCatalogiOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -235,10 +234,11 @@
 		228DB9EB18BC53F1002BA12A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = Apple;
 			};
-			buildConfigurationList = 228DB9EE18BC53F1002BA12A /* Build configuration list for PBXProject "UICatalog" */;
+			buildConfigurationList = 228DB9EE18BC53F1002BA12A /* Build configuration list for PBXProject "XCatalog" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -404,7 +404,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				INFOPLIST_FILE = "UICatalog/UICatalog-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/XCatalogiOS/UICatalog-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -416,7 +416,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				INFOPLIST_FILE = "UICatalog/UICatalog-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/XCatalogiOS/UICatalog-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -426,7 +426,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		228DB9EE18BC53F1002BA12A /* Build configuration list for PBXProject "UICatalog" */ = {
+		228DB9EE18BC53F1002BA12A /* Build configuration list for PBXProject "XCatalog" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				228DBA0918BC53F1002BA12A /* Debug */,
