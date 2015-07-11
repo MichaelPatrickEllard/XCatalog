@@ -92,7 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				3E5C084A19748EAA00969DD7 /* Apple README.md */,
-				228DB9F518BC53F1002BA12A /* UICatalog */,
+				228DB9F518BC53F1002BA12A /* XCatalogiOS */,
 				228DB9F418BC53F1002BA12A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -105,7 +105,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		228DB9F518BC53F1002BA12A /* UICatalog */ = {
+		228DB9F518BC53F1002BA12A /* XCatalogiOS */ = {
 			isa = PBXGroup;
 			children = (
 				3E1DA7601931CC99000114A9 /* View Controllers */,
@@ -113,6 +113,7 @@
 				228DBA0718BC53F1002BA12A /* Images.xcassets */,
 				228DB9F618BC53F1002BA12A /* Supporting Files */,
 			);
+			name = XCatalogiOS;
 			path = UICatalog;
 			sourceTree = "<group>";
 		};
@@ -211,9 +212,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		228DB9F218BC53F1002BA12A /* UICatalog */ = {
+		228DB9F218BC53F1002BA12A /* XCatalogiOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 228DBA0B18BC53F1002BA12A /* Build configuration list for PBXNativeTarget "UICatalog" */;
+			buildConfigurationList = 228DBA0B18BC53F1002BA12A /* Build configuration list for PBXNativeTarget "XCatalogiOS" */;
 			buildPhases = (
 				228DB9EF18BC53F1002BA12A /* Sources */,
 				228DB9F018BC53F1002BA12A /* Frameworks */,
@@ -223,7 +224,7 @@
 			);
 			dependencies = (
 			);
-			name = UICatalog;
+			name = XCatalogiOS;
 			productName = UICatalog;
 			productReference = 228DB9F318BC53F1002BA12A /* UICatalog.app */;
 			productType = "com.apple.product-type.application";
@@ -250,7 +251,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				228DB9F218BC53F1002BA12A /* UICatalog */,
+				228DB9F218BC53F1002BA12A /* XCatalogiOS */,
 			);
 		};
 /* End PBXProject section */
@@ -434,7 +435,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		228DBA0B18BC53F1002BA12A /* Build configuration list for PBXNativeTarget "UICatalog" */ = {
+		228DBA0B18BC53F1002BA12A /* Build configuration list for PBXNativeTarget "XCatalogiOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				228DBA0C18BC53F1002BA12A /* Debug */,
