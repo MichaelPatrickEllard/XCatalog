@@ -28,7 +28,6 @@
 		2200542718BC54EC002A6E8B /* ButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200542118BC54EC002A6E8B /* ButtonViewController.swift */; };
 		2200542818BC54EC002A6E8B /* CustomSearchBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200542218BC54EC002A6E8B /* CustomSearchBarViewController.swift */; };
 		2200542918BC54EC002A6E8B /* CustomToolbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200542318BC54EC002A6E8B /* CustomToolbarViewController.swift */; };
-		2200542A18BC54EC002A6E8B /* DatePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200542418BC54EC002A6E8B /* DatePickerController.swift */; };
 		2200542B18BC54EC002A6E8B /* DefaultSearchBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200542518BC54EC002A6E8B /* DefaultSearchBarViewController.swift */; };
 		2200542C18BC54EC002A6E8B /* DefaultToolbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200542618BC54EC002A6E8B /* DefaultToolbarViewController.swift */; };
 		2200543C18BC54F5002A6E8B /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200542D18BC54F5002A6E8B /* ImageViewController.swift */; };
@@ -44,7 +43,6 @@
 		2200544818BC54F5002A6E8B /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200543918BC54F5002A6E8B /* TextViewController.swift */; };
 		2200544918BC54F5002A6E8B /* TintedToolbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200543A18BC54F5002A6E8B /* TintedToolbarViewController.swift */; };
 		2200544A18BC54F5002A6E8B /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200543B18BC54F5002A6E8B /* WebViewController.swift */; };
-		221D43D418BF15EF00B9E8C9 /* UIColor+ApplicationSpecific.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221D43D318BF15EF00B9E8C9 /* UIColor+ApplicationSpecific.swift */; };
 		228DB9FA18BC53F1002BA12A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 228DB9F818BC53F1002BA12A /* InfoPlist.strings */; };
 		228DBA0818BC53F1002BA12A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 228DBA0718BC53F1002BA12A /* Images.xcassets */; };
 		3E5C084E1974991E00969DD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E5C08501974991E00969DD7 /* Main.storyboard */; };
@@ -67,7 +65,6 @@
 		E3753BD01B518E29006FCC10 /* AlertControllerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3753BCE1B518E29006FCC10 /* AlertControllerViewController.xib */; };
 		E3753BD31B518E41006FCC10 /* ButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3753BD11B518E41006FCC10 /* ButtonViewController.swift */; };
 		E3753BD41B518E41006FCC10 /* ButtonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3753BD21B518E41006FCC10 /* ButtonViewController.xib */; };
-		E3753BD71B518E82006FCC10 /* DatePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3753BD51B518E82006FCC10 /* DatePickerController.swift */; };
 		E3753BD81B518E82006FCC10 /* DatePickerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3753BD61B518E82006FCC10 /* DatePickerController.xib */; };
 		E3753BDB1B518EA2006FCC10 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3753BD91B518EA2006FCC10 /* ImageViewController.swift */; };
 		E3753BDC1B518EA2006FCC10 /* ImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3753BDA1B518EA2006FCC10 /* ImageViewController.xib */; };
@@ -91,6 +88,12 @@
 		E3753C001B518FC0006FCC10 /* TextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3753BFE1B518FC0006FCC10 /* TextViewController.xib */; };
 		E3753C031B518FD8006FCC10 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3753C011B518FD8006FCC10 /* WebViewController.swift */; };
 		E3753C041B518FD8006FCC10 /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3753C021B518FD8006FCC10 /* WebViewController.xib */; };
+		E3ADC97F1B51ADCA0042087B /* DatePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3ADC97D1B51ADCA0042087B /* DatePickerController.swift */; };
+		E3ADC9801B51ADCA0042087B /* DatePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3ADC97D1B51ADCA0042087B /* DatePickerController.swift */; };
+		E3ADC9811B51ADCA0042087B /* XColor+ApplicationSpecific.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3ADC97E1B51ADCA0042087B /* XColor+ApplicationSpecific.swift */; };
+		E3ADC9821B51ADCA0042087B /* XColor+ApplicationSpecific.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3ADC97E1B51ADCA0042087B /* XColor+ApplicationSpecific.swift */; };
+		E3ADC98C1B51AE6C0042087B /* XKit-OSX.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3ADC98A1B51AE6C0042087B /* XKit-OSX.swift */; };
+		E3ADC98E1B51AF4C0042087B /* XKit-iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3ADC98D1B51AF4C0042087B /* XKit-iOS.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,7 +120,6 @@
 		2200542118BC54EC002A6E8B /* ButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ButtonViewController.swift; sourceTree = "<group>"; };
 		2200542218BC54EC002A6E8B /* CustomSearchBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = CustomSearchBarViewController.swift; sourceTree = "<group>"; };
 		2200542318BC54EC002A6E8B /* CustomToolbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = CustomToolbarViewController.swift; sourceTree = "<group>"; };
-		2200542418BC54EC002A6E8B /* DatePickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = DatePickerController.swift; sourceTree = "<group>"; };
 		2200542518BC54EC002A6E8B /* DefaultSearchBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultSearchBarViewController.swift; sourceTree = "<group>"; };
 		2200542618BC54EC002A6E8B /* DefaultToolbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = DefaultToolbarViewController.swift; sourceTree = "<group>"; };
 		2200542D18BC54F5002A6E8B /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ImageViewController.swift; sourceTree = "<group>"; };
@@ -133,7 +135,6 @@
 		2200543918BC54F5002A6E8B /* TextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = TextViewController.swift; sourceTree = "<group>"; };
 		2200543A18BC54F5002A6E8B /* TintedToolbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TintedToolbarViewController.swift; sourceTree = "<group>"; };
 		2200543B18BC54F5002A6E8B /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
-		221D43D318BF15EF00B9E8C9 /* UIColor+ApplicationSpecific.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+ApplicationSpecific.swift"; sourceTree = "<group>"; };
 		228DB9F318BC53F1002BA12A /* XCatalogiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XCatalogiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		228DB9F718BC53F1002BA12A /* UICatalog-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UICatalog-Info.plist"; sourceTree = "<group>"; };
 		228DB9F918BC53F1002BA12A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -161,7 +162,6 @@
 		E3753BCE1B518E29006FCC10 /* AlertControllerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlertControllerViewController.xib; sourceTree = "<group>"; };
 		E3753BD11B518E41006FCC10 /* ButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonViewController.swift; sourceTree = "<group>"; };
 		E3753BD21B518E41006FCC10 /* ButtonViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonViewController.xib; sourceTree = "<group>"; };
-		E3753BD51B518E82006FCC10 /* DatePickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerController.swift; sourceTree = "<group>"; };
 		E3753BD61B518E82006FCC10 /* DatePickerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DatePickerController.xib; sourceTree = "<group>"; };
 		E3753BD91B518EA2006FCC10 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		E3753BDA1B518EA2006FCC10 /* ImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageViewController.xib; sourceTree = "<group>"; };
@@ -185,6 +185,10 @@
 		E3753BFE1B518FC0006FCC10 /* TextViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextViewController.xib; sourceTree = "<group>"; };
 		E3753C011B518FD8006FCC10 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		E3753C021B518FD8006FCC10 /* WebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
+		E3ADC97D1B51ADCA0042087B /* DatePickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerController.swift; sourceTree = "<group>"; };
+		E3ADC97E1B51ADCA0042087B /* XColor+ApplicationSpecific.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XColor+ApplicationSpecific.swift"; sourceTree = "<group>"; };
+		E3ADC98A1B51AE6C0042087B /* XKit-OSX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XKit-OSX.swift"; sourceTree = "<group>"; };
+		E3ADC98D1B51AF4C0042087B /* XKit-iOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XKit-iOS.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				3E5C084A19748EAA00969DD7 /* Apple README.md */,
+				E3ADC97C1B51ADCA0042087B /* XCatalogShared */,
 				228DB9F518BC53F1002BA12A /* XCatalogiOS */,
 				E3694A381B51732D0013F46D /* XCatalogOSX */,
 				228DB9F418BC53F1002BA12A /* Products */,
@@ -227,6 +232,7 @@
 		228DB9F518BC53F1002BA12A /* XCatalogiOS */ = {
 			isa = PBXGroup;
 			children = (
+				E3ADC98D1B51AF4C0042087B /* XKit-iOS.swift */,
 				3E1DA7601931CC99000114A9 /* View Controllers */,
 				3E2459D41931CCB5002D3369 /* Application */,
 				228DBA0718BC53F1002BA12A /* Images.xcassets */,
@@ -270,7 +276,6 @@
 				2200541A18BC54E8002A6E8B /* ActivityIndicatorViewController.swift */,
 				2200541B18BC54E8002A6E8B /* AlertControllerViewController.swift */,
 				2200542118BC54EC002A6E8B /* ButtonViewController.swift */,
-				2200542418BC54EC002A6E8B /* DatePickerController.swift */,
 				2200542D18BC54F5002A6E8B /* ImageViewController.swift */,
 				2200543018BC54F5002A6E8B /* PageControlViewController.swift */,
 				2200543118BC54F5002A6E8B /* PickerViewController.swift */,
@@ -292,7 +297,6 @@
 			isa = PBXGroup;
 			children = (
 				2200541C18BC54E8002A6E8B /* AppDelegate.swift */,
-				221D43D318BF15EF00B9E8C9 /* UIColor+ApplicationSpecific.swift */,
 				3E5C08501974991E00969DD7 /* Main.storyboard */,
 			);
 			name = Application;
@@ -330,6 +334,7 @@
 		E3694A381B51732D0013F46D /* XCatalogOSX */ = {
 			isa = PBXGroup;
 			children = (
+				E3ADC98A1B51AE6C0042087B /* XKit-OSX.swift */,
 				E3649B211B5174C6003942E0 /* OSXMain.storyboard */,
 				E3649B171B5174A6003942E0 /* BlueViewController.swift */,
 				E3649B181B5174A6003942E0 /* BlueViewController.xib */,
@@ -345,7 +350,6 @@
 				E3753BCE1B518E29006FCC10 /* AlertControllerViewController.xib */,
 				E3753BD11B518E41006FCC10 /* ButtonViewController.swift */,
 				E3753BD21B518E41006FCC10 /* ButtonViewController.xib */,
-				E3753BD51B518E82006FCC10 /* DatePickerController.swift */,
 				E3753BD61B518E82006FCC10 /* DatePickerController.xib */,
 				E3753BD91B518EA2006FCC10 /* ImageViewController.swift */,
 				E3753BDA1B518EA2006FCC10 /* ImageViewController.xib */,
@@ -379,6 +383,15 @@
 				E3694A3A1B51732D0013F46D /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E3ADC97C1B51ADCA0042087B /* XCatalogShared */ = {
+			isa = PBXGroup;
+			children = (
+				E3ADC97D1B51ADCA0042087B /* DatePickerController.swift */,
+				E3ADC97E1B51ADCA0042087B /* XColor+ApplicationSpecific.swift */,
+			);
+			path = XCatalogShared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -503,6 +516,7 @@
 			files = (
 				2200544018BC54F5002A6E8B /* PickerViewController.swift in Sources */,
 				3E6AE852196B39110062A3E1 /* SearchResultsViewController.swift in Sources */,
+				E3ADC98E1B51AF4C0042087B /* XKit-iOS.swift in Sources */,
 				2200543F18BC54F5002A6E8B /* PageControlViewController.swift in Sources */,
 				3E6AE85A196B3BBC0062A3E1 /* SearchBarEmbeddedInNavigationBarViewController.swift in Sources */,
 				2200544918BC54F5002A6E8B /* TintedToolbarViewController.swift in Sources */,
@@ -513,10 +527,10 @@
 				2200542018BC54E8002A6E8B /* AppDelegate.swift in Sources */,
 				2200541F18BC54E8002A6E8B /* AlertControllerViewController.swift in Sources */,
 				2200542C18BC54EC002A6E8B /* DefaultToolbarViewController.swift in Sources */,
+				E3ADC9811B51ADCA0042087B /* XColor+ApplicationSpecific.swift in Sources */,
 				3E6AE854196B39350062A3E1 /* SearchShowResultsInSourceViewController.swift in Sources */,
 				2200543C18BC54F5002A6E8B /* ImageViewController.swift in Sources */,
 				2200541E18BC54E8002A6E8B /* ActivityIndicatorViewController.swift in Sources */,
-				221D43D418BF15EF00B9E8C9 /* UIColor+ApplicationSpecific.swift in Sources */,
 				2200544618BC54F5002A6E8B /* SwitchViewController.swift in Sources */,
 				2200544118BC54F5002A6E8B /* ProgressViewController.swift in Sources */,
 				2200544718BC54F5002A6E8B /* TextFieldViewController.swift in Sources */,
@@ -526,7 +540,7 @@
 				3E6AE850196B20240062A3E1 /* SearchControllerBaseViewController.swift in Sources */,
 				2200542818BC54EC002A6E8B /* CustomSearchBarViewController.swift in Sources */,
 				2200542918BC54EC002A6E8B /* CustomToolbarViewController.swift in Sources */,
-				2200542A18BC54EC002A6E8B /* DatePickerController.swift in Sources */,
+				E3ADC97F1B51ADCA0042087B /* DatePickerController.swift in Sources */,
 				2200542718BC54EC002A6E8B /* ButtonViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -537,6 +551,7 @@
 			files = (
 				E3753C031B518FD8006FCC10 /* WebViewController.swift in Sources */,
 				E3753BF31B518F5C006FCC10 /* StepperViewController.swift in Sources */,
+				E3ADC98C1B51AE6C0042087B /* XKit-OSX.swift in Sources */,
 				E3649B1F1B5174A6003942E0 /* PurpleViewController.swift in Sources */,
 				E3753BEF1B518F33006FCC10 /* SliderViewController.swift in Sources */,
 				E3753BEB1B518F1C006FCC10 /* SegmentedControlViewController.swift in Sources */,
@@ -547,8 +562,9 @@
 				E3753BE71B518EF1006FCC10 /* ProgressViewController.swift in Sources */,
 				E3753BCF1B518E29006FCC10 /* AlertControllerViewController.swift in Sources */,
 				E3649B1C1B5174A6003942E0 /* BlueViewController.swift in Sources */,
+				E3ADC9821B51ADCA0042087B /* XColor+ApplicationSpecific.swift in Sources */,
 				E3694A3C1B51732D0013F46D /* AppDelegate.swift in Sources */,
-				E3753BD71B518E82006FCC10 /* DatePickerController.swift in Sources */,
+				E3ADC9801B51ADCA0042087B /* DatePickerController.swift in Sources */,
 				E3753BE31B518ED3006FCC10 /* PickerViewController.swift in Sources */,
 				E3753BDF1B518EBA006FCC10 /* PageControlViewController.swift in Sources */,
 				E3753BCB1B518E0E006FCC10 /* ActivityIndicatorViewController.swift in Sources */,

@@ -6,14 +6,14 @@
     A view controller that demonstrates how to use UIDatePicker.
 */
 
-import UIKit
+import Foundation
 
-class DatePickerController: UIViewController {
+class DatePickerController: XViewController {
     // MARK: Properties
 
-    @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var datePicker: XDatePicker!
     
-    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var dateLabel: XLabel!
 
     /// A date formatter to format the `date` property of `datePicker`.
     lazy var dateFormatter: NSDateFormatter = {
@@ -61,6 +61,6 @@ class DatePickerController: UIViewController {
     // MARK: Actions
 
     func updateDatePickerLabel() {
-        dateLabel.text = dateFormatter.stringFromDate(datePicker.date)
+        dateLabel.labelText = dateFormatter.stringFromDate(datePicker.date)
     }
 }

@@ -564,7 +564,7 @@
         <!--Date Picker-->
         <scene sceneID="Zru-Ge-8gi">
             <objects>
-                <viewController id="QVr-ji-WII" customClass="DatePickerController" customModule="UICatalog" sceneMemberID="viewController">
+                <viewController id="QVr-ji-WII" customClass="DatePickerController" customModule="XCatalogiOS" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8GU-qC-yZu"/>
                         <viewControllerLayoutGuide type="bottom" id="z0T-QL-Sra"/>
