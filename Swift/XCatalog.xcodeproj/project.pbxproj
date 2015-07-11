@@ -6,6 +6,21 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		E3694A561B51736B0013F46D /* BuildBoth */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = E3694A571B51736B0013F46D /* Build configuration list for PBXAggregateTarget "BuildBoth" */;
+			buildPhases = (
+			);
+			dependencies = (
+				E3694A5B1B5173750013F46D /* PBXTargetDependency */,
+				E3694A5D1B5173750013F46D /* PBXTargetDependency */,
+			);
+			name = BuildBoth;
+			productName = BuildBoth;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		2200541E18BC54E8002A6E8B /* ActivityIndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200541A18BC54E8002A6E8B /* ActivityIndicatorViewController.swift */; };
 		2200541F18BC54E8002A6E8B /* AlertControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200541B18BC54E8002A6E8B /* AlertControllerViewController.swift */; };
@@ -38,7 +53,28 @@
 		3E6AE854196B39350062A3E1 /* SearchShowResultsInSourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6AE853196B39350062A3E1 /* SearchShowResultsInSourceViewController.swift */; };
 		3E6AE856196B3B490062A3E1 /* SearchPresentOverNavigationBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6AE855196B3B490062A3E1 /* SearchPresentOverNavigationBarViewController.swift */; };
 		3E6AE85A196B3BBC0062A3E1 /* SearchBarEmbeddedInNavigationBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6AE859196B3BBC0062A3E1 /* SearchBarEmbeddedInNavigationBarViewController.swift */; };
+		E3694A3C1B51732D0013F46D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3694A3B1B51732D0013F46D /* AppDelegate.swift */; };
+		E3694A3E1B51732D0013F46D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3694A3D1B51732D0013F46D /* ViewController.swift */; };
+		E3694A401B51732D0013F46D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3694A3F1B51732D0013F46D /* Images.xcassets */; };
+		E3694A431B51732D0013F46D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3694A411B51732D0013F46D /* Main.storyboard */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E3694A5A1B5173750013F46D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 228DB9EB18BC53F1002BA12A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 228DB9F218BC53F1002BA12A;
+			remoteInfo = XCatalogiOS;
+		};
+		E3694A5C1B5173750013F46D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 228DB9EB18BC53F1002BA12A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E3694A361B51732D0013F46D;
+			remoteInfo = XCatalogOSX;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		2200541A18BC54E8002A6E8B /* ActivityIndicatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorViewController.swift; sourceTree = "<group>"; };
@@ -75,10 +111,23 @@
 		3E6AE853196B39350062A3E1 /* SearchShowResultsInSourceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchShowResultsInSourceViewController.swift; sourceTree = "<group>"; };
 		3E6AE855196B3B490062A3E1 /* SearchPresentOverNavigationBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPresentOverNavigationBarViewController.swift; sourceTree = "<group>"; };
 		3E6AE859196B3BBC0062A3E1 /* SearchBarEmbeddedInNavigationBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBarEmbeddedInNavigationBarViewController.swift; sourceTree = "<group>"; };
+		E3694A371B51732D0013F46D /* XCatalogOSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XCatalogOSX.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3694A3A1B51732D0013F46D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3694A3B1B51732D0013F46D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E3694A3D1B51732D0013F46D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E3694A3F1B51732D0013F46D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E3694A421B51732D0013F46D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		228DB9F018BC53F1002BA12A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3694A341B51732D0013F46D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -93,6 +142,7 @@
 			children = (
 				3E5C084A19748EAA00969DD7 /* Apple README.md */,
 				228DB9F518BC53F1002BA12A /* XCatalogiOS */,
+				E3694A381B51732D0013F46D /* XCatalogOSX */,
 				228DB9F418BC53F1002BA12A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -101,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				228DB9F318BC53F1002BA12A /* XCatalogiOS.app */,
+				E3694A371B51732D0013F46D /* XCatalogOSX.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -208,6 +259,26 @@
 			name = "Base View Controllers";
 			sourceTree = "<group>";
 		};
+		E3694A381B51732D0013F46D /* XCatalogOSX */ = {
+			isa = PBXGroup;
+			children = (
+				E3694A3B1B51732D0013F46D /* AppDelegate.swift */,
+				E3694A3D1B51732D0013F46D /* ViewController.swift */,
+				E3694A3F1B51732D0013F46D /* Images.xcassets */,
+				E3694A411B51732D0013F46D /* Main.storyboard */,
+				E3694A391B51732D0013F46D /* Supporting Files */,
+			);
+			path = XCatalogOSX;
+			sourceTree = "<group>";
+		};
+		E3694A391B51732D0013F46D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E3694A3A1B51732D0013F46D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -228,6 +299,23 @@
 			productReference = 228DB9F318BC53F1002BA12A /* XCatalogiOS.app */;
 			productType = "com.apple.product-type.application";
 		};
+		E3694A361B51732D0013F46D /* XCatalogOSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E3694A541B51732E0013F46D /* Build configuration list for PBXNativeTarget "XCatalogOSX" */;
+			buildPhases = (
+				E3694A331B51732D0013F46D /* Sources */,
+				E3694A341B51732D0013F46D /* Frameworks */,
+				E3694A351B51732D0013F46D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XCatalogOSX;
+			productName = XCatalogOSX;
+			productReference = E3694A371B51732D0013F46D /* XCatalogOSX.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -237,6 +325,14 @@
 				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = Apple;
+				TargetAttributes = {
+					E3694A361B51732D0013F46D = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					E3694A561B51736B0013F46D = {
+						CreatedOnToolsVersion = 6.4;
+					};
+				};
 			};
 			buildConfigurationList = 228DB9EE18BC53F1002BA12A /* Build configuration list for PBXProject "XCatalog" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -252,6 +348,8 @@
 			projectRoot = "";
 			targets = (
 				228DB9F218BC53F1002BA12A /* XCatalogiOS */,
+				E3694A361B51732D0013F46D /* XCatalogOSX */,
+				E3694A561B51736B0013F46D /* BuildBoth */,
 			);
 		};
 /* End PBXProject section */
@@ -265,6 +363,15 @@
 				3E5C084E1974991E00969DD7 /* Main.storyboard in Resources */,
 				228DBA0818BC53F1002BA12A /* Images.xcassets in Resources */,
 				228DB9FA18BC53F1002BA12A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3694A351B51732D0013F46D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3694A401B51732D0013F46D /* Images.xcassets in Resources */,
+				E3694A431B51732D0013F46D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,7 +412,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E3694A331B51732D0013F46D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3694A3E1B51732D0013F46D /* ViewController.swift in Sources */,
+				E3694A3C1B51732D0013F46D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E3694A5B1B5173750013F46D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 228DB9F218BC53F1002BA12A /* XCatalogiOS */;
+			targetProxy = E3694A5A1B5173750013F46D /* PBXContainerItemProxy */;
+		};
+		E3694A5D1B5173750013F46D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E3694A361B51732D0013F46D /* XCatalogOSX */;
+			targetProxy = E3694A5C1B5173750013F46D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		228DB9F818BC53F1002BA12A /* InfoPlist.strings */ = {
@@ -320,6 +449,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				3E5C084F1974991E00969DD7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E3694A411B51732D0013F46D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E3694A421B51732D0013F46D /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -423,6 +560,64 @@
 			};
 			name = Release;
 		};
+		E3694A501B51732D0013F46D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = XCatalogOSX/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E3694A511B51732D0013F46D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = XCatalogOSX/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		E3694A581B51736B0013F46D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E3694A591B51736B0013F46D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -443,6 +638,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		E3694A541B51732E0013F46D /* Build configuration list for PBXNativeTarget "XCatalogOSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3694A501B51732D0013F46D /* Debug */,
+				E3694A511B51732D0013F46D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E3694A571B51736B0013F46D /* Build configuration list for PBXAggregateTarget "BuildBoth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3694A581B51736B0013F46D /* Debug */,
+				E3694A591B51736B0013F46D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
