@@ -130,8 +130,8 @@ extension XDatePicker {
         set {
             switch newValue {
             case .Time: self.datePickerElements = NSDatePickerElementFlags.HourMinuteSecondDatePickerElementFlag
-            case .Date: self.datePickerElements = NSDatePickerElementFlags.YearMonthDatePickerElementFlag
-            case .DateAndTime: self.datePickerElements = NSDatePickerElementFlags.HourMinuteSecondDatePickerElementFlag | NSDatePickerElementFlags.YearMonthDatePickerElementFlag
+            case .Date: self.datePickerElements = NSDatePickerElementFlags.YearMonthDayDatePickerElementFlag
+            case .DateAndTime: self.datePickerElements = NSDatePickerElementFlags.HourMinuteSecondDatePickerElementFlag | NSDatePickerElementFlags.YearMonthDayDatePickerElementFlag
             case .CountDownTimer: break // this may require more complicated stuff
             }
         }

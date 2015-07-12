@@ -17,15 +17,15 @@
             <rect key="frame" x="0.0" y="1" width="480" height="513"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4aH-kh-LVM" customClass="XLabel" customModule="XCatalogOSX" customModuleProvider="target">
-                    <rect key="frame" x="192" y="245" width="96" height="22"/>
+                <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4aH-kh-LVM" customClass="XLabel" customModule="XCatalogOSX" customModuleProvider="target">
+                    <rect key="frame" x="171" y="245" width="138" height="22"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="wA8-9I-QHY">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <datePicker verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OHK-E0-Uhk" customClass="XDatePicker" customModule="XCatalogOSX" customModuleProvider="target">
+                <datePicker verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="OHK-E0-Uhk" customClass="XDatePicker" customModule="XCatalogOSX" customModuleProvider="target">
                     <rect key="frame" x="171" y="318" width="139" height="148"/>
                     <datePickerCell key="cell" borderStyle="bezel" alignment="left" datePickerStyle="clockAndCalendar" id="wA7-xX-Nhv">
                         <font key="font" metaFont="system"/>
@@ -38,6 +38,13 @@
                     </datePickerCell>
                 </datePicker>
             </subviews>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="4aH-kh-LVM" secondAttribute="centerX" id="DGx-ea-l48"/>
+                <constraint firstItem="4aH-kh-LVM" firstAttribute="top" secondItem="OHK-E0-Uhk" secondAttribute="bottom" constant="51" id="NZh-7n-2xY"/>
+                <constraint firstAttribute="centerX" secondItem="OHK-E0-Uhk" secondAttribute="centerX" id="NhC-qt-dXx"/>
+                <constraint firstItem="OHK-E0-Uhk" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="47" id="Zgp-SG-hNc"/>
+                <constraint firstItem="OHK-E0-Uhk" firstAttribute="width" secondItem="4aH-kh-LVM" secondAttribute="width" id="hu4-Th-uXd"/>
+            </constraints>
             <point key="canvasLocation" x="179" y="479.5"/>
         </customView>
     </objects>
