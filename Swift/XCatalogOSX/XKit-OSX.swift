@@ -19,6 +19,45 @@ typealias XDatePicker = NSDatePicker
 
 typealias XColor = NSColor
 
+typealias XDisplayController = NSViewController
+
+typealias XProgressView = NSProgressIndicator
+
+enum ProgressViewStyle {
+    case Thin
+    case Thick
+    case Tinted
+}
+
+extension XProgressView {
+    
+    var progressStyle: ProgressViewStyle {
+        get {return .Thin} // Should be expanded to cover other casese
+        set {
+            
+            switch newValue {
+            case .Thin:
+                self.style = .BarStyle
+                self.controlTint = .DefaultControlTint
+                
+            case .Thick:
+                self.style = .BarStyle
+                self.controlTint = .ClearControlTint
+                
+            case .Tinted:
+                self.style = .BarStyle
+                self.controlTint = .BlueControlTint
+            }
+        }
+    }
+    
+    func advance(amount: Double)
+    {
+        self.incrementBy(amount * 2)    // Note:  Check into why the *2 is needed...
+    }
+}
+
+
 //typealias XPageController = NSPageController
 
 //typealias XImageView = NSImageView

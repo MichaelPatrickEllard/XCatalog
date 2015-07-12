@@ -34,7 +34,6 @@
 		2200543D18BC54F5002A6E8B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2200542E18BC54F5002A6E8B /* Localizable.strings */; };
 		2200543F18BC54F5002A6E8B /* PageControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200543018BC54F5002A6E8B /* PageControlViewController.swift */; };
 		2200544018BC54F5002A6E8B /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200543118BC54F5002A6E8B /* PickerViewController.swift */; };
-		2200544118BC54F5002A6E8B /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200543218BC54F5002A6E8B /* ProgressViewController.swift */; };
 		2200544218BC54F5002A6E8B /* SegmentedControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200543318BC54F5002A6E8B /* SegmentedControlViewController.swift */; };
 		2200544318BC54F5002A6E8B /* SliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200543418BC54F5002A6E8B /* SliderViewController.swift */; };
 		2200544518BC54F5002A6E8B /* StepperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200543618BC54F5002A6E8B /* StepperViewController.swift */; };
@@ -51,6 +50,8 @@
 		3E6AE854196B39350062A3E1 /* SearchShowResultsInSourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6AE853196B39350062A3E1 /* SearchShowResultsInSourceViewController.swift */; };
 		3E6AE856196B3B490062A3E1 /* SearchPresentOverNavigationBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6AE855196B3B490062A3E1 /* SearchPresentOverNavigationBarViewController.swift */; };
 		3E6AE85A196B3BBC0062A3E1 /* SearchBarEmbeddedInNavigationBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6AE859196B3BBC0062A3E1 /* SearchBarEmbeddedInNavigationBarViewController.swift */; };
+		E30E98AE1B5229FC0009ADD3 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30E98AD1B5229FC0009ADD3 /* ProgressViewController.swift */; };
+		E30E98AF1B5230500009ADD3 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30E98AD1B5229FC0009ADD3 /* ProgressViewController.swift */; };
 		E3649B1C1B5174A6003942E0 /* BlueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3649B171B5174A6003942E0 /* BlueViewController.swift */; };
 		E3649B1D1B5174A6003942E0 /* BlueViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3649B181B5174A6003942E0 /* BlueViewController.xib */; };
 		E3649B1E1B5174A6003942E0 /* MasterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3649B191B5174A6003942E0 /* MasterDetailViewController.swift */; };
@@ -72,7 +73,6 @@
 		E3753BE01B518EBA006FCC10 /* PageControlViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3753BDE1B518EBA006FCC10 /* PageControlViewController.xib */; };
 		E3753BE31B518ED3006FCC10 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3753BE11B518ED3006FCC10 /* PickerViewController.swift */; };
 		E3753BE41B518ED3006FCC10 /* PickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3753BE21B518ED3006FCC10 /* PickerViewController.xib */; };
-		E3753BE71B518EF1006FCC10 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3753BE51B518EF1006FCC10 /* ProgressViewController.swift */; };
 		E3753BE81B518EF1006FCC10 /* ProgressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3753BE61B518EF1006FCC10 /* ProgressViewController.xib */; };
 		E3753BEB1B518F1C006FCC10 /* SegmentedControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3753BE91B518F1C006FCC10 /* SegmentedControlViewController.swift */; };
 		E3753BEC1B518F1C006FCC10 /* SegmentedControlViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3753BEA1B518F1C006FCC10 /* SegmentedControlViewController.xib */; };
@@ -126,7 +126,6 @@
 		2200542E18BC54F5002A6E8B /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		2200543018BC54F5002A6E8B /* PageControlViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = PageControlViewController.swift; sourceTree = "<group>"; };
 		2200543118BC54F5002A6E8B /* PickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = PickerViewController.swift; sourceTree = "<group>"; };
-		2200543218BC54F5002A6E8B /* ProgressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ProgressViewController.swift; sourceTree = "<group>"; };
 		2200543318BC54F5002A6E8B /* SegmentedControlViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = SegmentedControlViewController.swift; sourceTree = "<group>"; };
 		2200543418BC54F5002A6E8B /* SliderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = SliderViewController.swift; sourceTree = "<group>"; };
 		2200543618BC54F5002A6E8B /* StepperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = StepperViewController.swift; sourceTree = "<group>"; };
@@ -146,6 +145,7 @@
 		3E6AE853196B39350062A3E1 /* SearchShowResultsInSourceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchShowResultsInSourceViewController.swift; sourceTree = "<group>"; };
 		3E6AE855196B3B490062A3E1 /* SearchPresentOverNavigationBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPresentOverNavigationBarViewController.swift; sourceTree = "<group>"; };
 		3E6AE859196B3BBC0062A3E1 /* SearchBarEmbeddedInNavigationBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBarEmbeddedInNavigationBarViewController.swift; sourceTree = "<group>"; };
+		E30E98AD1B5229FC0009ADD3 /* ProgressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
 		E3649B171B5174A6003942E0 /* BlueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlueViewController.swift; sourceTree = "<group>"; };
 		E3649B181B5174A6003942E0 /* BlueViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlueViewController.xib; sourceTree = "<group>"; };
 		E3649B191B5174A6003942E0 /* MasterDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterDetailViewController.swift; sourceTree = "<group>"; };
@@ -170,7 +170,6 @@
 		E3753BDE1B518EBA006FCC10 /* PageControlViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PageControlViewController.xib; sourceTree = "<group>"; };
 		E3753BE11B518ED3006FCC10 /* PickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		E3753BE21B518ED3006FCC10 /* PickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PickerViewController.xib; sourceTree = "<group>"; };
-		E3753BE51B518EF1006FCC10 /* ProgressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
 		E3753BE61B518EF1006FCC10 /* ProgressViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgressViewController.xib; sourceTree = "<group>"; };
 		E3753BE91B518F1C006FCC10 /* SegmentedControlViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentedControlViewController.swift; sourceTree = "<group>"; };
 		E3753BEA1B518F1C006FCC10 /* SegmentedControlViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SegmentedControlViewController.xib; sourceTree = "<group>"; };
@@ -281,7 +280,6 @@
 				2200542D18BC54F5002A6E8B /* ImageViewController.swift */,
 				2200543018BC54F5002A6E8B /* PageControlViewController.swift */,
 				2200543118BC54F5002A6E8B /* PickerViewController.swift */,
-				2200543218BC54F5002A6E8B /* ProgressViewController.swift */,
 				2200543318BC54F5002A6E8B /* SegmentedControlViewController.swift */,
 				2200543418BC54F5002A6E8B /* SliderViewController.swift */,
 				2200543618BC54F5002A6E8B /* StepperViewController.swift */,
@@ -359,7 +357,6 @@
 				E3753BDE1B518EBA006FCC10 /* PageControlViewController.xib */,
 				E3753BE11B518ED3006FCC10 /* PickerViewController.swift */,
 				E3753BE21B518ED3006FCC10 /* PickerViewController.xib */,
-				E3753BE51B518EF1006FCC10 /* ProgressViewController.swift */,
 				E3753BE61B518EF1006FCC10 /* ProgressViewController.xib */,
 				E3753BE91B518F1C006FCC10 /* SegmentedControlViewController.swift */,
 				E3753BEA1B518F1C006FCC10 /* SegmentedControlViewController.xib */,
@@ -392,6 +389,7 @@
 			children = (
 				E3ADC97D1B51ADCA0042087B /* DatePickerController.swift */,
 				E3ADC97E1B51ADCA0042087B /* XColor+ApplicationSpecific.swift */,
+				E30E98AD1B5229FC0009ADD3 /* ProgressViewController.swift */,
 			);
 			path = XCatalogShared;
 			sourceTree = "<group>";
@@ -524,6 +522,7 @@
 				2200544918BC54F5002A6E8B /* TintedToolbarViewController.swift in Sources */,
 				2200544318BC54F5002A6E8B /* SliderViewController.swift in Sources */,
 				2200544218BC54F5002A6E8B /* SegmentedControlViewController.swift in Sources */,
+				E30E98AE1B5229FC0009ADD3 /* ProgressViewController.swift in Sources */,
 				3E6AE856196B3B490062A3E1 /* SearchPresentOverNavigationBarViewController.swift in Sources */,
 				2200544A18BC54F5002A6E8B /* WebViewController.swift in Sources */,
 				2200542018BC54E8002A6E8B /* AppDelegate.swift in Sources */,
@@ -534,7 +533,6 @@
 				2200543C18BC54F5002A6E8B /* ImageViewController.swift in Sources */,
 				2200541E18BC54E8002A6E8B /* ActivityIndicatorViewController.swift in Sources */,
 				2200544618BC54F5002A6E8B /* SwitchViewController.swift in Sources */,
-				2200544118BC54F5002A6E8B /* ProgressViewController.swift in Sources */,
 				2200544718BC54F5002A6E8B /* TextFieldViewController.swift in Sources */,
 				2200544818BC54F5002A6E8B /* TextViewController.swift in Sources */,
 				2200542B18BC54EC002A6E8B /* DefaultSearchBarViewController.swift in Sources */,
@@ -554,6 +552,7 @@
 				E3753C031B518FD8006FCC10 /* WebViewController.swift in Sources */,
 				E3753BF31B518F5C006FCC10 /* StepperViewController.swift in Sources */,
 				E3ADC98C1B51AE6C0042087B /* XKit-OSX.swift in Sources */,
+				E30E98AF1B5230500009ADD3 /* ProgressViewController.swift in Sources */,
 				E3649B1F1B5174A6003942E0 /* PurpleViewController.swift in Sources */,
 				E3753BEF1B518F33006FCC10 /* SliderViewController.swift in Sources */,
 				E3753BEB1B518F1C006FCC10 /* SegmentedControlViewController.swift in Sources */,
@@ -561,7 +560,6 @@
 				E3753BFF1B518FC0006FCC10 /* TextViewController.swift in Sources */,
 				E3753BD31B518E41006FCC10 /* ButtonViewController.swift in Sources */,
 				E3753BF71B518F85006FCC10 /* SwitchViewController.swift in Sources */,
-				E3753BE71B518EF1006FCC10 /* ProgressViewController.swift in Sources */,
 				E3753BCF1B518E29006FCC10 /* AlertControllerViewController.swift in Sources */,
 				E3649B1C1B5174A6003942E0 /* BlueViewController.swift in Sources */,
 				E3ADC9821B51ADCA0042087B /* XColor+ApplicationSpecific.swift in Sources */,

@@ -19,6 +19,44 @@ typealias XDatePicker = UIDatePicker
 
 typealias XColor = UIColor
 
+typealias XDisplayController = UITableViewController
+
+typealias XProgressView = UIProgressView
+
+enum ProgressViewStyle {
+    case Thin
+    case Thick
+    case Tinted
+}
+
+extension XProgressView {
+    
+    var style: ProgressViewStyle {
+        get {return .Thin} // Should be expanded to cover other casese
+        set {
+            
+            switch newValue {
+                case .Thin:
+                    self.progressViewStyle = .Default
+                    
+                case .Thick:
+                    self.progressViewStyle = .Bar
+                    
+                case .Tinted:
+                    self.progressViewStyle = .Default
+                
+                    self.trackTintColor = XColor.applicationBlueColor()
+                    self.progressTintColor = XColor.applicationPurpleColor()
+            }
+        }
+    }
+    
+    func advance(amount: Double)
+    {
+        self.setProgress(Float(amount), animated: true)
+    }
+}
+
 //typealias XPageController = UIPageController
 
 //typealias XImageView = UIImageView
