@@ -6,14 +6,14 @@
     A view controller that demonstrates how to use UIActivityIndicatorView.
 */
 
-import UIKit
+import Foundation
 
-class ActivityIndicatorViewController: UITableViewController {
+class ActivityIndicatorViewController: XTableViewController {
     // MARK: Properties
 
-    @IBOutlet weak var grayStyleActivityIndicatorView: UIActivityIndicatorView!
+    @IBOutlet weak var grayStyleActivityIndicatorView: XActivityIndicatorView!
     
-    @IBOutlet weak var tintedActivityIndicatorView: UIActivityIndicatorView!
+    @IBOutlet weak var tintedActivityIndicatorView: XActivityIndicatorView!
     
     // MARK: View Life Cycle
 
@@ -39,7 +39,7 @@ class ActivityIndicatorViewController: UITableViewController {
     func configureTintedActivityIndicatorView() {
         tintedActivityIndicatorView.activityIndicatorViewStyle = .Gray
         
-        tintedActivityIndicatorView.color = UIColor.applicationPurpleColor()
+        tintedActivityIndicatorView.color = XColor.applicationPurpleColor()
         
         tintedActivityIndicatorView.startAnimating()
     }

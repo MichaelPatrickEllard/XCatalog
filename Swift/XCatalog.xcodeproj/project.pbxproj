@@ -22,7 +22,6 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		2200541E18BC54E8002A6E8B /* ActivityIndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200541A18BC54E8002A6E8B /* ActivityIndicatorViewController.swift */; };
 		2200541F18BC54E8002A6E8B /* AlertControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200541B18BC54E8002A6E8B /* AlertControllerViewController.swift */; };
 		2200542018BC54E8002A6E8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200541C18BC54E8002A6E8B /* AppDelegate.swift */; };
 		2200542718BC54EC002A6E8B /* ButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200542118BC54EC002A6E8B /* ButtonViewController.swift */; };
@@ -49,6 +48,8 @@
 		3E6AE854196B39350062A3E1 /* SearchShowResultsInSourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6AE853196B39350062A3E1 /* SearchShowResultsInSourceViewController.swift */; };
 		3E6AE856196B3B490062A3E1 /* SearchPresentOverNavigationBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6AE855196B3B490062A3E1 /* SearchPresentOverNavigationBarViewController.swift */; };
 		3E6AE85A196B3BBC0062A3E1 /* SearchBarEmbeddedInNavigationBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6AE859196B3BBC0062A3E1 /* SearchBarEmbeddedInNavigationBarViewController.swift */; };
+		A680ACCE1B52DA74006ADDBC /* ActivityIndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A680ACCD1B52DA74006ADDBC /* ActivityIndicatorViewController.swift */; };
+		A680ACCF1B52DB12006ADDBC /* ActivityIndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A680ACCD1B52DA74006ADDBC /* ActivityIndicatorViewController.swift */; };
 		E30E98AE1B5229FC0009ADD3 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30E98AD1B5229FC0009ADD3 /* ProgressViewController.swift */; };
 		E30E98AF1B5230500009ADD3 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30E98AD1B5229FC0009ADD3 /* ProgressViewController.swift */; };
 		E3649B1C1B5174A6003942E0 /* BlueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3649B171B5174A6003942E0 /* BlueViewController.swift */; };
@@ -59,7 +60,6 @@
 		E3649B231B5174C6003942E0 /* OSXMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3649B211B5174C6003942E0 /* OSXMain.storyboard */; };
 		E3694A3C1B51732D0013F46D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3694A3B1B51732D0013F46D /* AppDelegate.swift */; };
 		E3694A401B51732D0013F46D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3694A3F1B51732D0013F46D /* Images.xcassets */; };
-		E3753BCB1B518E0E006FCC10 /* ActivityIndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3753BC91B518E0E006FCC10 /* ActivityIndicatorViewController.swift */; };
 		E3753BCC1B518E0E006FCC10 /* ActivityIndicatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3753BCA1B518E0E006FCC10 /* ActivityIndicatorViewController.xib */; };
 		E3753BCF1B518E29006FCC10 /* AlertControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3753BCD1B518E29006FCC10 /* AlertControllerViewController.swift */; };
 		E3753BD01B518E29006FCC10 /* AlertControllerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3753BCE1B518E29006FCC10 /* AlertControllerViewController.xib */; };
@@ -114,7 +114,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2200541A18BC54E8002A6E8B /* ActivityIndicatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorViewController.swift; sourceTree = "<group>"; };
 		2200541B18BC54E8002A6E8B /* AlertControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = AlertControllerViewController.swift; sourceTree = "<group>"; };
 		2200541C18BC54E8002A6E8B /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2200542118BC54EC002A6E8B /* ButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ButtonViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +143,7 @@
 		3E6AE853196B39350062A3E1 /* SearchShowResultsInSourceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchShowResultsInSourceViewController.swift; sourceTree = "<group>"; };
 		3E6AE855196B3B490062A3E1 /* SearchPresentOverNavigationBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPresentOverNavigationBarViewController.swift; sourceTree = "<group>"; };
 		3E6AE859196B3BBC0062A3E1 /* SearchBarEmbeddedInNavigationBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBarEmbeddedInNavigationBarViewController.swift; sourceTree = "<group>"; };
+		A680ACCD1B52DA74006ADDBC /* ActivityIndicatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorViewController.swift; sourceTree = "<group>"; };
 		E30E98AD1B5229FC0009ADD3 /* ProgressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
 		E3649B171B5174A6003942E0 /* BlueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlueViewController.swift; sourceTree = "<group>"; };
 		E3649B181B5174A6003942E0 /* BlueViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlueViewController.xib; sourceTree = "<group>"; };
@@ -156,7 +156,6 @@
 		E3694A3A1B51732D0013F46D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3694A3B1B51732D0013F46D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3694A3F1B51732D0013F46D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		E3753BC91B518E0E006FCC10 /* ActivityIndicatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorViewController.swift; sourceTree = "<group>"; };
 		E3753BCA1B518E0E006FCC10 /* ActivityIndicatorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityIndicatorViewController.xib; sourceTree = "<group>"; };
 		E3753BCD1B518E29006FCC10 /* AlertControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertControllerViewController.swift; sourceTree = "<group>"; };
 		E3753BCE1B518E29006FCC10 /* AlertControllerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlertControllerViewController.xib; sourceTree = "<group>"; };
@@ -273,7 +272,6 @@
 		3E1DA7601931CC99000114A9 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				2200541A18BC54E8002A6E8B /* ActivityIndicatorViewController.swift */,
 				2200541B18BC54E8002A6E8B /* AlertControllerViewController.swift */,
 				2200542118BC54EC002A6E8B /* ButtonViewController.swift */,
 				2200542D18BC54F5002A6E8B /* ImageViewController.swift */,
@@ -342,7 +340,6 @@
 				E3694A3B1B51732D0013F46D /* AppDelegate.swift */,
 				E3694A3F1B51732D0013F46D /* Images.xcassets */,
 				E3694A391B51732D0013F46D /* Supporting Files */,
-				E3753BC91B518E0E006FCC10 /* ActivityIndicatorViewController.swift */,
 				E3753BCA1B518E0E006FCC10 /* ActivityIndicatorViewController.xib */,
 				E3753BCD1B518E29006FCC10 /* AlertControllerViewController.swift */,
 				E3753BCE1B518E29006FCC10 /* AlertControllerViewController.xib */,
@@ -384,6 +381,7 @@
 		E3ADC97C1B51ADCA0042087B /* XCatalogShared */ = {
 			isa = PBXGroup;
 			children = (
+				A680ACCD1B52DA74006ADDBC /* ActivityIndicatorViewController.swift */,
 				E3ADC97D1B51ADCA0042087B /* DatePickerController.swift */,
 				E3ADC97E1B51ADCA0042087B /* XColor+ApplicationSpecific.swift */,
 				E30E98AD1B5229FC0009ADD3 /* ProgressViewController.swift */,
@@ -530,7 +528,6 @@
 				3E6AE854196B39350062A3E1 /* SearchShowResultsInSourceViewController.swift in Sources */,
 				2200543C18BC54F5002A6E8B /* ImageViewController.swift in Sources */,
 				E38F2EC41B52A651000A70C7 /* SwitchViewController.swift in Sources */,
-				2200541E18BC54E8002A6E8B /* ActivityIndicatorViewController.swift in Sources */,
 				2200544718BC54F5002A6E8B /* TextFieldViewController.swift in Sources */,
 				2200544818BC54F5002A6E8B /* TextViewController.swift in Sources */,
 				2200542B18BC54EC002A6E8B /* DefaultSearchBarViewController.swift in Sources */,
@@ -538,6 +535,7 @@
 				3E6AE850196B20240062A3E1 /* SearchControllerBaseViewController.swift in Sources */,
 				2200542818BC54EC002A6E8B /* CustomSearchBarViewController.swift in Sources */,
 				2200542918BC54EC002A6E8B /* CustomToolbarViewController.swift in Sources */,
+				A680ACCE1B52DA74006ADDBC /* ActivityIndicatorViewController.swift in Sources */,
 				E3ADC97F1B51ADCA0042087B /* DatePickerController.swift in Sources */,
 				2200542718BC54EC002A6E8B /* ButtonViewController.swift in Sources */,
 			);
@@ -551,6 +549,7 @@
 				E3753BF31B518F5C006FCC10 /* StepperViewController.swift in Sources */,
 				E3ADC98C1B51AE6C0042087B /* XKit-OSX.swift in Sources */,
 				E30E98AF1B5230500009ADD3 /* ProgressViewController.swift in Sources */,
+				A680ACCF1B52DB12006ADDBC /* ActivityIndicatorViewController.swift in Sources */,
 				E3649B1F1B5174A6003942E0 /* PurpleViewController.swift in Sources */,
 				E3753BEF1B518F33006FCC10 /* SliderViewController.swift in Sources */,
 				E38F2EC51B52A82E000A70C7 /* SwitchViewController.swift in Sources */,
@@ -565,7 +564,6 @@
 				E3ADC9801B51ADCA0042087B /* DatePickerController.swift in Sources */,
 				E3753BE31B518ED3006FCC10 /* PickerViewController.swift in Sources */,
 				E3753BDF1B518EBA006FCC10 /* PageControlViewController.swift in Sources */,
-				E3753BCB1B518E0E006FCC10 /* ActivityIndicatorViewController.swift in Sources */,
 				E3753BFB1B518FA9006FCC10 /* TextFieldViewController.swift in Sources */,
 				E3649B1E1B5174A6003942E0 /* MasterDetailViewController.swift in Sources */,
 			);

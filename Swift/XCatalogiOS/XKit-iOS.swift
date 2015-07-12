@@ -11,7 +11,7 @@ import UIKit
 //##  Activity Indictor                     ##
 //############################################
 
-
+typealias XActivityIndicatorView = UIActivityIndicatorView
 
 //############################################
 //##  Alert Controller                      ##
@@ -176,6 +176,8 @@ extension XSwitchBox
 typealias XViewController = UIViewController
 
 typealias XDisplayController = UITableViewController
+
+typealias XTableViewController = UITableViewController
 
 typealias XStoryboardSegue = UIStoryboardSegue
 

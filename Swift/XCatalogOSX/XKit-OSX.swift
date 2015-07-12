@@ -12,6 +12,54 @@ import AppKit
 //##  Activity Indictor                     ##
 //############################################
 
+typealias XActivityIndicatorView = NSProgressIndicator
+
+enum XActivityIndicatorViewStyle {
+    // This is for our purposes; a better design might be to use .White and .WhiteLarge and implement the size changes too
+    // We still don't have the capability of setting any old color (I think)
+    case Gray
+    case Tinted
+}
+
+extension XActivityIndicatorView {
+    //    convenience init() {
+    //        self.init()
+    //        self.style = NSProgressIndicatorStyle.SpinningStyle
+    //    }
+    var activityIndicatorViewStyle: XActivityIndicatorViewStyle {
+        get {
+            switch self.controlTint {
+            case .DefaultControlTint: return .Gray
+            case .BlueControlTint: return .Tinted
+            default: return .Gray
+            }
+        }
+        set {
+            // HACK: since I can't figure out how to do an init() here, we must require a style to be set; luckily the XCatalog code does this
+            self.style = NSProgressIndicatorStyle.SpinningStyle
+            switch newValue {
+            case .Gray:
+                self.controlTint = .DefaultControlTint
+            case .Tinted:
+                self.controlTint = .BlueControlTint
+            }
+        }
+    }
+    var color: XColor {
+        // HACK: allow any color to be set, but make it Tinted
+        get { return XColor.blueColor() }
+        set {
+            activityIndicatorViewStyle = .Tinted
+        }
+    }
+    func startAnimating() {
+        self.startAnimation(self)
+    }
+    var hidesWhenStopped: Bool {
+        get { return !self.displayedWhenStopped }
+        set { self.displayedWhenStopped = !newValue }
+    }
+}
 
 
 //############################################
@@ -82,8 +130,8 @@ extension XDatePicker {
         set {
             switch newValue {
             case .Time: self.datePickerElements = NSDatePickerElementFlags.HourMinuteSecondDatePickerElementFlag
-            case .Date: self.datePickerElements = NSDatePickerElementFlags.YearMonthDatePickerElementFlag
-            case .DateAndTime: self.datePickerElements = NSDatePickerElementFlags.HourMinuteSecondDatePickerElementFlag | NSDatePickerElementFlags.YearMonthDatePickerElementFlag
+            case .Date: self.datePickerElements = NSDatePickerElementFlags.YearMonthDayDatePickerElementFlag
+            case .DateAndTime: self.datePickerElements = NSDatePickerElementFlags.HourMinuteSecondDatePickerElementFlag | NSDatePickerElementFlags.YearMonthDayDatePickerElementFlag
             case .CountDownTimer: break // this may require more complicated stuff
             }
         }
@@ -244,6 +292,8 @@ extension XLabel
 typealias XViewController = NSViewController
 
 typealias XDisplayController = NSViewController
+
+typealias XTableViewController = NSViewController
 
 typealias XStoryboardSegue = NSStoryboardSegue
 
