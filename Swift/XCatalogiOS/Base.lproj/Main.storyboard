@@ -506,7 +506,7 @@
         <!--Text View-->
         <scene sceneID="DT7-pA-8MW">
             <objects>
-                <viewController id="pUP-b0-VMf" customClass="TextViewController" customModule="UICatalog" sceneMemberID="viewController">
+                <viewController id="pUP-b0-VMf" customClass="TextViewController" customModule="XCatalogiOS" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JlH-Bm-Kma"/>
                         <viewControllerLayoutGuide type="bottom" id="toJ-7g-olB"/>
@@ -611,7 +611,7 @@
         <!--Image Views-->
         <scene sceneID="tB4-Qu-dAN">
             <objects>
-                <viewController id="XCI-A9-c2M" customClass="ImageViewController" customModule="UICatalog" sceneMemberID="viewController">
+                <viewController id="XCI-A9-c2M" customClass="ImageViewController" customModule="XCatalogiOS" sceneMemberID="viewController">
                     <imageView key="view" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="InE-1J-uPb">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -628,7 +628,7 @@
         <!--Text Fields-->
         <scene sceneID="LZ1-eW-n5K">
             <objects>
-                <tableViewController id="DSJ-7r-oCY" customClass="TextFieldViewController" customModule="UICatalog" sceneMemberID="viewController">
+                <tableViewController id="DSJ-7r-oCY" customClass="TextFieldViewController" customModule="XCatalogiOS" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="dyj-uS-k8j">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -807,7 +807,7 @@
         <!--Picker View-->
         <scene sceneID="gkd-fd-9L5">
             <objects>
-                <viewController id="hIc-I2-PiV" customClass="PickerViewController" customModule="UICatalog" sceneMemberID="viewController">
+                <viewController id="hIc-I2-PiV" customClass="PickerViewController" customModule="XCatalogiOS" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="44e-ay-Afs"/>
                         <viewControllerLayoutGuide type="bottom" id="QCK-YT-rm3"/>
@@ -853,7 +853,7 @@
         <!--Buttons-->
         <scene sceneID="q2O-rM-1tM">
             <objects>
-                <tableViewController id="gl0-hM-EWg" customClass="ButtonViewController" customModule="UICatalog" sceneMemberID="viewController">
+                <tableViewController id="gl0-hM-EWg" customClass="ButtonViewController" customModule="XCatalogiOS" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="gDs-OX-aHt">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1006,7 +1006,7 @@
         <!--Alert Controllers-->
         <scene sceneID="KTf-Aj-rDo">
             <objects>
-                <tableViewController id="Va4-Ge-jQn" customClass="AlertControllerViewController" customModule="UICatalog" sceneMemberID="viewController">
+                <tableViewController id="Va4-Ge-jQn" customClass="AlertControllerViewController" customModule="XCatalogiOS" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="iro-ev-0xV">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1155,7 +1155,7 @@
         <!--Segmented Controls-->
         <scene sceneID="0RQ-gw-hMl">
             <objects>
-                <tableViewController id="Eil-ie-nN6" customClass="SegmentedControlViewController" customModule="UICatalog" sceneMemberID="viewController">
+                <tableViewController id="Eil-ie-nN6" customClass="SegmentedControlViewController" customModule="XCatalogiOS" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="fLQ-5f-tUh">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1563,7 +1563,7 @@
         <!--Activity Indicators-->
         <scene sceneID="MAa-F9-GYf">
             <objects>
-                <tableViewController id="08q-TN-XKe" customClass="ActivityIndicatorViewController" customModule="UICatalog" sceneMemberID="viewController">
+                <tableViewController id="08q-TN-XKe" customClass="ActivityIndicatorViewController" customModule="XCatalogiOS" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="Txd-dj-VDv">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1630,7 +1630,7 @@
         <!--Progress Views-->
         <scene sceneID="lvJ-t8-0eN">
             <objects>
-                <tableViewController id="aY0-FD-8DD" customClass="ProgressViewController" customModule="UICatalog" sceneMemberID="viewController">
+                <tableViewController id="aY0-FD-8DD" customClass="ProgressViewController" customModule="XCatalogiOS" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="vxe-YC-yBi">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2015,7 +2015,7 @@
         <!--Tinted Toolbar-->
         <scene sceneID="Ijb-te-8LZ">
             <objects>
-                <viewController id="rwk-8i-VeC" customClass="TintedToolbarViewController" customModule="UICatalog" sceneMemberID="viewController">
+                <viewController id="rwk-8i-VeC" customClass="TintedToolbarViewController" customModule="XCatalogiOS" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LZb-8q-45E"/>
                         <viewControllerLayoutGuide type="bottom" id="NZX-Oy-1Kt"/>
@@ -2050,7 +2050,7 @@
         <!--Custom Toolbar-->
         <scene sceneID="C2O-h4-3oH">
             <objects>
-                <viewController id="lOU-hu-5wA" customClass="CustomToolbarViewController" customModule="UICatalog" sceneMemberID="viewController">
+                <viewController id="lOU-hu-5wA" customClass="CustomToolbarViewController" customModule="XCatalogiOS" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aZb-zx-rwB"/>
                         <viewControllerLayoutGuide type="bottom" id="jmX-Vc-aUL"/>
@@ -2085,7 +2085,7 @@
         <!--Default Search Bar-->
         <scene sceneID="6SM-do-4VC">
             <objects>
-                <viewController id="j8R-ph-MPO" customClass="DefaultSearchBarViewController" customModule="UICatalog" sceneMemberID="viewController">
+                <viewController id="j8R-ph-MPO" customClass="DefaultSearchBarViewController" customModule="XCatalogiOS" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="neH-e9-BQ5"/>
                         <viewControllerLayoutGuide type="bottom" id="aC6-6c-Knc"/>
@@ -2121,7 +2121,7 @@
         <!--Custom Search Bar-->
         <scene sceneID="XTU-e0-pR1">
             <objects>
-                <viewController id="CpU-Qe-H5t" customClass="CustomSearchBarViewController" customModule="UICatalog" sceneMemberID="viewController">
+                <viewController id="CpU-Qe-H5t" customClass="CustomSearchBarViewController" customModule="XCatalogiOS" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uKt-Vw-tnD"/>
                         <viewControllerLayoutGuide type="bottom" id="eni-Xx-UaU"/>
@@ -2157,7 +2157,7 @@
         <!--Default Toolbar-->
         <scene sceneID="ZVk-rz-XqB">
             <objects>
-                <viewController id="owQ-sz-se7" customClass="DefaultToolbarViewController" customModule="UICatalog" sceneMemberID="viewController">
+                <viewController id="owQ-sz-se7" customClass="DefaultToolbarViewController" customModule="XCatalogiOS" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Cho-g3-DYF"/>
                         <viewControllerLayoutGuide type="bottom" id="0CC-uv-cAd"/>
@@ -2192,7 +2192,7 @@
         <!--Switches-->
         <scene sceneID="yZh-jH-dTD">
             <objects>
-                <tableViewController id="zcI-oN-J3j" customClass="SwitchViewController" customModule="UICatalog" sceneMemberID="viewController">
+                <tableViewController id="zcI-oN-J3j" customClass="SwitchViewController" customModule="XCatalogiOS" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="4ER-nG-feZ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2259,7 +2259,7 @@
         <!--Sliders-->
         <scene sceneID="AcL-XD-MBK">
             <objects>
-                <tableViewController id="laz-6N-ZhE" customClass="SliderViewController" customModule="UICatalog" sceneMemberID="viewController">
+                <tableViewController id="laz-6N-ZhE" customClass="SliderViewController" customModule="XCatalogiOS" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="8xG-xW-Mvc">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2354,7 +2354,7 @@
         <!--Steppers-->
         <scene sceneID="xBH-7V-3ks">
             <objects>
-                <tableViewController id="Ob2-pp-aCj" customClass="StepperViewController" customModule="UICatalog" sceneMemberID="viewController">
+                <tableViewController id="Ob2-pp-aCj" customClass="StepperViewController" customModule="XCatalogiOS" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="aQ3-9F-Tmi">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2471,7 +2471,7 @@
         <!--Page Control-->
         <scene sceneID="eth-bz-h7N">
             <objects>
-                <viewController id="ZSF-lM-gQa" customClass="PageControlViewController" customModule="UICatalog" sceneMemberID="viewController">
+                <viewController id="ZSF-lM-gQa" customClass="PageControlViewController" customModule="XCatalogiOS" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6Sc-G5-6wY"/>
                         <viewControllerLayoutGuide type="bottom" id="zOG-pg-mmF"/>
@@ -2586,7 +2586,7 @@
         <!--Web View-->
         <scene sceneID="U1S-K7-t1c">
             <objects>
-                <viewController id="i9U-A8-mkf" customClass="WebViewController" customModule="UICatalog" sceneMemberID="viewController">
+                <viewController id="i9U-A8-mkf" customClass="WebViewController" customModule="XCatalogiOS" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CAh-bY-Vd1"/>
                         <viewControllerLayoutGuide type="bottom" id="vag-pU-U6d"/>
@@ -2641,7 +2641,7 @@
         <!--Search Results View Controller-->
         <scene sceneID="nru-JS-Who">
             <objects>
-                <tableViewController storyboardIdentifier="SearchResultsViewControllerIdentifier" id="NaS-tz-1nv" customClass="SearchResultsViewController" customModule="UICatalog" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SearchResultsViewControllerIdentifier" id="NaS-tz-1nv" customClass="SearchResultsViewController" customModule="XCatalogiOS" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="hGq-LY-TB9">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2675,7 +2675,7 @@
         <!--Present Over Navigation Bar-->
         <scene sceneID="f31-XH-9p6">
             <objects>
-                <tableViewController title="Present Over Navigation Bar" id="c3l-vJ-AfP" customClass="SearchPresentOverNavigationBarViewController" customModule="UICatalog" sceneMemberID="viewController">
+                <tableViewController title="Present Over Navigation Bar" id="c3l-vJ-AfP" customClass="SearchPresentOverNavigationBarViewController" customModule="XCatalogiOS" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="NwO-0b-WKm">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2716,7 +2716,7 @@
         <!--Search Bar Embedded in Navigation Bar-->
         <scene sceneID="td1-He-Flo">
             <objects>
-                <tableViewController id="6hd-yD-95z" customClass="SearchBarEmbeddedInNavigationBarViewController" customModule="UICatalog" sceneMemberID="viewController">
+                <tableViewController id="6hd-yD-95z" customClass="SearchBarEmbeddedInNavigationBarViewController" customModule="XCatalogiOS" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="F8d-3Y-8ax">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2751,7 +2751,7 @@
         <!--Results in Searched Controller-->
         <scene sceneID="ub5-0M-QFG">
             <objects>
-                <tableViewController id="tnI-yi-Jgo" customClass="SearchShowResultsInSourceViewController" customModule="UICatalog" sceneMemberID="viewController">
+                <tableViewController id="tnI-yi-Jgo" customClass="SearchShowResultsInSourceViewController" customModule="XCatalogiOS" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="gOe-fh-XyL">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
