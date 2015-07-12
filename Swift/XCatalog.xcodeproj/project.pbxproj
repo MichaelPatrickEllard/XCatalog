@@ -116,7 +116,6 @@
 /* Begin PBXFileReference section */
 		2200541B18BC54E8002A6E8B /* AlertControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = AlertControllerViewController.swift; sourceTree = "<group>"; };
 		2200541C18BC54E8002A6E8B /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2200542118BC54EC002A6E8B /* ButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ButtonViewController.swift; sourceTree = "<group>"; };
 		2200542218BC54EC002A6E8B /* CustomSearchBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = CustomSearchBarViewController.swift; sourceTree = "<group>"; };
 		2200542318BC54EC002A6E8B /* CustomToolbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = CustomToolbarViewController.swift; sourceTree = "<group>"; };
 		2200542518BC54EC002A6E8B /* DefaultSearchBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultSearchBarViewController.swift; sourceTree = "<group>"; };
@@ -272,7 +271,6 @@
 			isa = PBXGroup;
 			children = (
 				2200541B18BC54E8002A6E8B /* AlertControllerViewController.swift */,
-				2200542118BC54EC002A6E8B /* ButtonViewController.swift */,
 				2200542D18BC54F5002A6E8B /* ImageViewController.swift */,
 				2200543018BC54F5002A6E8B /* PageControlViewController.swift */,
 				2200543118BC54F5002A6E8B /* PickerViewController.swift */,
