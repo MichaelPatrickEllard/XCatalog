@@ -7,72 +7,24 @@
 
 import AppKit
 
-typealias XViewController = NSViewController
+
+//############################################
+//##  Activity Indictor                     ##
+//############################################
+
+
+
+//############################################
+//##  Alert Controller                      ##
+//############################################
+
+
+
+//############################################
+//##  Buttons                               ##
+//############################################
 
 typealias XButton = NSButton
-
-typealias XLabel = NSTextField
-
-typealias XStoryboardSegue = NSStoryboardSegue
-
-typealias XDatePicker = NSDatePicker
-
-typealias XColor = NSColor
-
-typealias XDisplayController = NSViewController
-
-typealias XProgressView = NSProgressIndicator
-
-typealias XSwitchBox = NSButton
-
-enum ProgressViewStyle {
-    case Thin
-    case Thick
-    case Tinted
-}
-
-extension XProgressView {
-    
-    var progressStyle: ProgressViewStyle {
-        get {return .Thin} // Should be expanded to cover other casese
-        set {
-            
-            switch newValue {
-            case .Thin:
-                self.style = .BarStyle
-                self.controlTint = .DefaultControlTint
-                
-            case .Thick:
-                self.style = .BarStyle
-                self.controlTint = .ClearControlTint
-                
-            case .Tinted:
-                self.style = .BarStyle
-                self.controlTint = .BlueControlTint
-            }
-        }
-    }
-    
-    func advance(amount: Double)
-    {
-        self.incrementBy(amount * 2)    // Note:  Check into why the *2 is needed...
-    }
-}
-
-
-//typealias XPageController = NSPageController
-
-//typealias XImageView = NSImageView
-
-//typealias XImage = NSImage
-
-extension XLabel
-{
-    var labelText: String {
-        get {return self.stringValue}
-        set {self.stringValue = newValue}
-    }
-}
 
 extension XButton
 {
@@ -80,6 +32,23 @@ extension XButton
         return self.title
     }
 }
+
+//############################################
+//##  Colors                                ##
+//############################################
+
+typealias XColor = NSColor
+
+//############################################
+//##  Image View                            ##
+//############################################
+
+
+//############################################
+//##  Date Picker                           ##
+//############################################
+
+typealias XDatePicker = NSDatePicker
 
 enum XDatePickerMode : Int {
     
@@ -144,6 +113,84 @@ extension XDatePicker {
     }
 }
 
+//############################################
+//##  Label                                 ##
+//############################################
+
+
+
+
+//############################################
+//##  Page Control                          ##
+//############################################
+
+
+//############################################
+//##  Picker View                           ##
+//############################################
+
+
+//############################################
+//##  Progress View Controller              ##
+//############################################
+
+typealias XProgressView = NSProgressIndicator
+
+enum ProgressViewStyle {
+    case Thin
+    case Thick
+    case Tinted
+}
+
+extension XProgressView {
+    
+    var progressStyle: ProgressViewStyle {
+        get {return .Thin} // Should be expanded to cover other casese
+        set {
+            
+            switch newValue {
+            case .Thin:
+                self.style = .BarStyle
+                self.controlTint = .DefaultControlTint
+                
+            case .Thick:
+                self.style = .BarStyle
+                self.controlTint = .ClearControlTint
+                
+            case .Tinted:
+                self.style = .BarStyle
+                self.controlTint = .BlueControlTint
+            }
+        }
+    }
+    
+    func advance(amount: Double)
+    {
+        self.incrementBy(amount * 2)    // Note:  Check into why the *2 is needed...
+    }
+}
+
+//############################################
+//##  Segmented Control                     ##
+//############################################
+
+
+//############################################
+//##  Slider                                ##
+//############################################
+
+
+//############################################
+//##  Stepper                               ##
+//############################################
+
+
+//############################################
+//##  Switch / Checkbox                     ##
+//############################################
+
+typealias XSwitchBox = NSButton
+
 extension XSwitchBox
 {
     func setAction(action: Selector, target: AnyObject)
@@ -169,3 +216,68 @@ extension XSwitchBox
         NSLog("Switchbox colors aren't used on the OS X side, where the interface is very different")
     }
 }
+
+//############################################
+//##  TextField                             ##
+//############################################
+
+typealias XLabel = NSTextField
+
+extension XLabel
+{
+    var labelText: String {
+        get {return self.stringValue}
+        set {self.stringValue = newValue}
+    }
+}
+
+//############################################
+//##  TextView                              ##
+//############################################
+
+
+
+//############################################
+//##  View Controllers                      ##
+//############################################
+
+typealias XViewController = NSViewController
+
+typealias XDisplayController = NSViewController
+
+typealias XStoryboardSegue = NSStoryboardSegue
+
+//############################################
+//##  WebView                               ##
+//############################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

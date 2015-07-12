@@ -7,23 +7,79 @@
 
 import UIKit
 
-typealias XViewController = UIViewController
+//############################################
+//##  Activity Indictor                     ##
+//############################################
+
+
+
+//############################################
+//##  Alert Controller                      ##
+//############################################
+
+
+
+//############################################
+//##  Buttons                               ##
+//############################################
 
 typealias XButton = UIButton
 
-typealias XLabel = UILabel
+extension XButton
+{
+    var buttonTitle: String {
+        if let value = titleLabel?.text {return value} else {return ""}
+    }
+}
 
-typealias XStoryboardSegue = UIStoryboardSegue
-
-typealias XDatePicker = UIDatePicker
+//############################################
+//##  Colors                                ##
+//############################################
 
 typealias XColor = UIColor
 
-typealias XDisplayController = UITableViewController
+//############################################
+//##  Image View                            ##
+//############################################
+
+
+//############################################
+//##  Date Picker                           ##
+//############################################
+
+typealias XDatePicker = UIDatePicker
+
+//############################################
+//##  Label                                 ##
+//############################################
+
+typealias XLabel = UILabel
+
+extension XLabel
+{
+    var labelText: String
+        {
+        get {if let value = text {return value} else {return ""}}
+        set {text = newValue}
+    }
+}
+
+
+//############################################
+//##  Page Control                          ##
+//############################################
+
+
+//############################################
+//##  Picker View                           ##
+//############################################
+
+
+//############################################
+//##  Progress View Controller              ##
+//############################################
 
 typealias XProgressView = UIProgressView
-
-typealias XSwitchBox = UISwitch
 
 enum ProgressViewStyle {
     case Thin
@@ -38,17 +94,17 @@ extension XProgressView {
         set {
             
             switch newValue {
-                case .Thin:
-                    self.progressViewStyle = .Default
-                    
-                case .Thick:
-                    self.progressViewStyle = .Bar
-                    
-                case .Tinted:
-                    self.progressViewStyle = .Default
+            case .Thin:
+                self.progressViewStyle = .Default
                 
-                    self.trackTintColor = XColor.applicationBlueColor()
-                    self.progressTintColor = XColor.applicationPurpleColor()
+            case .Thick:
+                self.progressViewStyle = .Bar
+                
+            case .Tinted:
+                self.progressViewStyle = .Default
+                
+                self.trackTintColor = XColor.applicationBlueColor()
+                self.progressTintColor = XColor.applicationPurpleColor()
             }
         }
     }
@@ -59,27 +115,27 @@ extension XProgressView {
     }
 }
 
-//typealias XPageController = UIPageController
 
-//typealias XImageView = UIImageView
+//############################################
+//##  Segmented Control                     ##
+//############################################
 
-//typealias XImage = UIImage
 
-extension XLabel
-{
-    var labelText: String
-    {
-        get {if let value = text {return value} else {return ""}}
-        set {text = newValue}
-    }
-}
+//############################################
+//##  Slider                                ##
+//############################################
 
-extension XButton
-{
-    var buttonTitle: String {
-        if let value = titleLabel?.text {return value} else {return ""}
-    }
-}
+
+//############################################
+//##  Stepper                               ##
+//############################################
+
+
+//############################################
+//##  Switch / Checkbox                     ##
+//############################################
+
+typealias XSwitchBox = UISwitch
 
 extension XSwitchBox
 {
@@ -100,3 +156,33 @@ extension XSwitchBox
         self.thumbTintColor = thumbTint
     }
 }
+
+//############################################
+//##  TextField                             ##
+//############################################
+
+
+
+//############################################
+//##  TextView                              ##
+//############################################
+
+
+
+//############################################
+//##  View Controllers                      ##
+//############################################
+
+typealias XViewController = UIViewController
+
+typealias XDisplayController = UITableViewController
+
+typealias XStoryboardSegue = UIStoryboardSegue
+
+//############################################
+//##  WebView                               ##
+//############################################
+
+
+
+
