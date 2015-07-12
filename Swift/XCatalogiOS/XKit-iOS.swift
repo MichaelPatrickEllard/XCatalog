@@ -31,7 +31,7 @@ enum ProgressViewStyle {
 
 extension XProgressView {
     
-    var style: ProgressViewStyle {
+    var progressStyle: ProgressViewStyle {
         get {return .Thin} // Should be expanded to cover other casese
         set {
             
