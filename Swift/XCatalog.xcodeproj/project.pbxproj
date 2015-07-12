@@ -152,6 +152,7 @@
 		E3649B1A1B5174A6003942E0 /* PurpleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurpleViewController.swift; sourceTree = "<group>"; };
 		E3649B1B1B5174A6003942E0 /* PurpleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PurpleViewController.xib; sourceTree = "<group>"; };
 		E3649B221B5174C6003942E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/OSXMain.storyboard; sourceTree = "<group>"; };
+		E36604161B51F29B008F02E6 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E3694A371B51732D0013F46D /* XCatalogOSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XCatalogOSX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3694A3A1B51732D0013F46D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3694A3B1B51732D0013F46D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -212,6 +213,7 @@
 		228DB9EA18BC53F1002BA12A = {
 			isa = PBXGroup;
 			children = (
+				E36604161B51F29B008F02E6 /* README.md */,
 				3E5C084A19748EAA00969DD7 /* Apple README.md */,
 				E3ADC97C1B51ADCA0042087B /* XCatalogShared */,
 				228DB9F518BC53F1002BA12A /* XCatalogiOS */,
