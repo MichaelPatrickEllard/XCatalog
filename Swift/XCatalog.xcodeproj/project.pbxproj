@@ -37,7 +37,6 @@
 		2200544218BC54F5002A6E8B /* SegmentedControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200543318BC54F5002A6E8B /* SegmentedControlViewController.swift */; };
 		2200544318BC54F5002A6E8B /* SliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200543418BC54F5002A6E8B /* SliderViewController.swift */; };
 		2200544518BC54F5002A6E8B /* StepperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200543618BC54F5002A6E8B /* StepperViewController.swift */; };
-		2200544618BC54F5002A6E8B /* SwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200543718BC54F5002A6E8B /* SwitchViewController.swift */; };
 		2200544718BC54F5002A6E8B /* TextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200543818BC54F5002A6E8B /* TextFieldViewController.swift */; };
 		2200544818BC54F5002A6E8B /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200543918BC54F5002A6E8B /* TextViewController.swift */; };
 		2200544918BC54F5002A6E8B /* TintedToolbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200543A18BC54F5002A6E8B /* TintedToolbarViewController.swift */; };
@@ -80,7 +79,6 @@
 		E3753BF01B518F33006FCC10 /* SliderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3753BEE1B518F33006FCC10 /* SliderViewController.xib */; };
 		E3753BF31B518F5C006FCC10 /* StepperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3753BF11B518F5C006FCC10 /* StepperViewController.swift */; };
 		E3753BF41B518F5C006FCC10 /* StepperViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3753BF21B518F5C006FCC10 /* StepperViewController.xib */; };
-		E3753BF71B518F85006FCC10 /* SwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3753BF51B518F85006FCC10 /* SwitchViewController.swift */; };
 		E3753BF81B518F85006FCC10 /* SwitchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3753BF61B518F85006FCC10 /* SwitchViewController.xib */; };
 		E3753BFB1B518FA9006FCC10 /* TextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3753BF91B518FA8006FCC10 /* TextFieldViewController.swift */; };
 		E3753BFC1B518FA9006FCC10 /* TextFieldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3753BFA1B518FA8006FCC10 /* TextFieldViewController.xib */; };
@@ -88,6 +86,8 @@
 		E3753C001B518FC0006FCC10 /* TextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3753BFE1B518FC0006FCC10 /* TextViewController.xib */; };
 		E3753C031B518FD8006FCC10 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3753C011B518FD8006FCC10 /* WebViewController.swift */; };
 		E3753C041B518FD8006FCC10 /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3753C021B518FD8006FCC10 /* WebViewController.xib */; };
+		E38F2EC41B52A651000A70C7 /* SwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38F2EC31B52A651000A70C7 /* SwitchViewController.swift */; };
+		E38F2EC51B52A82E000A70C7 /* SwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38F2EC31B52A651000A70C7 /* SwitchViewController.swift */; };
 		E3ADC97F1B51ADCA0042087B /* DatePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3ADC97D1B51ADCA0042087B /* DatePickerController.swift */; };
 		E3ADC9801B51ADCA0042087B /* DatePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3ADC97D1B51ADCA0042087B /* DatePickerController.swift */; };
 		E3ADC9811B51ADCA0042087B /* XColor+ApplicationSpecific.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3ADC97E1B51ADCA0042087B /* XColor+ApplicationSpecific.swift */; };
@@ -129,7 +129,6 @@
 		2200543318BC54F5002A6E8B /* SegmentedControlViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = SegmentedControlViewController.swift; sourceTree = "<group>"; };
 		2200543418BC54F5002A6E8B /* SliderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = SliderViewController.swift; sourceTree = "<group>"; };
 		2200543618BC54F5002A6E8B /* StepperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = StepperViewController.swift; sourceTree = "<group>"; };
-		2200543718BC54F5002A6E8B /* SwitchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = SwitchViewController.swift; sourceTree = "<group>"; };
 		2200543818BC54F5002A6E8B /* TextFieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldViewController.swift; sourceTree = "<group>"; };
 		2200543918BC54F5002A6E8B /* TextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = TextViewController.swift; sourceTree = "<group>"; };
 		2200543A18BC54F5002A6E8B /* TintedToolbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TintedToolbarViewController.swift; sourceTree = "<group>"; };
@@ -177,7 +176,6 @@
 		E3753BEE1B518F33006FCC10 /* SliderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SliderViewController.xib; sourceTree = "<group>"; };
 		E3753BF11B518F5C006FCC10 /* StepperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepperViewController.swift; sourceTree = "<group>"; };
 		E3753BF21B518F5C006FCC10 /* StepperViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StepperViewController.xib; sourceTree = "<group>"; };
-		E3753BF51B518F85006FCC10 /* SwitchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchViewController.swift; sourceTree = "<group>"; };
 		E3753BF61B518F85006FCC10 /* SwitchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SwitchViewController.xib; sourceTree = "<group>"; };
 		E3753BF91B518FA8006FCC10 /* TextFieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldViewController.swift; sourceTree = "<group>"; };
 		E3753BFA1B518FA8006FCC10 /* TextFieldViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextFieldViewController.xib; sourceTree = "<group>"; };
@@ -185,6 +183,7 @@
 		E3753BFE1B518FC0006FCC10 /* TextViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextViewController.xib; sourceTree = "<group>"; };
 		E3753C011B518FD8006FCC10 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		E3753C021B518FD8006FCC10 /* WebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
+		E38F2EC31B52A651000A70C7 /* SwitchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchViewController.swift; sourceTree = "<group>"; };
 		E3ADC97D1B51ADCA0042087B /* DatePickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerController.swift; sourceTree = "<group>"; };
 		E3ADC97E1B51ADCA0042087B /* XColor+ApplicationSpecific.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XColor+ApplicationSpecific.swift"; sourceTree = "<group>"; };
 		E3ADC98A1B51AE6C0042087B /* XKit-OSX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XKit-OSX.swift"; sourceTree = "<group>"; };
@@ -283,7 +282,6 @@
 				2200543318BC54F5002A6E8B /* SegmentedControlViewController.swift */,
 				2200543418BC54F5002A6E8B /* SliderViewController.swift */,
 				2200543618BC54F5002A6E8B /* StepperViewController.swift */,
-				2200543718BC54F5002A6E8B /* SwitchViewController.swift */,
 				2200543818BC54F5002A6E8B /* TextFieldViewController.swift */,
 				2200543918BC54F5002A6E8B /* TextViewController.swift */,
 				2200543B18BC54F5002A6E8B /* WebViewController.swift */,
@@ -364,7 +362,6 @@
 				E3753BEE1B518F33006FCC10 /* SliderViewController.xib */,
 				E3753BF11B518F5C006FCC10 /* StepperViewController.swift */,
 				E3753BF21B518F5C006FCC10 /* StepperViewController.xib */,
-				E3753BF51B518F85006FCC10 /* SwitchViewController.swift */,
 				E3753BF61B518F85006FCC10 /* SwitchViewController.xib */,
 				E3753BF91B518FA8006FCC10 /* TextFieldViewController.swift */,
 				E3753BFA1B518FA8006FCC10 /* TextFieldViewController.xib */,
@@ -390,6 +387,7 @@
 				E3ADC97D1B51ADCA0042087B /* DatePickerController.swift */,
 				E3ADC97E1B51ADCA0042087B /* XColor+ApplicationSpecific.swift */,
 				E30E98AD1B5229FC0009ADD3 /* ProgressViewController.swift */,
+				E38F2EC31B52A651000A70C7 /* SwitchViewController.swift */,
 			);
 			path = XCatalogShared;
 			sourceTree = "<group>";
@@ -531,8 +529,8 @@
 				E3ADC9811B51ADCA0042087B /* XColor+ApplicationSpecific.swift in Sources */,
 				3E6AE854196B39350062A3E1 /* SearchShowResultsInSourceViewController.swift in Sources */,
 				2200543C18BC54F5002A6E8B /* ImageViewController.swift in Sources */,
+				E38F2EC41B52A651000A70C7 /* SwitchViewController.swift in Sources */,
 				2200541E18BC54E8002A6E8B /* ActivityIndicatorViewController.swift in Sources */,
-				2200544618BC54F5002A6E8B /* SwitchViewController.swift in Sources */,
 				2200544718BC54F5002A6E8B /* TextFieldViewController.swift in Sources */,
 				2200544818BC54F5002A6E8B /* TextViewController.swift in Sources */,
 				2200542B18BC54EC002A6E8B /* DefaultSearchBarViewController.swift in Sources */,
@@ -555,11 +553,11 @@
 				E30E98AF1B5230500009ADD3 /* ProgressViewController.swift in Sources */,
 				E3649B1F1B5174A6003942E0 /* PurpleViewController.swift in Sources */,
 				E3753BEF1B518F33006FCC10 /* SliderViewController.swift in Sources */,
+				E38F2EC51B52A82E000A70C7 /* SwitchViewController.swift in Sources */,
 				E3753BEB1B518F1C006FCC10 /* SegmentedControlViewController.swift in Sources */,
 				E3753BDB1B518EA2006FCC10 /* ImageViewController.swift in Sources */,
 				E3753BFF1B518FC0006FCC10 /* TextViewController.swift in Sources */,
 				E3753BD31B518E41006FCC10 /* ButtonViewController.swift in Sources */,
-				E3753BF71B518F85006FCC10 /* SwitchViewController.swift in Sources */,
 				E3753BCF1B518E29006FCC10 /* AlertControllerViewController.swift in Sources */,
 				E3649B1C1B5174A6003942E0 /* BlueViewController.swift in Sources */,
 				E3ADC9821B51ADCA0042087B /* XColor+ApplicationSpecific.swift in Sources */,

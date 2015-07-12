@@ -23,6 +23,8 @@ typealias XDisplayController = NSViewController
 
 typealias XProgressView = NSProgressIndicator
 
+typealias XSwitchBox = NSButton
+
 enum ProgressViewStyle {
     case Thin
     case Thick
@@ -139,5 +141,31 @@ extension XDatePicker {
             target = targetX
             action = actionX
             // ignore the control events (??)
+    }
+}
+
+extension XSwitchBox
+{
+    func setAction(action: Selector, target: AnyObject)
+    {
+        self.action = action
+        self.target = target
+    }
+    
+    func setOnState(isOn: Bool)
+    {
+        if (isOn)
+        {
+            self.state = NSOnState
+        }
+        else
+        {
+            self.state = NSOffState
+        }
+    }
+    
+    func setColorScheme(tint: XColor, onTint: XColor, thumbTint: XColor)
+    {
+        NSLog("Switchbox colors aren't used on the OS X side, where the interface is very different")
     }
 }

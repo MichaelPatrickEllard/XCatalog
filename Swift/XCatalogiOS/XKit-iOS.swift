@@ -23,6 +23,8 @@ typealias XDisplayController = UITableViewController
 
 typealias XProgressView = UIProgressView
 
+typealias XSwitchBox = UISwitch
+
 enum ProgressViewStyle {
     case Thin
     case Thick
@@ -76,5 +78,25 @@ extension XButton
 {
     var buttonTitle: String {
         if let value = titleLabel?.text {return value} else {return ""}
+    }
+}
+
+extension XSwitchBox
+{
+    func setAction(action: Selector, target: AnyObject)
+    {
+        addTarget(target, action: action, forControlEvents: .ValueChanged)
+    }
+    
+    func setOnState(isOn: Bool)
+    {
+        self.setOn(true, animated: false)
+    }
+    
+    func setColorScheme(tint: XColor, onTint: XColor, thumbTint: XColor)
+    {
+        self.tintColor = tint
+        self.onTintColor = onTint
+        self.thumbTintColor = thumbTint
     }
 }
