@@ -21,7 +21,7 @@ The components of this project were created by:
 - SegmentedControlViewController - Mike Ellard (IP)
 - SliderViewController - ? 1.5
 - StepperViewController - ? 1.5
-- SwitchViewController -- Mike Ellard (IP)
+- SwitchViewController -- Mike Ellard
 - TextFieldViewController - ? 2
 - WebViewController - ? 2
 
