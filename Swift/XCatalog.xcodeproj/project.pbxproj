@@ -145,6 +145,8 @@
 		3E6AE859196B3BBC0062A3E1 /* SearchBarEmbeddedInNavigationBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBarEmbeddedInNavigationBarViewController.swift; sourceTree = "<group>"; };
 		A680ACCD1B52DA74006ADDBC /* ActivityIndicatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorViewController.swift; sourceTree = "<group>"; };
 		E30E98AD1B5229FC0009ADD3 /* ProgressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
+		E322C8AC1B52E755002C1020 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		E322C8AD1B52E846002C1020 /* Apple LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = "Apple LICENSE.txt"; path = "../Apple LICENSE.txt"; sourceTree = "<group>"; };
 		E3649B171B5174A6003942E0 /* BlueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlueViewController.swift; sourceTree = "<group>"; };
 		E3649B181B5174A6003942E0 /* BlueViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlueViewController.xib; sourceTree = "<group>"; };
 		E3649B191B5174A6003942E0 /* MasterDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterDetailViewController.swift; sourceTree = "<group>"; };
@@ -211,7 +213,9 @@
 			isa = PBXGroup;
 			children = (
 				E36604161B51F29B008F02E6 /* README.md */,
+				E322C8AC1B52E755002C1020 /* LICENSE.md */,
 				3E5C084A19748EAA00969DD7 /* Apple README.md */,
+				E322C8AD1B52E846002C1020 /* Apple LICENSE.txt */,
 				E3ADC97C1B51ADCA0042087B /* XCatalogShared */,
 				228DB9F518BC53F1002BA12A /* XCatalogiOS */,
 				E3694A381B51732D0013F46D /* XCatalogOSX */,
