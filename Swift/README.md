@@ -17,11 +17,11 @@ The components of this project were created by:
 - ImageViewController -- ? 1.5
 - PageControlViewController -- ? 2
 - PickerViewController -- ? 3
-- ProgressViewController -- Mike Ellard (IP)
+- ProgressViewController -- Mike Ellard
 - SegmentedControlViewController - Mike Ellard (IP)
 - SliderViewController - ? 1.5
 - StepperViewController - ? 1.5
-- SwitchViewController - ? 1
+- SwitchViewController -- Mike Ellard (IP)
 - TextFieldViewController - ? 2
 - WebViewController - ? 2
 
