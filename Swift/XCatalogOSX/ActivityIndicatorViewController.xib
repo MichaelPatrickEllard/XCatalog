@@ -2,10 +2,13 @@
 <document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7706"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="ActivityIndicatorViewController" customModule="XCatalogOSX" customModuleProvider="target">
             <connections>
+                <outlet property="grayStyleActivityIndicatorView" destination="hfM-W3-Bzw" id="Ye4-XS-cBm"/>
+                <outlet property="tintedActivityIndicatorView" destination="8uG-uC-M9w" id="Oys-aO-CgY"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -15,9 +18,31 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jaM-6L-1aR">
-                    <rect key="frame" x="38" y="218" width="141" height="17"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Activity Indicator View" id="pJO-xO-KjJ">
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="D64-AT-81o" customClass="XLabel" customModule="XCatalogOSX" customModuleProvider="target">
+                    <rect key="frame" x="185" y="235" width="110" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="DEFAULT (GRAY)" id="qk8-5Q-uI0">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9rV-vx-xuf" customClass="XLabel" customModule="XCatalogOSX" customModuleProvider="target">
+                    <rect key="frame" x="214" y="128" width="52" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="TINTED" id="ybY-bh-jtp">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="hfM-W3-Bzw" customClass="XActivityIndicatorView" customModule="XCatalogOSX" customModuleProvider="target">
+                    <rect key="frame" x="232" y="230" width="16" height="16"/>
+                </progressIndicator>
+                <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="8uG-uC-M9w" customClass="XActivityIndicatorView" customModule="XCatalogOSX" customModuleProvider="target">
+                    <rect key="frame" x="232" y="83" width="16" height="16"/>
+                </progressIndicator>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GLk-kH-cw9">
+                    <rect key="frame" x="20" y="255" width="115" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Activity Indicators" id="tkF-gl-Thh">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -25,8 +50,14 @@
                 </textField>
             </subviews>
             <constraints>
-                <constraint firstItem="jaM-6L-1aR" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="37" id="Gtz-Ht-ABd"/>
-                <constraint firstItem="jaM-6L-1aR" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="40" id="fW4-5h-VHQ"/>
+                <constraint firstAttribute="centerX" secondItem="8uG-uC-M9w" secondAttribute="centerX" id="7Be-CU-8It"/>
+                <constraint firstAttribute="centerX" secondItem="9rV-vx-xuf" secondAttribute="centerX" id="FIN-4K-Zzf"/>
+                <constraint firstAttribute="centerX" secondItem="hfM-W3-Bzw" secondAttribute="centerX" id="IMP-uq-ai2"/>
+                <constraint firstAttribute="centerY" secondItem="9rV-vx-xuf" secondAttribute="centerY" id="YDX-2Q-7Pw"/>
+                <constraint firstAttribute="centerX" secondItem="D64-AT-81o" secondAttribute="centerX" id="ZT8-Ni-r3A"/>
+                <constraint firstAttribute="centerY" secondItem="hfM-W3-Bzw" secondAttribute="centerY" multiplier="4" id="gAy-NF-cTw"/>
+                <constraint firstAttribute="centerY" secondItem="8uG-uC-M9w" secondAttribute="centerY" multiplier="0.75" id="jfl-qa-oXz"/>
+                <constraint firstItem="D64-AT-81o" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="20" symbolic="YES" id="pRO-1P-OdU"/>
             </constraints>
         </customView>
     </objects>
