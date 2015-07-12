@@ -9,6 +9,40 @@ import AppKit
 
 
 //############################################
+//##  Common constants,enums,aliases        ##
+//############################################
+
+enum XControlState {
+    case Normal
+    case Highlighted
+}
+
+enum XControlEvents {
+    case ValueChanged
+    case TouchUpInside
+}
+
+typealias XImage = NSImage
+
+// These NSAttributedString names should be in Foundation but are duplicated in UIKit and AppKit
+let XForegroundColorAttributeName = NSForegroundColorAttributeName
+let XStrikethroughStyleAttributeName = NSStrikethroughStyleAttributeName
+//typealias XUnderlineStyle = NSUnderlineStyle
+enum XUnderlineStyle : Int {
+    case StyleNone
+    case StyleSingle
+    case StyleThick
+    case StyleDouble
+    case PatternDot
+    case PatternDash
+    case PatternDashDot
+    case PatternDashDotDot
+    case ByWord
+}
+// End of NSAttributedString names used in XCatalog
+
+
+//############################################
 //##  Activity Indictor                     ##
 //############################################
 
@@ -79,6 +113,46 @@ extension XButton
     var buttonTitle: String {
         return self.title
     }
+    var backgroundColor: XColor {
+        // HACK: allow any color to be set, but ignore it; return blue
+        get { return XColor.blueColor() }
+        set { }
+    }
+    var tintColor: XColor {
+        // HACK: allow any color to be set, but ignore it; return blue
+        get { return XColor.blueColor() }
+        set { }
+    }
+    var xAccessibilityLabel: String? {
+        // HACK: allow any label to be set, but ignore it; return empty string
+        get { return self.accessibilityLabel() ?? "" }
+        set { self.setAccessibilityLabel(newValue)}
+    }
+    func setTitle( title: String!, forState state: XControlState ) {
+        switch state {
+        case .Normal: self.title = title
+        case .Highlighted: self.alternateTitle = title
+        }
+    }
+    func setAttributedTitle( title: NSAttributedString!, forState state: XControlState ) {
+        switch state {
+        case .Normal: self.attributedTitle = title
+        case .Highlighted: self.attributedAlternateTitle = title
+        }
+    }
+    func setImage( image: XImage?, forState state: XControlState ) {
+        switch state {
+        case .Normal: self.image = image
+        case .Highlighted: self.alternateImage = image
+        }
+    }
+    func addTarget(targetX: AnyObject?,
+        action actionX: Selector,
+        forControlEvents controlEvents: XControlEvents) {
+            target = targetX
+            action = actionX
+            // ignore the control events
+    }
 }
 
 //############################################
@@ -104,10 +178,6 @@ enum XDatePickerMode : Int {
     case Date // Displays month, day, and year depending on the locale setting (e.g. November | 15 | 2007)
     case DateAndTime // Displays date, hour, minute, and optionally AM/PM designation depending on the locale setting (e.g. Wed Nov 15 | 6 | 53 | PM)
     case CountDownTimer // Displays hour and minute (e.g. 1 | 53)
-}
-
-enum XControlEvents {
-    case ValueChanged
 }
 
 extension XDatePicker {
@@ -157,7 +227,7 @@ extension XDatePicker {
         forControlEvents controlEvents: XControlEvents) {
             target = targetX
             action = actionX
-            // ignore the control events (??)
+            // ignore the control events
     }
 }
 

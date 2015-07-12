@@ -1,19 +1,124 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="5023" systemVersion="13A603" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="5023"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7706"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="ButtonViewController" customModuleProvider="target">
+        <customObject id="-2" userLabel="File's Owner" customClass="ButtonViewController" customModule="XCatalogOSX" customModuleProvider="target">
             <connections>
+                <outlet property="attributedTextButton" destination="tot-T3-tzb" id="qCU-sv-c2Z"/>
+                <outlet property="imageButton" destination="EWI-wF-Qt3" id="A5R-ZD-2cR"/>
+                <outlet property="systemContactAddButton" destination="FNV-sw-hf6" id="vVE-VG-ShA"/>
+                <outlet property="systemDetailDisclosureButton" destination="lY9-4P-D52" id="EGr-KJ-3CS"/>
+                <outlet property="systemTextButton" destination="8eC-Mg-iAL" id="U0f-37-wuz"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="Hz6-mo-xeY">
-            <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
+            <rect key="frame" x="0.0" y="1" width="529" height="580"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Qss-Ow-UZj">
+                    <rect key="frame" x="214" y="543" width="99" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="SYSTEM TEXT" id="lKp-Yi-5R7">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jmS-qJ-zBT">
+                    <rect key="frame" x="187" y="448" width="152" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="SYSTEM (Contact Add)" id="dBy-Lb-54d">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="U3x-aW-YRh">
+                    <rect key="frame" x="174" y="352" width="178" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="SYSTEM (Detail Disclosure)" id="lot-IL-Eyk">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0KM-Zw-faS">
+                    <rect key="frame" x="238" y="206" width="51" height="48"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="IMAGE" id="Q2R-CG-pdP">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bpv-D9-dbI">
+                    <rect key="frame" x="200" y="112" width="126" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="ATTRIBUTED TEXT" id="9Q1-oP-fns">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8eC-Mg-iAL" customClass="XButton" customModule="XCatalogOSX">
+                    <rect key="frame" x="222" y="490" width="82" height="32"/>
+                    <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="tCJ-0z-YVN">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                </button>
+                <button horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="FNV-sw-hf6" customClass="XButton" customModule="XCatalogOSX" customModuleProvider="target">
+                    <rect key="frame" x="244" y="392" width="39" height="38"/>
+                    <buttonCell key="cell" type="round" bezelStyle="circular" imagePosition="above" alignment="left" borderStyle="border" imageScaling="proportionallyDown" id="zoB-Kv-hf1">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="label"/>
+                    </buttonCell>
+                </button>
+                <button horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lY9-4P-D52" customClass="XButton" customModule="XCatalogOSX" customModuleProvider="target">
+                    <rect key="frame" x="249" y="291" width="29" height="26"/>
+                    <buttonCell key="cell" type="disclosure" bezelStyle="roundedDisclosure" imagePosition="only" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="DXF-CQ-GJG">
+                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                </button>
+                <button verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tot-T3-tzb" customClass="XButton" customModule="XCatalogOSX" customModuleProvider="target">
+                    <rect key="frame" x="201" y="41" width="124" height="19"/>
+                    <buttonCell key="cell" type="roundRect" title="Round Rect Button" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="vbZ-E7-uZm">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" size="24" name=".HelveticaNeueDeskInterface-Regular"/>
+                    </buttonCell>
+                </button>
+                <button misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EWI-wF-Qt3" customClass="XButton" customModule="XCatalogOSX" customModuleProvider="target">
+                    <rect key="frame" x="202" y="172" width="124" height="18"/>
+                    <buttonCell key="cell" type="roundRect" title="Round Rect Button" bezelStyle="roundedRect" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="Zko-U3-IUk">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="controlContent"/>
+                    </buttonCell>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="Qss-Ow-UZj" secondAttribute="centerX" constant="1" id="2gG-Ja-o5l"/>
+                <constraint firstItem="lY9-4P-D52" firstAttribute="top" secondItem="U3x-aW-YRh" secondAttribute="bottom" constant="37" id="2m9-bf-yQH"/>
+                <constraint firstAttribute="centerX" secondItem="lY9-4P-D52" secondAttribute="centerX" constant="1" id="4Fz-sN-jo8"/>
+                <constraint firstAttribute="centerX" secondItem="bpv-D9-dbI" secondAttribute="centerX" constant="1.5" id="86N-cW-47X"/>
+                <constraint firstItem="0KM-Zw-faS" firstAttribute="top" secondItem="lY9-4P-D52" secondAttribute="bottom" constant="40" id="8wn-lR-a8p"/>
+                <constraint firstItem="EWI-wF-Qt3" firstAttribute="top" secondItem="0KM-Zw-faS" secondAttribute="bottom" constant="47" id="Anb-2g-1Be"/>
+                <constraint firstItem="8eC-Mg-iAL" firstAttribute="top" secondItem="Qss-Ow-UZj" secondAttribute="bottom" constant="25" id="FHA-XA-PwD"/>
+                <constraint firstAttribute="centerX" secondItem="8eC-Mg-iAL" secondAttribute="centerX" constant="1.5" id="Lk3-ag-Wqb"/>
+                <constraint firstItem="jmS-qJ-zBT" firstAttribute="top" secondItem="8eC-Mg-iAL" secondAttribute="bottom" constant="32" id="S5b-AH-AQY"/>
+                <constraint firstItem="Qss-Ow-UZj" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="20" id="TPk-bN-HaM"/>
+                <constraint firstAttribute="centerX" secondItem="jmS-qJ-zBT" secondAttribute="centerX" constant="1.5" id="U9B-b8-Uk2"/>
+                <constraint firstItem="FNV-sw-hf6" firstAttribute="top" secondItem="jmS-qJ-zBT" secondAttribute="bottom" constant="21" id="Vbg-vA-L3c"/>
+                <constraint firstItem="U3x-aW-YRh" firstAttribute="top" secondItem="FNV-sw-hf6" secondAttribute="bottom" constant="32" id="XLV-iT-m9t"/>
+                <constraint firstAttribute="centerX" secondItem="EWI-wF-Qt3" secondAttribute="centerX" id="ef2-Jl-gG9"/>
+                <constraint firstAttribute="centerX" secondItem="U3x-aW-YRh" secondAttribute="centerX" constant="1.5" id="gfB-28-3B1"/>
+                <constraint firstAttribute="centerX" secondItem="FNV-sw-hf6" secondAttribute="centerX" constant="1.5" id="iRU-lQ-O6K"/>
+                <constraint firstAttribute="centerX" secondItem="0KM-Zw-faS" secondAttribute="centerX" constant="1" id="p2F-KC-YHH"/>
+                <constraint firstAttribute="centerX" secondItem="tot-T3-tzb" secondAttribute="centerX" constant="1.5" id="szF-n3-YBH"/>
+                <constraint firstItem="tot-T3-tzb" firstAttribute="top" secondItem="bpv-D9-dbI" secondAttribute="bottom" constant="52" id="yWo-dJ-Wwz"/>
+                <constraint firstItem="bpv-D9-dbI" firstAttribute="top" secondItem="EWI-wF-Qt3" secondAttribute="bottom" constant="43" id="zMp-uE-9dG"/>
+            </constraints>
+            <point key="canvasLocation" x="206.5" y="448"/>
         </customView>
     </objects>
 </document>

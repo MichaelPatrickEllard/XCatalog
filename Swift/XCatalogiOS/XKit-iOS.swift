@@ -8,6 +8,22 @@
 import UIKit
 
 //############################################
+//##  Common constants,enums,aliases        ##
+//############################################
+
+typealias XControlState = UIControlState
+
+typealias XControlEvents = UIControlEvents
+
+typealias XImage = UIImage
+
+// These NSAttributedString names should be in Foundation but are duplicated in UIKit and AppKit
+let XForegroundColorAttributeName = NSForegroundColorAttributeName
+let XStrikethroughStyleAttributeName = NSStrikethroughStyleAttributeName
+typealias XUnderlineStyle = NSUnderlineStyle
+// End of NSAttributedString names used in XCatalog
+
+//############################################
 //##  Activity Indictor                     ##
 //############################################
 
@@ -29,6 +45,11 @@ extension XButton
 {
     var buttonTitle: String {
         if let value = titleLabel?.text {return value} else {return ""}
+    }
+    var xAccessibilityLabel: String? {
+        // HACK: allow any label to be set, but ignore it; return empty string
+        get { return self.accessibilityLabel ?? "" }
+        set { self.accessibilityLabel = (newValue) }
     }
 }
 
