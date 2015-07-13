@@ -198,8 +198,6 @@ typealias XViewController = UIViewController
 
 typealias XDisplayController = UITableViewController
 
-typealias XTableViewController = UITableViewController
-
 typealias XStoryboardSegue = UIStoryboardSegue
 
 //############################################

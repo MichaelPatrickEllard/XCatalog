@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ActivityIndicatorViewController: XTableViewController {
+class ActivityIndicatorViewController: XDisplayController {
     // MARK: Properties
 
     @IBOutlet weak var grayStyleActivityIndicatorView: XActivityIndicatorView!

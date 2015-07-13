@@ -364,8 +364,6 @@ typealias XViewController = NSViewController
 
 typealias XDisplayController = NSViewController
 
-typealias XTableViewController = NSViewController
-
 typealias XStoryboardSegue = NSStoryboardSegue
 
 //############################################
