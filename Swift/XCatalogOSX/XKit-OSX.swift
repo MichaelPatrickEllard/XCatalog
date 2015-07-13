@@ -87,6 +87,7 @@ extension XActivityIndicatorView {
         }
     }
     func startAnimating() {
+        self.style = NSProgressIndicatorStyle.SpinningStyle // HACK: make sure the style is set properly for simple use cases
         self.startAnimation(self)
     }
     var hidesWhenStopped: Bool {
