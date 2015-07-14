@@ -44,16 +44,16 @@
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0KM-Zw-faS">
-                    <rect key="frame" x="238" y="206" width="51" height="48"/>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0KM-Zw-faS">
+                    <rect key="frame" x="238" y="237" width="51" height="17"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="IMAGE" id="Q2R-CG-pdP">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bpv-D9-dbI">
-                    <rect key="frame" x="200" y="112" width="126" height="17"/>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bpv-D9-dbI">
+                    <rect key="frame" x="200" y="111" width="126" height="17"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="ATTRIBUTED TEXT" id="9Q1-oP-fns">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -81,15 +81,15 @@
                         <font key="font" metaFont="system"/>
                     </buttonCell>
                 </button>
-                <button verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tot-T3-tzb" customClass="XButton" customModule="XCatalogOSX" customModuleProvider="target">
-                    <rect key="frame" x="201" y="41" width="124" height="19"/>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tot-T3-tzb" customClass="XButton" customModule="XCatalogOSX" customModuleProvider="target">
+                    <rect key="frame" x="154" y="40" width="219" height="19"/>
                     <buttonCell key="cell" type="roundRect" title="Round Rect Button" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="vbZ-E7-uZm">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" size="24" name=".HelveticaNeueDeskInterface-Regular"/>
                     </buttonCell>
                 </button>
-                <button misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EWI-wF-Qt3" customClass="XButton" customModule="XCatalogOSX" customModuleProvider="target">
-                    <rect key="frame" x="202" y="172" width="124" height="19"/>
+                <button translatesAutoresizingMaskIntoConstraints="NO" id="EWI-wF-Qt3" customClass="XButton" customModule="XCatalogOSX" customModuleProvider="target">
+                    <rect key="frame" x="207" y="171" width="114" height="19"/>
                     <buttonCell key="cell" type="roundRect" title="Round Rect Button" bezelStyle="roundedRect" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="Zko-U3-IUk">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="cellTitle"/>
