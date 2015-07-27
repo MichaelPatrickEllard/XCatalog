@@ -6,7 +6,6 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="AlertControllerViewController" customModule="XCatalogOSX" customModuleProvider="target">
             <connections>
-                <outlet property="tableView" destination="dHZ-Tq-bPh" id="Byo-kH-f6e"/>
                 <outlet property="tableView1" destination="dHZ-Tq-bPh" id="o3L-Dk-cum"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
@@ -19,7 +18,7 @@
             <subviews>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nad-86-zgj">
                     <rect key="frame" x="80" y="380" width="375" height="48"/>
-                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Implementing this feature on OS X would require creation of a new class." id="RfD-c0-JOP">
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="NOTE: Some features of this class remain unimplemented for OS X." id="RfD-c0-JOP">
                         <font key="font" metaFont="system" size="20"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
