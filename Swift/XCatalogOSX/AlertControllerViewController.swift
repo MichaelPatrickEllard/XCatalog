@@ -13,6 +13,8 @@ class AlertControllerViewController: NSViewController {
     @IBOutlet weak var tableView1: NSTableView!
     //@IBOutlet weak var tableView2: NSTableView!
     
+    weak var secureTextAlertAction: XAlertAction?
+    
     // A matrix of closures that should be invoked based on which table view cell is
     // tapped (index by section, row).
     var actionMap: [[(selectedIndexPath: NSIndexPath) -> Void]] {
@@ -23,7 +25,7 @@ class AlertControllerViewController: NSViewController {
                 self.showOkayCancelAlert,
                 self.showOtherAlert,
                 self.showTextEntryAlert,
-                self.showSimpleAlert, // self.showSecureTextEntryAlert
+                self.showSecureTextEntryAlert
             ],
             // Action sheet style alerts.
             [
@@ -154,7 +156,8 @@ class AlertControllerViewController: NSViewController {
         }
         
         let otherAction = XAlertAction(title: otherButtonTitle, style: .Default) { action in
-            NSLog("The \"Text Entry\" alert's other action occured.")
+            let text = alertController.textFields?.first?.text ?? ""
+            NSLog("The \"Text Entry\" alert's other action occured with text=\(text).")
         }
         
         // Add the actions.
@@ -163,56 +166,85 @@ class AlertControllerViewController: NSViewController {
         
         presentViewController(alertController, animated: true, completion: nil)
     }
-    
+ 
     /// Show a secure text entry alert with two custom buttons.
-//    func showSecureTextEntryAlert(_: NSIndexPath) {
-//        let title = NSLocalizedString("A Short Title is Best", comment: "")
-//        let message = NSLocalizedString("A message should be a short, complete sentence.", comment: "")
-//        let cancelButtonTitle = NSLocalizedString("Cancel", comment: "")
-//        let otherButtonTitle = NSLocalizedString("OK", comment: "")
-//        
-//        let alertController = UIAlertController(title: title, message: message, preferredStyle: .Alert)
-//        
-//        // Add the text field for the secure text entry.
-//        alertController.addTextFieldWithConfigurationHandler { textField in
-//            // Listen for changes to the text field's text so that we can toggle the current
-//            // action's enabled property based on whether the user has entered a sufficiently
-//            // secure entry.
-//            NSNotificationCenter.defaultCenter().addObserver(self, selector: "handleTextFieldTextDidChangeNotification:", name: UITextFieldTextDidChangeNotification, object: textField)
-//            
-//            textField.secureTextEntry = true
-//        }
-//        
-//        // Stop listening for text change notifications on the text field. This closure will be called in the two action handlers.
-//        let removeTextFieldObserver: Void -> Void = {
-//            NSNotificationCenter.defaultCenter().removeObserver(self, name: UITextFieldTextDidChangeNotification, object: alertController.textFields!.first)
-//        }
-//        
-//        // Create the actions.
-//        let cancelAction = UIAlertAction(title: cancelButtonTitle, style: .Cancel) { action in
-//            NSLog("The \"Secure Text Entry\" alert's cancel action occured.")
-//            
-//            removeTextFieldObserver()
-//        }
-//        
-//        let otherAction = UIAlertAction(title: otherButtonTitle, style: .Default) { action in
-//            NSLog("The \"Secure Text Entry\" alert's other action occured.")
-//            
-//            removeTextFieldObserver()
-//        }
-//        
-//        // The text field initially has no text in the text field, so we'll disable it.
-//        otherAction.enabled = false
-//        
-//        // Hold onto the secure text alert action to toggle the enabled/disabled state when the text changed.
-//        secureTextAlertAction = otherAction
-//        
-//        // Add the actions.
-//        alertController.addAction(cancelAction)
-//        alertController.addAction(otherAction)
-//        
-//        presentViewController(alertController, animated: true, completion: nil)
-//    }
+    func showSecureTextEntryAlert(_: NSIndexPath) {
+        let title = NSLocalizedString("A Short Title is Best", comment: "")
+        let message = NSLocalizedString("A message should be a short, complete sentence.", comment: "")
+        let cancelButtonTitle = NSLocalizedString("Cancel", comment: "")
+        let otherButtonTitle = NSLocalizedString("OK", comment: "")
+        
+        let alertController = XAlertController(title: title, message: message, preferredStyle: .Alert)
+        
+        // Add the text field for the secure text entry.
+        alertController.addTextFieldWithConfigurationHandler { textField in
+            // Listen for changes to the text field's text so that we can toggle the current
+            // action's enabled property based on whether the user has entered a sufficiently
+            // secure entry.
+            
+            // *** XKIT DESIGN NOTES: 
+            //This use case will never work, due to what we do with addAction(), which must use a system-provided action button instead of the one the user provides.
+            //
+            // Plus, we need to figure out how to do secure text entry in Mac OSX:
+            //  - An instance of NSSecureTextField can do the job, but the regular version is NSTextField, a control (NSCell) version of NSTextView
+            //  - To change one class into the other in the parent's accessory view, we need some extra capabilities on the NSTextField class as used here
+            // Could we make the secureTextEntry flag a feature of the XAlertController instead? This seems like bad design...
+            // Could we make the default an NSSecureTextField and somehow disable the secure entry feature if we need normal? This isn't documented...
+            // We want an object that can morph itself from insecure to secure without losing its assigned place as an accessory view... hmmmm, sounds like another class
+            // Is this a case of static dispatch, i.e., the "curiously recurring template pattern"?
+            // I don't think so, we need to instantiate a (false) NSTextField, and then replace it with an NSSecureTextField - member variable seems like the way to go
+            // However, note that this will rely on forwarding all input messages from the wrapper class to its active member, and also forwarding the notification mechanism
+            // On the other hand, having a class means we can deal with the notifications better (I think)
+            //
+            // SAVING GRACE: If you look at the declaration of NSSecureTextField, it is an NSTextField with a boolean "echosBullets" defined (not documented)
+            // This should allow us to implement the whole thing with a couple of aliases and an extension!
+            
+            NSNotificationCenter.defaultCenter().addObserver(self, selector: "handleTextFieldTextDidChangeNotification:", name: XAlertTextFieldTextDidChangeNotification, object: textField)
+            
+            textField.secureTextEntry = true
+        }
+        
+        // Stop listening for text change notifications on the text field. This closure will be called in the two action handlers.
+        let removeTextFieldObserver: Void -> Void = {
+            NSNotificationCenter.defaultCenter().removeObserver(self, name: XAlertTextFieldTextDidChangeNotification, object: alertController.textFields!.first)
+        }
+        
+        // Create the actions.
+        let cancelAction = XAlertAction(title: cancelButtonTitle, style: .Cancel) { action in
+            NSLog("The \"Secure Text Entry\" alert's cancel action occured.")
+            
+            removeTextFieldObserver()
+        }
+        
+        let otherAction = XAlertAction(title: otherButtonTitle, style: .Default) { action in
+            let text = alertController.textFields?.first?.text ?? ""
+            NSLog("The \"Secure Text Entry\" alert's other action occured with text=\(text).")
+            
+            removeTextFieldObserver()
+        }
+        
+        // Hold onto the secure text alert action to toggle the enabled/disabled state when the text changed.
+        secureTextAlertAction = otherAction
+        
+        // Add the actions.
+        alertController.addAction(cancelAction)
+        alertController.addAction(otherAction)
+
+        // HACK ALERT: the implementation of this feature requires that this code be executed AFTER the action is installed, so the system button can be updated as well
+        // The text field initially has no text in the text field, so we'll disable it.
+        otherAction.enabled = false
+        
+        presentViewController(alertController, animated: true, completion: nil)
+    }
+    
+    // MARK: UITextFieldTextDidChangeNotification
+    
+    func handleTextFieldTextDidChangeNotification(notification: NSNotification) {
+        let textField = notification.object as! XAlertTextField
+        
+        // Enforce a minimum length of >= 5 characters for secure text alerts.
+        secureTextAlertAction!.enabled = count(textField.text) >= 5
+    }
     
     // MARK: UIAlertControllerStyleActionSheet Style Alerts
     
@@ -280,6 +312,173 @@ class AlertControllerViewController: NSViewController {
         presentViewController(alertController, animated: true, completion: nil)
     }
     
+}
+
+///////////////////////////////
+// Additions to XKit for OSX //
+///////////////////////////////
+typealias XAlertController = NSAlert
+
+typealias XAlertHandler = (() -> ())
+typealias XAlertTextField = NSTextField
+typealias XAlertTextFieldConfigurationHandler = ((XAlertTextField) -> ())
+let XAlertTextFieldTextDidChangeNotification = NSControlTextDidChangeNotification //UITextFieldTextDidChangeNotification
+
+enum XAlertStyle {
+    case Alert, ActionSheet
+}
+
+extension XAlertController {
+    convenience init(title: String?, message: String?, preferredStyle: XAlertStyle) {
+        self.init()
+        // NOTE: OS X requires these text strings to be non-nil, thus the coalescing operator is used
+        self.messageText = title ?? "Alert"
+        self.informativeText = message ?? ""
+        // TOTAL HACK WARNING!
+        // Subvert Apple's intended use of alertStyle to carry our info about how to run modally, since no difference in visual display
+        // NOTE: Borks usage of critical style, however
+        switch preferredStyle {
+        case .Alert:
+            self.alertStyle = NSAlertStyle.WarningAlertStyle // says to use runModal()
+        case .ActionSheet:
+            self.alertStyle = NSAlertStyle.InformationalAlertStyle // says to run as modal sheet (use beginSheet...())
+        }
+    }
+    
+    func addAction( action: XAlertAction ) {
+        // add a button (really the XAlertAction) to the appropriate XAlert
+        self.addButtonWithTitle(action.title)
+        // copy the target and action settings to the new button
+        if var buttonX = self.buttons.last as? NSButton {
+            action.setupTarget(&buttonX)
+        }
+    }
+
+    // popovers are unimplemented at this time
+    var popoverPresentationController: NSPopover? {
+        get { return nil }
+        set { }
+    }
+    
+    func addTextFieldWithConfigurationHandler(handler: XAlertTextFieldConfigurationHandler?) {
+        var accessory = XAlertTextField(frame: NSMakeRect(0, 0, 200, 24)) // experimentally determined height of 24pts works on my Mac mini - is this universal enough?)
+        
+        accessory.editable = true
+        accessory.drawsBackground = true
+        
+        self.accessoryView = accessory
+
+        // allow caller to configure the text view further
+        if let handler = handler {
+            handler(accessory)
+        }
+    }
+    
+    var textFields: [XAlertTextField]? {
+        // DESIGN NOTE: iOS allows multiple text fields per alert, but OS X only allows one: accessoryView
+        // Proper implementation would need us to add that extra functionality but we're postponing making self a class as long as possible
+        if let accessory = self.accessoryView as? XAlertTextField {
+            return [accessory]
+        }
+        return nil
+    }
+}
+
+extension XAlertTextField {
+    var secureTextEntry: Bool {
+        // NOTE: cell methods have been deprecated in OS X10.10 (Yosemite) - what is the replacement mechanism? this works tho
+        set {
+            if let oldCell = self.cell() as? NSTextFieldCell {
+                let cell = NSSecureTextFieldCell()
+                cell.editable = oldCell.editable
+                cell.drawsBackground = oldCell.drawsBackground
+                cell.stringValue = oldCell.stringValue
+                self.setCell(cell)
+            }
+        }
+        get {
+            if let oldCell = self.cell() as? NSSecureTextFieldCell {
+                return true
+            }
+            return false
+        }
+    }
+    
+    var text: String {
+        get { return self.stringValue }
+        set { self.stringValue = newValue }
+    }
+}
+
+extension NSViewController {
+    func presentViewController( controller: XAlertController, animated: Bool, completion: XAlertHandler? ) {
+        // this is where we use controller to run modally or with the action sheet
+        if controller.alertStyle == NSAlertStyle.WarningAlertStyle {
+            controller.runModal()
+        } else if let window = self.view.window where controller.alertStyle == .InformationalAlertStyle {
+            controller.beginSheetModalForWindow(window) { response/*: NSModalResponse*/ in
+                // this is the wrapper to call  the dispatch table??
+                println("Sheet modal response was \(response)")
+            }
+            // call the completion handler now, not when sheet modal is done
+            if let completion = completion {
+                completion()
+            }
+        }
+    }
+}
+
+typealias XAlertActionHandler = ((NSNotification) -> ())
+//typealias XAlertAction = XButton
+class XAlertAction: NSButton {
+    private var actionHandler: XAlertActionHandler?
+    private var otherButton: NSButton?
+    
+    private func setupTarget( inout button: NSButton ) {
+        // copy its target/action into our own, for use later; remember the object we are associated with
+        otherButton = button
+        self.target = button.target
+        self.action = button.action
+        // set up our target/action for the other button in its place
+        button.target = self
+        button.action = "runActionHandler:"
+    }
+    
+    func runActionHandler(notification: NSNotification) {
+        if let actionHandler = actionHandler {
+            actionHandler(notification)
+        }
+        if let otherButton = otherButton {
+            otherButton.sendAction(self.action, to: self.target)
+        }
+    }
+    
+    // HACK: simple forwarding of enabled flag to otherButton, if installed
+    override var enabled: Bool {
+        set {
+            if let otherButton = otherButton {
+                otherButton.enabled = newValue
+            }
+            super.enabled = newValue
+        }
+        get { return super.enabled }
+    }
+}
+
+enum XAlertActionStyle {
+    case Default, Cancel, Destructive
+}
+
+extension XAlertAction {
+    convenience init( title: String?, style: XAlertActionStyle, completion: XAlertActionHandler? = nil) {
+        self.init()
+        if let title = title {
+            self.title = title
+        }
+        self.actionHandler = completion
+        self.target = self
+        self.action = "runActionHandler:"
+    }
 }
 
 // HACK for OS X VC ONLY
@@ -354,146 +553,6 @@ extension AlertControllerViewController: NSTableViewDelegate {
         action(selectedIndexPath: path)
         // cancel the selection
         tableView1.deselectRow(rowOfView)
-    }
-}
-
-///////////////////////////////
-// Additions to XKit for OSX //
-///////////////////////////////
-typealias XAlertController = NSAlert
-
-typealias XAlertHandler = (() -> ())
-typealias XAlertTextFieldConfigurationHandler = ((NSTextView) -> ())
-
-enum XAlertStyle {
-    case Alert, ActionSheet
-}
-
-extension XAlertController {
-    convenience init(title: String?, message: String?, preferredStyle: XAlertStyle) {
-        self.init()
-        // NOTE: OS X requires these text strings to be non-nil, thus the coalescing operator is used
-        self.messageText = title ?? "Alert"
-        self.informativeText = message ?? ""
-        // TOTAL HACK WARNING!
-        // Subvert Apple's intended use of alertStyle to carry our info about how to run modally, since no difference in visual display
-        // NOTE: Borks usage of critical style, however
-        switch preferredStyle {
-        case .Alert:
-            self.alertStyle = NSAlertStyle.WarningAlertStyle // says to use runModal()
-        case .ActionSheet:
-            self.alertStyle = NSAlertStyle.InformationalAlertStyle // says to run as modal sheet (use beginSheet...())
-        }
-    }
-    
-    func addAction( action: XAlertAction ) {
-        // add a button (really the XAlertAction) to the appropriate XAlert
-        self.addButtonWithTitle(action.title)
-        // copy the target and action settings to the new button
-        if var buttonX = self.buttons.last as? NSButton {
-            action.setupTarget(&buttonX)
-        }
-    }
-
-    // popovers are unimplemented at this time
-    var popoverPresentationController: NSPopover? {
-        get { return nil }
-        set { }
-    }
-    
-    func addTextFieldWithConfigurationHandler(handler: XAlertTextFieldConfigurationHandler?) {
-        var accessory = NSTextView(frame: NSMakeRect(0, 0, 200, 15)) // fixed size ok?
-        
-//        let font = NSFont.systemFontOfSize(NSFont.systemFontSize())
-//        let textAttributes = [NSFontAttributeName:font]
-//        let sampleText = " " // next line crashes when set to empty string
-//        accessory.insertText(NSAttributedString(string: sampleText, attributes: textAttributes))
-        accessory.editable = true
-        accessory.drawsBackground = true
-
-        // allow caller to configure the text view further
-        if let handler = handler {
-            handler(accessory)
-        }
-        
-        self.accessoryView = accessory
-    }
-    
-}
-
-extension NSViewController {
-    func presentViewController( controller: XAlertController, animated: Bool, completion: XAlertHandler? ) {
-        // this is where we use controller to run modally or with the action sheet
-        if controller.alertStyle == NSAlertStyle.WarningAlertStyle {
-            controller.runModal()
-        } else if let window = self.view.window where controller.alertStyle == .InformationalAlertStyle {
-            controller.beginSheetModalForWindow(window) { response/*: NSModalResponse*/ in
-                // this is the wrapper to call  the dispatch table??
-                println("Sheet modal response was \(response)")
-            }
-            // call the completion handler now, not when sheet modal is done
-            if let completion = completion {
-                completion()
-            }
-        }
-    }
-}
-
-typealias XAlertActionHandler = ((NSNotification) -> ())
-//typealias XAlertAction = XButton
-class XAlertAction: NSButton {
-    var actionHandler: XAlertActionHandler?
-    var otherButton: NSButton?
-    
-    private func setupTarget( inout button: NSButton ) {
-        // copy its target/action into our own, for use later; remember the object we are associated with
-        otherButton = button
-        self.target = button.target
-        self.action = button.action
-        // set up our target/action for the other button in its place
-        button.target = self
-        button.action = "runActionHandler:"
-    }
-    
-    func runActionHandler(nsn: NSNotification) {
-        if let actionHandler = actionHandler {
-            actionHandler(nsn)
-        }
-        if let otherButton = otherButton {
-            otherButton.sendAction(self.action, to: self.target)
-        }
-    }
-}
-
-enum XAlertActionStyle {
-    case Default, Cancel, Destructive
-}
-
-extension XAlertAction {
-    convenience init( title: String?, style: XAlertActionStyle, completion: XAlertActionHandler? = nil) {
-        // add a button with the given action (target: self?)
-        // unfortunately, action MUST be a selector on OSX - OK so which object? well for THIS code, it's the given AlertControllerViewController object
-        // hard coding this prevents class use in an actual framework situation, though
-        // time to give up? use global private variables? (HACK! HACK!)
-        // well NSAlert's beginSheetModalForWindow is compatible with block completion handlers, but requires (A) a call to endSheetModal after, and (B) happens at runModal() time, after all actions added; still, it's our best shot...
-        // BUT...
-        // each button must have its own action closure, so one closure for the NSAlert would have to manage a dispatch table, which exists for each XAlert
-        // this really does imply XAlert must be a derived class, else we are creating tables of data (pseudo-objects) and keeping track of them with dictionaries
-        self.init()
-        if let title = title {
-            self.title = title
-        }
-        // TBD: do something to convert the Cancel style into the appropriate tintColor (maybe?) or whatever
-        switch style {
-        case .Cancel:
-            // NSAlert relies on button titles for behavior!
-            break //self.title = "Cancel"
-        default:
-            break // title is already set ("Ok" and "Don't Save" are also special)
-        }
-        self.actionHandler = completion
-        self.target = self
-        self.action = "runActionHandler:"
     }
 }
 
