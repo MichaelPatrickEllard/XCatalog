@@ -1,17 +1,16 @@
-/*
-    Copyright (C) 2015 Apple Inc. All Rights Reserved.
-    See LICENSE.txt for this sample’s licensing information
+//
+//  AlertControllerViewController.swift
+//  XCatalog
+//
+//  Created by Michael L Mehr on 7/30/15.
+//  Copyright (c) 2015 Apple. All rights reserved.
+//
+
+import Foundation
+
+class AlertControllerViewController: XTableViewController, XTableViewDelegate {
     
-    Abstract:
-    The view controller that demonstrates how to use UIAlertController.
-*/
-
-import UIKit
-
-class AlertControllerViewController : UITableViewController {
-    // MARK: Properties
-
-    weak var secureTextAlertAction: UIAlertAction?
+    weak var secureTextAlertAction: XAlertAction?
     
     // A matrix of closures that should be invoked based on which table view cell is
     // tapped (index by section, row).
@@ -33,26 +32,57 @@ class AlertControllerViewController : UITableViewController {
         ]
     }
     
-    // MARK: UIAlertControllerStyleAlert Style Alerts
-
+    // HACK for OS X VC ONLY
+    // - must implement TableView delegate / dataSource here due to bug in OS X Yosemite with tableView.useStaticContents (not working?)
+    var actionTitles = [
+        // Alert style alerts.
+        [
+            "Simple",
+            "Okay / Cancel",
+            "Other",
+            "Text Entry",
+            "Secure Text Entry",
+        ],
+        // Action sheet style alerts.
+        [
+            "Okay / Cancel (Action Sheet)",
+            "Other (Action Sheet)",
+        ]
+    ]
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do view setup here.
+        /*
+        // Following feature was introduced in Yosemite and doesn't work yet (file radar?) (XCode 6.4)
+        tableView1.usesStaticContents = true
+        tableView2.usesStaticContents = true
+        */
+//        tableView1.setDataSource(self)
+        //    tableView2.setDataSource(self)
+        setupTitles( actionTitles )
+        self.delegate = self
+    }
+    
     /// Show an alert with an "Okay" button.
     func showSimpleAlert(_: NSIndexPath) {
         let title = NSLocalizedString("A Short Title is Best", comment: "")
         let message = NSLocalizedString("A message should be a short, complete sentence.", comment: "")
         let cancelButtonTitle = NSLocalizedString("OK", comment: "")
-
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .Alert)
-
+        
+        let alertController = XAlertController(title: title, message: message, preferredStyle: .Alert)
+        
         // Create the action.
-        let cancelAction = UIAlertAction(title: cancelButtonTitle, style: .Cancel) { action in
+        let cancelAction = XAlertAction(title: cancelButtonTitle, style: .Cancel) { action in
             NSLog("The simple alert's cancel action occured.")
         }
-
+        
         // Add the action.
         alertController.addAction(cancelAction)
-
+        
         presentViewController(alertController, animated: true, completion: nil)
     }
+    
     
     /// Show an alert with an "Okay" and "Cancel" button.
     func showOkayCancelAlert(_: NSIndexPath) {
@@ -61,24 +91,24 @@ class AlertControllerViewController : UITableViewController {
         let cancelButtonTitle = NSLocalizedString("Cancel", comment: "")
         let otherButtonTitle = NSLocalizedString("OK", comment: "")
         
-        let alertCotroller = UIAlertController(title: title, message: message, preferredStyle: .Alert)
-
+        let alertCotroller = XAlertController(title: title, message: message, preferredStyle: .Alert)
+        
         // Create the actions.
-        let cancelAction = UIAlertAction(title: cancelButtonTitle, style: .Cancel) { action in
+        let cancelAction = XAlertAction(title: cancelButtonTitle, style: .Cancel) { action in
             NSLog("The \"Okay/Cancel\" alert's cancel action occured.")
         }
         
-        let otherAction = UIAlertAction(title: otherButtonTitle, style: .Default) { action in
+        let otherAction = XAlertAction(title: otherButtonTitle, style: .Default) { action in
             NSLog("The \"Okay/Cancel\" alert's other action occured.")
         }
         
         // Add the actions.
         alertCotroller.addAction(cancelAction)
         alertCotroller.addAction(otherAction)
-
+        
         presentViewController(alertCotroller, animated: true, completion: nil)
     }
-
+    
     /// Show an alert with two custom buttons.
     func showOtherAlert(_: NSIndexPath) {
         let title = NSLocalizedString("A Short Title is Best", comment: "")
@@ -87,18 +117,18 @@ class AlertControllerViewController : UITableViewController {
         let otherButtonTitleOne = NSLocalizedString("Choice One", comment: "")
         let otherButtonTitleTwo = NSLocalizedString("Choice Two", comment: "")
         
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+        let alertController = XAlertController(title: title, message: message, preferredStyle: .Alert)
         
         // Create the actions.
-        let cancelAction = UIAlertAction(title: cancelButtonTitle, style: .Cancel) { action in
+        let cancelAction = XAlertAction(title: cancelButtonTitle, style: .Cancel) { action in
             NSLog("The \"Other\" alert's cancel action occured.")
         }
         
-        let otherButtonOneAction = UIAlertAction(title: otherButtonTitleOne, style: .Default) { action in
+        let otherButtonOneAction = XAlertAction(title: otherButtonTitleOne, style: .Default) { action in
             NSLog("The \"Other\" alert's other button one action occured.")
         }
         
-        let otherButtonTwoAction = UIAlertAction(title: otherButtonTitleTwo, style: .Default) { action in
+        let otherButtonTwoAction = XAlertAction(title: otherButtonTitleTwo, style: .Default) { action in
             NSLog("The \"Other\" alert's other button two action occured.")
         }
         
@@ -109,7 +139,8 @@ class AlertControllerViewController : UITableViewController {
         
         presentViewController(alertController, animated: true, completion: nil)
     }
-
+    
+    
     /// Show a text entry alert with two custom buttons.
     func showTextEntryAlert(_: NSIndexPath) {
         let title = NSLocalizedString("A Short Title is Best", comment: "")
@@ -117,20 +148,22 @@ class AlertControllerViewController : UITableViewController {
         let cancelButtonTitle = NSLocalizedString("Cancel", comment: "")
         let otherButtonTitle = NSLocalizedString("OK", comment: "")
         
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+        let alertController = XAlertController(title: title, message: message, preferredStyle: .Alert)
         
         // Add the text field for text entry.
         alertController.addTextFieldWithConfigurationHandler { textField in
             // If you need to customize the text field, you can do so here.
         }
-
+        
         // Create the actions.
-        let cancelAction = UIAlertAction(title: cancelButtonTitle, style: .Cancel) { action in
+        let cancelAction = XAlertAction(title: cancelButtonTitle, style: .Cancel) { action in
             NSLog("The \"Text Entry\" alert's cancel action occured.")
         }
         
-        let otherAction = UIAlertAction(title: otherButtonTitle, style: .Default) { action in
-            NSLog("The \"Text Entry\" alert's other action occured.")
+        let otherAction = XAlertAction(title: otherButtonTitle, style: .Default) { action in
+            let textField = alertController.textFields?.first as! XAlertTextField?
+            let text = textField?.text ?? ""
+            NSLog("The \"Text Entry\" alert's other action occured with text=\(text).")
         }
         
         // Add the actions.
@@ -147,32 +180,35 @@ class AlertControllerViewController : UITableViewController {
         let cancelButtonTitle = NSLocalizedString("Cancel", comment: "")
         let otherButtonTitle = NSLocalizedString("OK", comment: "")
         
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+        let alertController = XAlertController(title: title, message: message, preferredStyle: .Alert)
         
         // Add the text field for the secure text entry.
         alertController.addTextFieldWithConfigurationHandler { textField in
             // Listen for changes to the text field's text so that we can toggle the current
             // action's enabled property based on whether the user has entered a sufficiently
             // secure entry.
-            NSNotificationCenter.defaultCenter().addObserver(self, selector: "handleTextFieldTextDidChangeNotification:", name: UITextFieldTextDidChangeNotification, object: textField)
+            
+            NSNotificationCenter.defaultCenter().addObserver(self, selector: "handleTextFieldTextDidChangeNotification:", name: XAlertTextFieldTextDidChangeNotification, object: textField)
             
             textField.secureTextEntry = true
         }
         
         // Stop listening for text change notifications on the text field. This closure will be called in the two action handlers.
         let removeTextFieldObserver: Void -> Void = {
-            NSNotificationCenter.defaultCenter().removeObserver(self, name: UITextFieldTextDidChangeNotification, object: alertController.textFields!.first)
+            NSNotificationCenter.defaultCenter().removeObserver(self, name: XAlertTextFieldTextDidChangeNotification, object: alertController.textFields!.first)
         }
-
+        
         // Create the actions.
-        let cancelAction = UIAlertAction(title: cancelButtonTitle, style: .Cancel) { action in
+        let cancelAction = XAlertAction(title: cancelButtonTitle, style: .Cancel) { action in
             NSLog("The \"Secure Text Entry\" alert's cancel action occured.")
             
             removeTextFieldObserver()
         }
         
-        let otherAction = UIAlertAction(title: otherButtonTitle, style: .Default) { action in
-            NSLog("The \"Secure Text Entry\" alert's other action occured.")
+        let otherAction = XAlertAction(title: otherButtonTitle, style: .Default) { action in
+            let textField = alertController.textFields?.first as! XAlertTextField?
+            let text = textField?.text ?? ""
+            NSLog("The \"Secure Text Entry\" alert's other action occured with text=\(text).")
             
             removeTextFieldObserver()
         }
@@ -197,14 +233,14 @@ class AlertControllerViewController : UITableViewController {
         let cancelButtonTitle = NSLocalizedString("Cancel", comment: "OK")
         let destructiveButtonTitle = NSLocalizedString("OK", comment: "")
         
-        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
+        let alertController = XAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
         
         // Create the actions.
-        let cancelAction = UIAlertAction(title: cancelButtonTitle, style: .Cancel) { action in
+        let cancelAction = XAlertAction(title: cancelButtonTitle, style: .Cancel) { action in
             NSLog("The \"Okay/Cancel\" alert action sheet's cancel action occured.")
         }
         
-        let destructiveAction = UIAlertAction(title: destructiveButtonTitle, style: .Destructive) { action in
+        let destructiveAction = XAlertAction(title: destructiveButtonTitle, style: .Destructive) { action in
             NSLog("The \"Okay/Cancel\" alert action sheet's destructive action occured.")
         }
         
@@ -216,27 +252,28 @@ class AlertControllerViewController : UITableViewController {
         if let popoverPresentationController = alertController.popoverPresentationController {
             // This method expects a valid cell to display from.
             let selectedCell = tableView.cellForRowAtIndexPath(selectedIndexPath)!
-            popoverPresentationController.sourceRect = selectedCell.frame
-            popoverPresentationController.sourceView = view
-            popoverPresentationController.permittedArrowDirections = .Up
+            println("In popover code for section \(selectedIndexPath.section) and row \(selectedIndexPath.row) with cell \(selectedCell)")
+            //            popoverPresentationController.sourceRect = selectedCell.frame
+            //            popoverPresentationController.sourceView = view
+            //            popoverPresentationController.permittedArrowDirections = .Up
         }
         
         presentViewController(alertController, animated: true, completion: nil)
     }
-
+    
     /// Show a dialog with two custom buttons.
     func showOtherActionSheet(selectedIndexPath: NSIndexPath) {
         let destructiveButtonTitle = NSLocalizedString("Destructive Choice", comment: "")
         let otherButtonTitle = NSLocalizedString("Safe Choice", comment: "")
         
-        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
+        let alertController = XAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
         
         // Create the actions.
-        let destructiveAction = UIAlertAction(title: destructiveButtonTitle, style: .Destructive) { action in
+        let destructiveAction = XAlertAction(title: destructiveButtonTitle, style: .Destructive) { action in
             NSLog("The \"Other\" alert action sheet's destructive action occured.")
         }
         
-        let otherAction = UIAlertAction(title: otherButtonTitle, style: .Default) { action in
+        let otherAction = XAlertAction(title: otherButtonTitle, style: .Default) { action in
             NSLog("The \"Other\" alert action sheet's other action occured.")
         }
         
@@ -247,32 +284,33 @@ class AlertControllerViewController : UITableViewController {
         // Configure the alert controller's popover presentation controller if it has one.
         if let popoverPresentationController = alertController.popoverPresentationController {
             // This method expects a valid cell to display from.
-            let selectedCell = tableView.cellForRowAtIndexPath(selectedIndexPath)!
-            popoverPresentationController.sourceRect = selectedCell.frame
-            popoverPresentationController.sourceView = view
-            popoverPresentationController.permittedArrowDirections = .Up
+            //            let selectedCell = tableView.cellForRowAtIndexPath(selectedIndexPath)!
+            //            popoverPresentationController.sourceRect = selectedCell.frame
+            //            popoverPresentationController.sourceView = view
+            //            popoverPresentationController.permittedArrowDirections = .Up
         }
         
         presentViewController(alertController, animated: true, completion: nil)
     }
     
-    // MARK: UITextFieldTextDidChangeNotification
-
+    // MARK: XTextFieldTextDidChangeNotification
+    
     func handleTextFieldTextDidChangeNotification(notification: NSNotification) {
-        let textField = notification.object as! UITextField
-
+        let textField = notification.object as! XAlertTextField
+        
         // Enforce a minimum length of >= 5 characters for secure text alerts.
         secureTextAlertAction!.enabled = count(textField.text) >= 5
     }
     
-    // MARK: UITableViewDelegate
-
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-
+    
+    // MARK: XTableViewDelegate
+    
+    override func tableView(tableView: XTableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
         let action = actionMap[indexPath.section][indexPath.row]
         
         action(selectedIndexPath: indexPath)
-
+        
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
 }

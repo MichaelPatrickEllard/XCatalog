@@ -6,7 +6,6 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="AlertControllerViewController" customModule="XCatalogOSX" customModuleProvider="target">
             <connections>
-                <outlet property="tableView1" destination="dHZ-Tq-bPh" id="o3L-Dk-cum"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -31,7 +30,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="OtR-tr-fp4" viewBased="YES" id="dHZ-Tq-bPh">
-                                <rect key="frame" x="0.0" y="0.0" width="497" height="0.0"/>
+                                <rect key="frame" x="0.0" y="0.0" width="496" height="0.0"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <size key="intercellSpacing" width="3" height="2"/>
                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -172,10 +171,6 @@
                                         </prototypeCellViews>
                                     </tableColumn>
                                 </tableColumns>
-                                <connections>
-                                    <outlet property="dataSource" destination="-2" id="ipo-N2-yWe"/>
-                                    <outlet property="delegate" destination="-2" id="lQ7-1A-MbB"/>
-                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>

@@ -32,8 +32,15 @@ typealias XActivityIndicatorView = UIActivityIndicatorView
 //############################################
 //##  Alert Controller                      ##
 //############################################
+typealias XAlertController = UIAlertController
 
+typealias XAlertHandler = (() -> ())
+typealias XAlertTextField = UITextField
+typealias XAlertTextFieldConfigurationHandler = ((XAlertTextField) -> ())
+let XAlertTextFieldTextDidChangeNotification = UITextFieldTextDidChangeNotification
 
+typealias XAlertAction = UIAlertAction
+typealias XAlertActionStyle = UIAlertActionStyle
 
 //############################################
 //##  Buttons                               ##
@@ -199,6 +206,27 @@ typealias XViewController = UIViewController
 typealias XDisplayController = UITableViewController
 
 typealias XStoryboardSegue = UIStoryboardSegue
+
+
+//############################################
+//##  Table View Controller                 ##
+//############################################
+
+typealias XTableViewController = UITableViewController
+typealias XTableViewDelegate = UITableViewDelegate
+typealias XTableView = UITableView
+
+extension XTableViewController {
+    
+    // DESIGN NOTE: No need for implementing the simulated static table view under iOS
+    func setupTitles( titles: [[String]]) {
+    }
+    
+    var delegate: XTableViewDelegate? {
+        get { return nil }
+        set { }
+    }
+}
 
 //############################################
 //##  WebView                               ##

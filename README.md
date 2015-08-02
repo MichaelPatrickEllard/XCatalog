@@ -21,7 +21,7 @@ The components of this project were created by:
 
 - XKit concept and project infrastructure -- Mike Ellard
 - ActivityIndicatorViewController -- Mike Mehr
-- AlertControllerViewController -- Mike Mehr (IP)
+- AlertControllerViewController -- Mike Mehr
 - ButtonViewController -- Mike Mehr
 - DatePickerController -- Mike Mehr
 - ImageViewController -- Would require creation of a new class
