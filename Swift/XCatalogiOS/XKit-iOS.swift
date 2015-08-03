@@ -153,6 +153,15 @@ extension XProgressView {
 //##  Slider                                ##
 //############################################
 
+typealias XSlider = UISlider
+
+extension XSlider {
+    var currentValue: Double {
+        get { return Double(value) }
+        set { value = Float(newValue) }
+    }
+}
+
 
 //############################################
 //##  Stepper                               ##

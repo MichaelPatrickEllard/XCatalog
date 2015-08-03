@@ -22,6 +22,20 @@ enum XControlEvents {
     case TouchUpInside
 }
 
+typealias XControl = NSControl
+
+extension XControl {
+    
+    func addTarget(targetX: AnyObject?,
+        action actionX: Selector,
+        forControlEvents controlEvents: XControlEvents) {
+            target = targetX
+            action = actionX
+            // ignore the control events
+    }
+    
+}
+
 typealias XImage = NSImage
 
 // These NSAttributedString names should be in Foundation but are duplicated in UIKit and AppKit
@@ -373,13 +387,6 @@ extension XButton
         case .Highlighted: self.alternateImage = image
         }
     }
-    func addTarget(targetX: AnyObject?,
-        action actionX: Selector,
-        forControlEvents controlEvents: XControlEvents) {
-            target = targetX
-            action = actionX
-            // ignore the control events
-    }
 }
 
 //############################################
@@ -449,13 +456,6 @@ extension XDatePicker {
         get { return 1 }
         set { }
     }
-    func addTarget(targetX: AnyObject?,
-        action actionX: Selector,
-        forControlEvents controlEvents: XControlEvents) {
-            target = targetX
-            action = actionX
-            // ignore the control events
-    }
 }
 
 //############################################
@@ -524,6 +524,50 @@ extension XProgressView {
 //##  Slider                                ##
 //############################################
 
+typealias XSlider = NSSlider
+
+extension XSlider {
+    // NOTE: default value for maximumValue are 100 in OS X but 1.0 in iOS
+    // NOTE: default value for continuous is false in OS X but true in iOS
+    var minimumValue: Double {
+        get { return minValue }
+        set { minValue = newValue}
+    }
+
+    var maximumValue: Double {
+        get { return maxValue }
+        set { maxValue = newValue }
+    }
+
+    // NOTE: if we use value here, we have a conflict with the NSObject selector of the same name (?)
+    var currentValue: Double {
+        get { return doubleValue }
+        set { doubleValue = newValue}
+    }
+
+    // NOTE: track tint colors not implemented
+    var minimumTrackTintColor: XColor {
+        get { return XColor.blueColor() }
+        set {
+        }
+    }
+    var maximumTrackTintColor: XColor {
+        get { return XColor.blueColor() }
+        set {
+        }
+    }
+    
+    // NOTE: custom track and thumb images not implemented
+    func setMinimumTrackImage( image: XImage?, forState: XControlState ) {
+        // does nothing
+    }
+    func setMaximumTrackImage( image: XImage?, forState: XControlState ) {
+        // does nothing
+    }
+    func setThumbImage( image: XImage?, forState: XControlState ) {
+        // does nothing
+    }
+}
 
 //############################################
 //##  Stepper                               ##

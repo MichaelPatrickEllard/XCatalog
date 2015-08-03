@@ -29,7 +29,7 @@ The components of this project were created by:
 - PickerViewController -- Would require creation of a new class
 - ProgressViewController -- Mike Ellard
 - SegmentedControlViewController - Mike Ellard (IP)
-- SliderViewController - TODO: Effort = 1.5
+- SliderViewController - Mike Mehr (partial)
 - StepperViewController - TODO: Effort = 1.5
 - SwitchViewController -- Mike Ellard
 - TextFieldViewController - TODO: Effort = 2
