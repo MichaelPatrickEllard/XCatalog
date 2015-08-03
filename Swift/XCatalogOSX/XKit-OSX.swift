@@ -247,7 +247,8 @@ extension XAlertAction {
         self.init()
         if let title = title {
             if style == .Destructive {
-                self.attributedTitle = NSAttributedString(string: title, attributes: [NSForegroundColorAttributeName:NSColor.redColor()])
+                self.attributedTitle = NSAttributedString(string: title)
+                self.tintColor = XColor.redColor()
             } else {
                 self.title = title
             }
@@ -268,10 +269,8 @@ extension XAlertAction {
         button.action = "runActionHandler:"
         // copy our flags, title and attributes to the provided button as well
         button.enabled = enabled
-        button.title = title
+        // BUG NOTE: in spite of the following, something in OS X sets this back to its default color before displaying
         button.attributedTitle = attributedTitle
-//        button.alternateTitle = alternateTitle
-//        button.attributedAlternateTitle = attributedAlternateTitle
     }
     
     func runActionHandler(notification: NSNotification) {
@@ -310,14 +309,46 @@ extension XButton
         return self.title
     }
     var backgroundColor: XColor {
-        // HACK: allow any color to be set, but ignore it; return blue
-        get { return XColor.blueColor() }
-        set { }
+        get {
+            // get the font attributes from the first character of the attributed title
+            let attrTitle = attributedTitle
+            let len = min(1, attrTitle.length)
+            let range = NSMakeRange(0, len)
+            let attrs = attrTitle.fontAttributesInRange(range)
+            var textColor = NSColor.controlTextColor()
+            if attrs.count > 0 {
+                textColor = attrs[NSBackgroundColorAttributeName] as! NSColor
+            }
+            return textColor
+        }
+        set {
+            var attrTitle = NSMutableAttributedString(attributedString: attributedTitle)
+            let range = NSMakeRange(0, attrTitle.length)
+            attrTitle.addAttribute(NSBackgroundColorAttributeName, value: newValue, range: range)
+            attrTitle.fixAttributesInRange(range)
+            attributedTitle = attrTitle
+        }
     }
     var tintColor: XColor {
-        // HACK: allow any color to be set, but ignore it; return blue
-        get { return XColor.blueColor() }
-        set { }
+        get {
+            // get the font attributes from the first character of the attributed title
+            let attrTitle = attributedTitle
+            let len = min(1, attrTitle.length)
+            let range = NSMakeRange(0, len)
+            let attrs = attrTitle.fontAttributesInRange(range)
+            var textColor = NSColor.controlTextColor()
+            if attrs.count > 0 {
+                textColor = attrs[NSForegroundColorAttributeName] as! NSColor
+            }
+            return textColor
+        }
+        set {
+            var attrTitle = NSMutableAttributedString(attributedString: attributedTitle)
+            let range = NSMakeRange(0, attrTitle.length)
+            attrTitle.addAttribute(NSForegroundColorAttributeName, value: newValue, range: range)
+            attrTitle.fixAttributesInRange(range)
+            attributedTitle = attrTitle
+        }
     }
     var xAccessibilityLabel: String? {
         // HACK: allow any label to be set, but ignore it; return empty string
