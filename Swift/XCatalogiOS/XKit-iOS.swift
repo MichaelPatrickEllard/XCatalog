@@ -167,6 +167,14 @@ extension XSlider {
 //##  Stepper                               ##
 //############################################
 
+typealias XStepper = UIStepper
+
+extension XStepper {
+    var currentValue: Double {
+        get { return (value) }
+        set { value = (newValue) }
+    }
+}
 
 //############################################
 //##  Switch / Checkbox                     ##

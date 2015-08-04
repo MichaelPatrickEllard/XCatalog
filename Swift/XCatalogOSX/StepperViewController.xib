@@ -1,19 +1,87 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="5023" systemVersion="13A603" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="5023"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7706"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="StepperViewController" customModuleProvider="target">
+        <customObject id="-2" userLabel="File's Owner" customClass="StepperViewController" customModule="XCatalogOSX" customModuleProvider="target">
             <connections>
+                <outlet property="customStepper" destination="3QJ-6k-NtG" id="Vpk-GV-o2G"/>
+                <outlet property="customStepperLabel" destination="PVG-B3-oiM" id="sbi-Ar-Sh4"/>
+                <outlet property="defaultStepper" destination="jrt-os-EiB" id="dyn-kV-Neg"/>
+                <outlet property="defaultStepperLabel" destination="gvn-wo-ydr" id="T4b-e9-1KL"/>
+                <outlet property="tintedStepper" destination="8dN-4B-YZh" id="X15-T3-jZS"/>
+                <outlet property="tintedStepperLabel" destination="f4B-2z-Vs7" id="ivz-sy-Uzz"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="Hz6-mo-xeY">
             <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jrt-os-EiB" customClass="XStepper" customModule="XCatalogOSX" customModuleProvider="target">
+                    <rect key="frame" x="327" y="203" width="19" height="27"/>
+                    <stepperCell key="cell" continuous="YES" alignment="left" maxValue="100" id="lRC-Y9-Bgr"/>
+                </stepper>
+                <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8dN-4B-YZh" customClass="XStepper" customModule="XCatalogOSX" customModuleProvider="target">
+                    <rect key="frame" x="327" y="122" width="19" height="27"/>
+                    <stepperCell key="cell" continuous="YES" alignment="left" maxValue="100" id="ga0-dw-cda"/>
+                </stepper>
+                <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3QJ-6k-NtG" customClass="XStepper" customModule="XCatalogOSX" customModuleProvider="target">
+                    <rect key="frame" x="327" y="46" width="19" height="27"/>
+                    <stepperCell key="cell" continuous="YES" alignment="left" maxValue="100" id="eQb-af-uox"/>
+                </stepper>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gvn-wo-ydr" customClass="XLabel" customModule="XCatalogOSX" customModuleProvider="target">
+                    <rect key="frame" x="221" y="209" width="103" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Label" id="Fb9-tU-TWz">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f4B-2z-Vs7" customClass="XLabel" customModule="XCatalogOSX" customModuleProvider="target">
+                    <rect key="frame" x="221" y="128" width="103" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Label" id="bTJ-2r-AF3">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PVG-B3-oiM" customClass="XLabel" customModule="XCatalogOSX" customModuleProvider="target">
+                    <rect key="frame" x="221" y="52" width="103" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Label" id="qsT-YI-v7e">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RkC-cb-bcF">
+                    <rect key="frame" x="20" y="209" width="62" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="DEFAULT" id="HIC-ZY-GHc">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IuG-6V-nUw">
+                    <rect key="frame" x="20" y="128" width="52" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="TINTED" id="AMc-jb-qca">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jIo-1P-Vuc">
+                    <rect key="frame" x="20" y="52" width="63" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="CUSTOM" id="how-p6-BPm">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
         </customView>
     </objects>
 </document>

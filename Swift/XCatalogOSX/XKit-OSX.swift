@@ -15,6 +15,7 @@ import AppKit
 enum XControlState {
     case Normal
     case Highlighted
+    case Disabled
 }
 
 enum XControlEvents {
@@ -373,18 +374,21 @@ extension XButton
         switch state {
         case .Normal: self.title = title
         case .Highlighted: self.alternateTitle = title
+        default: break
         }
     }
     func setAttributedTitle( title: NSAttributedString!, forState state: XControlState ) {
         switch state {
         case .Normal: self.attributedTitle = title
         case .Highlighted: self.attributedAlternateTitle = title
+        default: break
         }
     }
     func setImage( image: XImage?, forState state: XControlState ) {
         switch state {
         case .Normal: self.image = image
         case .Highlighted: self.alternateImage = image
+        default: break
         }
     }
 }
@@ -527,8 +531,6 @@ extension XProgressView {
 typealias XSlider = NSSlider
 
 extension XSlider {
-    // NOTE: default value for maximumValue are 100 in OS X but 1.0 in iOS
-    // NOTE: default value for continuous is false in OS X but true in iOS
     var minimumValue: Double {
         get { return minValue }
         set { minValue = newValue}
@@ -573,6 +575,51 @@ extension XSlider {
 //##  Stepper                               ##
 //############################################
 
+typealias XStepper = NSStepper
+
+extension XStepper {
+    var minimumValue: Double {
+        get { return minValue }
+        set { minValue = newValue}
+    }
+    
+    var maximumValue: Double {
+        get { return maxValue }
+        set { maxValue = newValue }
+    }
+    
+    var stepValue: Double {
+        get { return increment }
+        set { increment = newValue }
+    }
+    
+    // NOTE: if we use value here, we have a conflict with the NSObject selector of the same name (?)
+    var currentValue: Double {
+        get { return doubleValue }
+        set { doubleValue = newValue}
+    }
+    
+    // NOTE: tint color not implemented
+    var tintColor: XColor {
+        get { return XColor.blueColor() }
+        set {
+        }
+    }
+    
+    // NOTE: custom background, inc/dec, and divider images not implemented
+    func setBackgroundImage( image: XImage?, forState: XControlState ) {
+        // does nothing
+    }
+    func setIncrementImage( image: XImage?, forState: XControlState ) {
+        // does nothing
+    }
+    func setDecrementImage( image: XImage?, forState: XControlState ) {
+        // does nothing
+    }
+    func setDividerImage( image: XImage?, forLeftSegmentState: XControlState, rightSegmentState: XControlState ) {
+        // does nothing
+    }
+}
 
 //############################################
 //##  Switch / Checkbox                     ##

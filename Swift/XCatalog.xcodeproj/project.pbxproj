@@ -32,7 +32,6 @@
 		2200543F18BC54F5002A6E8B /* PageControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200543018BC54F5002A6E8B /* PageControlViewController.swift */; };
 		2200544018BC54F5002A6E8B /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200543118BC54F5002A6E8B /* PickerViewController.swift */; };
 		2200544218BC54F5002A6E8B /* SegmentedControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200543318BC54F5002A6E8B /* SegmentedControlViewController.swift */; };
-		2200544518BC54F5002A6E8B /* StepperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200543618BC54F5002A6E8B /* StepperViewController.swift */; };
 		2200544718BC54F5002A6E8B /* TextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200543818BC54F5002A6E8B /* TextFieldViewController.swift */; };
 		2200544818BC54F5002A6E8B /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200543918BC54F5002A6E8B /* TextViewController.swift */; };
 		2200544918BC54F5002A6E8B /* TintedToolbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200543A18BC54F5002A6E8B /* TintedToolbarViewController.swift */; };
@@ -54,6 +53,8 @@
 		A6E82D8A1B6B3E0A009402A2 /* AlertControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E82D881B6B3E0A009402A2 /* AlertControllerViewController.swift */; };
 		A6E82D8C1B702533009402A2 /* SliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E82D8B1B702533009402A2 /* SliderViewController.swift */; };
 		A6E82D8D1B702533009402A2 /* SliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E82D8B1B702533009402A2 /* SliderViewController.swift */; };
+		A6E82D8F1B703527009402A2 /* StepperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E82D8E1B703527009402A2 /* StepperViewController.swift */; };
+		A6E82D901B703527009402A2 /* StepperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E82D8E1B703527009402A2 /* StepperViewController.swift */; };
 		E30E98AE1B5229FC0009ADD3 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30E98AD1B5229FC0009ADD3 /* ProgressViewController.swift */; };
 		E30E98AF1B5230500009ADD3 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30E98AD1B5229FC0009ADD3 /* ProgressViewController.swift */; };
 		E3649B1C1B5174A6003942E0 /* BlueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3649B171B5174A6003942E0 /* BlueViewController.swift */; };
@@ -77,7 +78,6 @@
 		E3753BEB1B518F1C006FCC10 /* SegmentedControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3753BE91B518F1C006FCC10 /* SegmentedControlViewController.swift */; };
 		E3753BEC1B518F1C006FCC10 /* SegmentedControlViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3753BEA1B518F1C006FCC10 /* SegmentedControlViewController.xib */; };
 		E3753BF01B518F33006FCC10 /* SliderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3753BEE1B518F33006FCC10 /* SliderViewController.xib */; };
-		E3753BF31B518F5C006FCC10 /* StepperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3753BF11B518F5C006FCC10 /* StepperViewController.swift */; };
 		E3753BF41B518F5C006FCC10 /* StepperViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3753BF21B518F5C006FCC10 /* StepperViewController.xib */; };
 		E3753BF81B518F85006FCC10 /* SwitchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3753BF61B518F85006FCC10 /* SwitchViewController.xib */; };
 		E3753BFB1B518FA9006FCC10 /* TextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3753BF91B518FA8006FCC10 /* TextFieldViewController.swift */; };
@@ -124,7 +124,6 @@
 		2200543018BC54F5002A6E8B /* PageControlViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = PageControlViewController.swift; sourceTree = "<group>"; };
 		2200543118BC54F5002A6E8B /* PickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = PickerViewController.swift; sourceTree = "<group>"; };
 		2200543318BC54F5002A6E8B /* SegmentedControlViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = SegmentedControlViewController.swift; sourceTree = "<group>"; };
-		2200543618BC54F5002A6E8B /* StepperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = StepperViewController.swift; sourceTree = "<group>"; };
 		2200543818BC54F5002A6E8B /* TextFieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldViewController.swift; sourceTree = "<group>"; };
 		2200543918BC54F5002A6E8B /* TextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = TextViewController.swift; sourceTree = "<group>"; };
 		2200543A18BC54F5002A6E8B /* TintedToolbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TintedToolbarViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +143,7 @@
 		A680ACD01B52E14D006ADDBC /* ButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonViewController.swift; sourceTree = "<group>"; };
 		A6E82D881B6B3E0A009402A2 /* AlertControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertControllerViewController.swift; sourceTree = "<group>"; };
 		A6E82D8B1B702533009402A2 /* SliderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderViewController.swift; sourceTree = "<group>"; };
+		A6E82D8E1B703527009402A2 /* StepperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepperViewController.swift; sourceTree = "<group>"; };
 		E30E98AD1B5229FC0009ADD3 /* ProgressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
 		E322C8AC1B52E755002C1020 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = LICENSE.md; path = ../LICENSE.md; sourceTree = "<group>"; };
 		E322C8AD1B52E846002C1020 /* Apple LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = "Apple LICENSE.txt"; path = "../Apple LICENSE.txt"; sourceTree = "<group>"; };
@@ -171,7 +171,6 @@
 		E3753BE91B518F1C006FCC10 /* SegmentedControlViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentedControlViewController.swift; sourceTree = "<group>"; };
 		E3753BEA1B518F1C006FCC10 /* SegmentedControlViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SegmentedControlViewController.xib; sourceTree = "<group>"; };
 		E3753BEE1B518F33006FCC10 /* SliderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SliderViewController.xib; sourceTree = "<group>"; };
-		E3753BF11B518F5C006FCC10 /* StepperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepperViewController.swift; sourceTree = "<group>"; };
 		E3753BF21B518F5C006FCC10 /* StepperViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StepperViewController.xib; sourceTree = "<group>"; };
 		E3753BF61B518F85006FCC10 /* SwitchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SwitchViewController.xib; sourceTree = "<group>"; };
 		E3753BF91B518FA8006FCC10 /* TextFieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldViewController.swift; sourceTree = "<group>"; };
@@ -276,7 +275,6 @@
 				2200543018BC54F5002A6E8B /* PageControlViewController.swift */,
 				2200543118BC54F5002A6E8B /* PickerViewController.swift */,
 				2200543318BC54F5002A6E8B /* SegmentedControlViewController.swift */,
-				2200543618BC54F5002A6E8B /* StepperViewController.swift */,
 				2200543818BC54F5002A6E8B /* TextFieldViewController.swift */,
 				2200543918BC54F5002A6E8B /* TextViewController.swift */,
 				2200543B18BC54F5002A6E8B /* WebViewController.swift */,
@@ -350,7 +348,6 @@
 				E3753BE91B518F1C006FCC10 /* SegmentedControlViewController.swift */,
 				E3753BEA1B518F1C006FCC10 /* SegmentedControlViewController.xib */,
 				E3753BEE1B518F33006FCC10 /* SliderViewController.xib */,
-				E3753BF11B518F5C006FCC10 /* StepperViewController.swift */,
 				E3753BF21B518F5C006FCC10 /* StepperViewController.xib */,
 				E3753BF61B518F85006FCC10 /* SwitchViewController.xib */,
 				E3753BF91B518FA8006FCC10 /* TextFieldViewController.swift */,
@@ -381,6 +378,7 @@
 				E3ADC97E1B51ADCA0042087B /* XColor+ApplicationSpecific.swift */,
 				E30E98AD1B5229FC0009ADD3 /* ProgressViewController.swift */,
 				A6E82D8B1B702533009402A2 /* SliderViewController.swift */,
+				A6E82D8E1B703527009402A2 /* StepperViewController.swift */,
 				E38F2EC31B52A651000A70C7 /* SwitchViewController.swift */,
 			);
 			path = XCatalogShared;
@@ -507,6 +505,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2200544018BC54F5002A6E8B /* PickerViewController.swift in Sources */,
+				A6E82D8F1B703527009402A2 /* StepperViewController.swift in Sources */,
 				A680ACD11B52E14D006ADDBC /* ButtonViewController.swift in Sources */,
 				3E6AE852196B39110062A3E1 /* SearchResultsViewController.swift in Sources */,
 				E3ADC98E1B51AF4C0042087B /* XKit-iOS.swift in Sources */,
@@ -527,7 +526,6 @@
 				2200544718BC54F5002A6E8B /* TextFieldViewController.swift in Sources */,
 				2200544818BC54F5002A6E8B /* TextViewController.swift in Sources */,
 				2200542B18BC54EC002A6E8B /* DefaultSearchBarViewController.swift in Sources */,
-				2200544518BC54F5002A6E8B /* StepperViewController.swift in Sources */,
 				3E6AE850196B20240062A3E1 /* SearchControllerBaseViewController.swift in Sources */,
 				2200542818BC54EC002A6E8B /* CustomSearchBarViewController.swift in Sources */,
 				2200542918BC54EC002A6E8B /* CustomToolbarViewController.swift in Sources */,
@@ -542,7 +540,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3753C031B518FD8006FCC10 /* WebViewController.swift in Sources */,
-				E3753BF31B518F5C006FCC10 /* StepperViewController.swift in Sources */,
+				A6E82D901B703527009402A2 /* StepperViewController.swift in Sources */,
 				E3ADC98C1B51AE6C0042087B /* XKit-OSX.swift in Sources */,
 				E30E98AF1B5230500009ADD3 /* ProgressViewController.swift in Sources */,
 				A680ACCF1B52DB12006ADDBC /* ActivityIndicatorViewController.swift in Sources */,

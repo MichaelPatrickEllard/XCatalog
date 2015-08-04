@@ -30,9 +30,10 @@ The components of this project were created by:
 - ProgressViewController -- Mike Ellard
 - SegmentedControlViewController - Mike Ellard (IP)
 - SliderViewController - Mike Mehr (partial)
-- StepperViewController - TODO: Effort = 1.5
+- StepperViewController - Mike Mehr (partial)
 - SwitchViewController -- Mike Ellard
 - TextFieldViewController - TODO: Effort = 2
+- TextViewController - TODO: Effort = ?
 - WebViewController - TODO: Effort = 2
 
 This project is a hack-athon project for iOSDevCamp 2015.  iOSDevCamp is awesome!  You should go!
