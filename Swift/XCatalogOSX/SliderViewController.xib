@@ -24,7 +24,7 @@
                 </slider>
                 <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XpR-MF-7aI" customClass="XSlider" customModule="XCatalogOSX" customModuleProvider="target">
                     <rect key="frame" x="128" y="126" width="334" height="21"/>
-                    <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="p0m-AG-lsK"/>
+                    <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="1" tickMarkPosition="above" sliderType="linear" id="p0m-AG-lsK"/>
                 </slider>
                 <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AgL-mv-q1Z" customClass="XSlider" customModule="XCatalogOSX" customModuleProvider="target">
                     <rect key="frame" x="128" y="66" width="334" height="21"/>

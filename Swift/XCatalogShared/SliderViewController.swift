@@ -42,9 +42,6 @@ class SliderViewController: XTableViewController {
         tintedSlider.minimumTrackTintColor = XColor.applicationBlueColor()
         tintedSlider.maximumTrackTintColor = XColor.applicationPurpleColor()
 
-        tintedSlider.maximumValue = 1.0 // default on iOS, must override for OS X
-        tintedSlider.continuous = true // default on iOS, must override for OS X
-
         tintedSlider.addTarget(self, action: "sliderValueDidChange:", forControlEvents: .ValueChanged)
     }
     
