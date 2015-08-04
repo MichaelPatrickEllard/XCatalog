@@ -17,6 +17,10 @@ typealias XControlEvents = UIControlEvents
 
 typealias XImage = UIImage
 
+typealias XView = UIView
+
+typealias XEdgeInsets = UIEdgeInsets
+
 // These NSAttributedString names should be in Foundation but are duplicated in UIKit and AppKit
 let XForegroundColorAttributeName = NSForegroundColorAttributeName
 let XStrikethroughStyleAttributeName = NSStrikethroughStyleAttributeName
@@ -206,6 +210,8 @@ extension XSwitchBox
 //##  TextField                             ##
 //############################################
 
+typealias XTextField = UITextField
+typealias XTextFieldDelegate = UITextFieldDelegate
 
 
 //############################################

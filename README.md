@@ -32,7 +32,7 @@ The components of this project were created by:
 - SliderViewController - Mike Mehr (partial)
 - StepperViewController - Mike Mehr (partial)
 - SwitchViewController -- Mike Ellard
-- TextFieldViewController - TODO: Effort = 2
+- TextFieldViewController - Mike Mehr (partial)
 - TextViewController - TODO: Effort = ?
 - WebViewController - TODO: Effort = 2
 

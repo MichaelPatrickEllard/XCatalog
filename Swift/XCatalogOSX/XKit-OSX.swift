@@ -39,6 +39,8 @@ extension XControl {
 
 typealias XImage = NSImage
 
+typealias XView = NSView
+
 // These NSAttributedString names should be in Foundation but are duplicated in UIKit and AppKit
 let XForegroundColorAttributeName = NSForegroundColorAttributeName
 let XStrikethroughStyleAttributeName = NSStrikethroughStyleAttributeName
@@ -200,32 +202,6 @@ extension XAlertController {
     }
 }
 
-extension XAlertTextField {
-    var secureTextEntry: Bool {
-        // NOTE: cell methods have been deprecated in OS X10.10 (Yosemite) - what is the replacement mechanism? this works tho
-        set {
-            if let oldCell = self.cell() as? NSTextFieldCell {
-                let cell = NSSecureTextFieldCell()
-                cell.editable = oldCell.editable
-                cell.drawsBackground = oldCell.drawsBackground
-                cell.stringValue = oldCell.stringValue
-                self.setCell(cell)
-            }
-        }
-        get {
-            if let oldCell = self.cell() as? NSSecureTextFieldCell {
-                return true
-            }
-            return false
-        }
-    }
-    
-    var text: String {
-        get { return self.stringValue }
-        set { self.stringValue = newValue }
-    }
-}
-
 // HACK: convert presentViewController() from a global function into a method to allow sheet modal runs to find the window to add the sheet to
 // ALTERNATE DESIGN: This isn't necessary if we use runModalSheet(), attaching the sheet to the app's main window instead of the current VC's window
 // ... however, there may be a collision (ambiguity) between versions of the global function in that case
@@ -318,6 +294,17 @@ extension XAlertAction {
 
 typealias XButton = NSButton
 
+enum XButtonType {
+    case Custom
+    case System
+    case DetailDisclosure
+    case InfoLight
+    case InfoDark
+    case ContactAdd
+}
+
+typealias XEdgeInsets = NSEdgeInsets
+
 extension XButton
 {
     var buttonTitle: String {
@@ -390,6 +377,16 @@ extension XButton
         case .Highlighted: self.alternateImage = image
         default: break
         }
+    }
+
+    // NOTE: edge insets are an unimplemented feature
+    var imageEdgeInsets: XEdgeInsets {
+        get { return XEdgeInsets(top: 0, left: 0, bottom: 0, right: 0) }
+        set { }
+    }
+    
+    class func buttonWithType(type: XButtonType) -> AnyObject {
+        return XButton()
     }
 }
 
@@ -664,6 +661,159 @@ extension XLabel
     var labelText: String {
         get {return self.stringValue}
         set {self.stringValue = newValue}
+    }
+    
+    var tintColor: XColor {
+        get { return XColor.blueColor() }
+        set { }
+    }
+}
+
+typealias XTextField = NSTextField
+typealias XTextFieldDelegate = NSTextFieldDelegate
+
+enum XTextAutocorrectionType {
+    case Default, No, Yes
+}
+enum XReturnKeyType {
+    case Default
+    case Go
+    case Google
+    case Join
+    case Next
+    case Route
+    case Search
+    case Send
+    case Yahoo
+    case Done
+    case EmergencyCall
+}
+enum XKeyboardType {
+    case Default
+    case ASCIICapable
+    case NumbersAndPunctuation
+    case URL
+    case NumberPad
+    case PhonePad
+    case NamePhonePad
+    case EmailAddress
+    case DecimalPad
+    case Twitter
+    case WebSearch
+}
+enum XTextFieldViewMode {
+    case Never, Always
+}
+enum XTextBorderStyle {
+    case None
+    case Line
+    case Bezel
+    case RoundedRect
+}
+
+extension XTextField {
+    var secureTextEntry: Bool {
+        // NOTE: cell methods have been deprecated in OS X10.10 (Yosemite) - what is the replacement mechanism? this works tho
+        set {
+            if let oldCell = self.cell() as? NSTextFieldCell {
+                let cell = NSSecureTextFieldCell()
+                cell.editable = oldCell.editable
+                cell.drawsBackground = oldCell.drawsBackground
+                cell.stringValue = oldCell.stringValue
+                self.setCell(cell)
+            }
+        }
+        get {
+            if let oldCell = self.cell() as? NSSecureTextFieldCell {
+                return true
+            }
+            return false
+        }
+    }
+    
+    var text: String {
+        get { return self.stringValue }
+        set { self.stringValue = newValue }
+    }
+    
+    var placeholder: String? {
+        get {
+            if let cell = self.cell() as? NSTextFieldCell {
+                return cell.placeholderString
+            }
+            return nil
+        }
+        set {
+            if let cell = self.cell() as? NSTextFieldCell {
+                cell.placeholderString = newValue
+            }
+        }
+    }
+
+    var borderStyle: XTextBorderStyle {
+        get {
+            if !bordered { return .None }
+            if !bezeled { return .Line }
+            if bezelStyle == .SquareBezel { return .Bezel }
+            return .RoundedRect
+        }
+        set {
+            switch newValue {
+            case .RoundedRect:
+                bordered = true
+                bezeled = true
+                bezelStyle = .RoundedBezel
+            case .Bezel:
+                bordered = true
+                bezeled = true
+                bezelStyle = .SquareBezel
+            case .Line:
+                bordered = true
+                bezeled = false
+            case .None:
+                bordered = false
+            default: break
+            }
+        }
+    }
+    
+    // NOTE: these various customization features are not implemented
+    var autocorrectionType: XTextAutocorrectionType {
+        get { return .No }
+        set { }
+    }
+    var returnKeyType: XReturnKeyType {
+        get { return .Done }
+        set { }
+    }
+    var keyboardType: XKeyboardType {
+        get { return .Default }
+        set { }
+    }
+    var clearButtonMode: XTextFieldViewMode {
+        get { return .Never }
+        set { }
+    }
+    
+    var background: XImage? {
+        get { return nil }
+        set { }
+    }
+    var leftView: XView? {
+        get { return nil }
+        set { }
+    }
+    var rightView: XView? {
+        get { return nil }
+        set { }
+    }
+    var leftViewMode: XTextFieldViewMode {
+        get { return .Never }
+        set { }
+    }
+    var rightViewMode: XTextFieldViewMode {
+        get { return .Never }
+        set { }
     }
 }
 
