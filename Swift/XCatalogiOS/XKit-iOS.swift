@@ -21,6 +21,10 @@ typealias XView = UIView
 
 typealias XEdgeInsets = UIEdgeInsets
 
+typealias XPopoverPresentationController = UIPopoverPresentationController
+
+typealias XPopoverArrowDirection = UIPopoverArrowDirection
+    
 // These NSAttributedString names should be in Foundation but are duplicated in UIKit and AppKit
 let XForegroundColorAttributeName = NSForegroundColorAttributeName
 let XStrikethroughStyleAttributeName = NSStrikethroughStyleAttributeName

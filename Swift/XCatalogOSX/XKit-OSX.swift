@@ -41,6 +41,31 @@ typealias XImage = NSImage
 
 typealias XView = NSView
 
+typealias XPopoverPresentationController = NSPopover
+
+enum XPopoverArrowDirection {
+    case Up, Down, Left, Right, Any, Unknown
+}
+
+extension XPopoverPresentationController {
+    // extensions used to simulate alerts on iPad would require a class derived from NSViewController to control the NSAlert if done properly
+    // The class would cache the three variables below and, if all were set, would call the NSPopover method:
+    //   showRelativeToRect(_:ofView:preferredEdge:)
+    // HACK: currently we will ignore these properties, since XKit's XAlertController doesn't implement its popoverPresentationController property
+    var sourceRect: CGRect {
+        get { return CGRect() }
+        set { }
+    }
+    var sourceView: XView {
+        get { return XView() }
+        set { }
+    }
+    var permittedArrowDirections: XPopoverArrowDirection {
+        get { return .Any }
+        set { }
+    }
+}
+
 // These NSAttributedString names should be in Foundation but are duplicated in UIKit and AppKit
 let XForegroundColorAttributeName = NSForegroundColorAttributeName
 let XStrikethroughStyleAttributeName = NSStrikethroughStyleAttributeName
@@ -155,9 +180,8 @@ extension XAlertController {
     }
     
     // popovers are unimplemented at this time
-    var popoverPresentationController: NSPopover? {
+    var popoverPresentationController: XPopoverPresentationController? {
         get { return nil }
-        set { }
     }
     
     func addTextFieldWithConfigurationHandler(handler: XAlertTextFieldConfigurationHandler?) {

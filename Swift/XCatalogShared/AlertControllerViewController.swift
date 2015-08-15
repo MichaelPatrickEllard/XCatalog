@@ -253,9 +253,9 @@ class AlertControllerViewController: XTableViewController, XTableViewDelegate {
             // This method expects a valid cell to display from.
             let selectedCell = tableView.cellForRowAtIndexPath(selectedIndexPath)!
             println("In popover code for section \(selectedIndexPath.section) and row \(selectedIndexPath.row) with cell \(selectedCell)")
-            //            popoverPresentationController.sourceRect = selectedCell.frame
-            //            popoverPresentationController.sourceView = view
-            //            popoverPresentationController.permittedArrowDirections = .Up
+            popoverPresentationController.sourceRect = selectedCell.frame
+            popoverPresentationController.sourceView = view
+            popoverPresentationController.permittedArrowDirections = .Up
         }
         
         presentViewController(alertController, animated: true, completion: nil)
@@ -284,10 +284,10 @@ class AlertControllerViewController: XTableViewController, XTableViewDelegate {
         // Configure the alert controller's popover presentation controller if it has one.
         if let popoverPresentationController = alertController.popoverPresentationController {
             // This method expects a valid cell to display from.
-            //            let selectedCell = tableView.cellForRowAtIndexPath(selectedIndexPath)!
-            //            popoverPresentationController.sourceRect = selectedCell.frame
-            //            popoverPresentationController.sourceView = view
-            //            popoverPresentationController.permittedArrowDirections = .Up
+            let selectedCell = tableView.cellForRowAtIndexPath(selectedIndexPath)!
+            popoverPresentationController.sourceRect = selectedCell.frame
+            popoverPresentationController.sourceView = view
+            popoverPresentationController.permittedArrowDirections = .Up
         }
         
         presentViewController(alertController, animated: true, completion: nil)
