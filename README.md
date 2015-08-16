@@ -24,7 +24,7 @@ The components of this project were created by:
 - AlertControllerViewController -- Mike Mehr
 - ButtonViewController -- Mike Mehr
 - DatePickerController -- Mike Mehr
-- ImageViewController -- Would require creation of a new class
+- ImageViewController -- Mike Mehr
 - PageControlViewController -- Would require creation of a new class
 - PickerViewController -- Would require creation of a new class
 - ProgressViewController -- Mike Ellard

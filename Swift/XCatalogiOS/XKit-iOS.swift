@@ -78,6 +78,28 @@ typealias XColor = UIColor
 //##  Image View                            ##
 //############################################
 
+typealias XImageView = UIImageView
+
+extension XImageView {
+    // renaming conventions for accessibility labeling
+    // these had to be renamed because the OS X class has functions that conflict with the property getter/setter convention
+    var currentIsAccessibilityElementValue: Bool {
+        set { isAccessibilityElement = (newValue) }
+        get { return isAccessibilityElement }
+    }
+    
+    var currentAccessibilityLabel: String {
+        // HACK: commandeered empty label to mean nil label; is this compatible with usage? check TBD
+        set {
+            if newValue.isEmpty {
+                accessibilityLabel = (nil)
+            } else {
+                accessibilityLabel = (newValue)
+            }
+        }
+        get { return accessibilityLabel ?? "" }
+    }
+}
 
 //############################################
 //##  Date Picker                           ##

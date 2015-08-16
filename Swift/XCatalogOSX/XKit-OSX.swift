@@ -424,6 +424,140 @@ typealias XColor = NSColor
 //##  Image View                            ##
 //############################################
 
+class XImageView: NSImageView  {
+    // MARK: XImageView - image animation feature interface
+    /* NOTES
+    - animationImages: array of images to animate
+    - animationDuration: number of seconds for a full cycle of images to display (equal time for each)
+    - startAnimating(): triggers the animation display
+    -- The display of images will stop when the view is hidden, but the images and duration are retained
+    -- The current index will be reset to the beginning when the images stop
+    - Feature is designed to fail safely such that:
+    -- If no images are provided (empty or nil array), nothing will be displayed and any animation will stop; this also works if animation is started but then cut short by manipulating the image list
+    -- If objects are provided, each is tested and if not an XImage, animation will stop
+    -- If only one image is provided, it will be displayed immediately and no animation will be started
+    -- The provided duration in seconds is to display the entire list of images provided; thus the delay to the next image is (dynamically) calculated to be the duration / image count. If the image count varies over time, the delay will vary as well; more images means shorter delays.
+    */
+    var animationImages: [AnyObject]?
+    var animationDuration: NSTimeInterval = 1.0 // time for complete cycle of images, in seconds
+    
+    func startAnimating() {
+        imageScaling = .ImageScaleProportionallyUpOrDown
+        animationHandler()
+    }
+
+    // MARK: XImageView - image animation feature implementation
+    private var currentIndex: Int = 0
+    private let MINIMUM_ANIMATION_DELAY: NSTimeInterval = 0.0 // set this to allow a speed limit if desired
+    
+    private var currentImage: XImage? {
+        // make sure images array exists
+        // make sure currentImageIndex is in range for it
+        // make sure the object pointed to (currentImage) is an XImage
+        // return that object if it exists, else return nil
+        var currentImageInt: XImage?
+        if let images = animationImages where currentIndex < images.count,
+            let image = images[currentIndex] as? XImage {
+            currentImageInt = image
+        }
+        return currentImageInt
+    }
+    
+    private var imageCount: Int {
+        return animationImages?.count ?? 0
+    }
+    
+    private var imageDelayInNanoseconds: Int64 {
+        let count = imageCount
+        if count == 0 || animationDuration == 0.0 {
+            return 0
+        }
+        let nsec = Int64(animationDuration) * 1000 * 1000 * 1000
+        return nsec/Int64(count)
+    }
+    
+    private func nextIndexNeedsDelay() -> Bool {
+        // if nil/empty images array or array only has one entry, reset index to 0 and return F
+        // else inc index w wraparound and return T signifying more than one image (needs delay)
+        let count = imageCount
+        if count > 1 {
+            if ++currentIndex >= count {
+                currentIndex = 0 // wraparound at max count
+            }
+            return true
+        } else {
+            currentIndex = 0 // auto-reset even if count changes
+        }
+        return false
+    }
+    
+    func animationHandler() {
+        // if images array exists and has at least one image, display it
+        var okToDispatch = false
+        let isImageVisible = !self.hidden // this was added as an easy way to determine if the image is onscreen
+        // TBD: actually need to test if self is the last member of the view hierarchy of the NSApp mainWindow (I think?)
+        if let image = currentImage where isImageVisible {
+            // onscreen with an image provided
+            self.image = image
+            // also bump to next image, if it exists
+            let oldIndex = currentIndex
+            okToDispatch = nextIndexNeedsDelay()
+            //println("Display image \(oldIndex+1); dispatch image \(currentIndex+1) of \(imageCount)")
+        }
+        else {
+            //println("Display LAST image \(currentIndex+1) of \(imageCount)")
+            // not onscreen (or only single image so no animation needed)
+            //currentIndex = 0
+        }
+        // GCD: if valid time interval and diff image exists, dispatch async at the duration specified on main thread
+        if okToDispatch && animationDuration > MINIMUM_ANIMATION_DELAY {
+            let when = dispatch_time(DISPATCH_TIME_NOW, imageDelayInNanoseconds)
+            dispatch_after(when, dispatch_get_main_queue(), animationHandler)
+        }
+    }
+}
+
+// MARK: XImageView - content mode color fill feature (NOT IMPLEMENTED)
+enum XViewContentMode {
+    // TBD: learn how to implement this feature and its related settings
+    case ScaleAspectFit
+}
+
+extension XImageView {
+    var contentMode: XViewContentMode {
+        set { }
+        get { return .ScaleAspectFit }
+    }
+    
+    // If the image does not have the same aspect ratio as imageView's bounds, then imageView's backgroundColor will be applied to the "empty" space.
+    var backgroundColor: XColor {
+        set { }
+        get { return XColor.whiteColor() }
+    }
+}
+
+// MARK: XImageView - accessibility element feature
+extension XImageView {
+    // renaming conventions for accessibility labeling
+    // these had to be renamed because the class has functions that conflict with the property getter/setter naming convention (see implementations of get/set for details)
+    
+    var currentIsAccessibilityElementValue: Bool {
+        set { setAccessibilityElement(newValue) }
+        get { return isAccessibilityElement() }
+    }
+    
+    var currentAccessibilityLabel: String {
+        // HACK: commandeered empty label to mean nil label; is this compatible with usage? check TBD
+        set {
+            if newValue.isEmpty {
+                setAccessibilityLabel(nil)
+            } else {
+                setAccessibilityLabel(newValue)
+            }
+        }
+        get { return accessibilityLabel() ?? "" }
+    }
+}
 
 //############################################
 //##  Date Picker                           ##

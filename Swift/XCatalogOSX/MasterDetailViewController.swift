@@ -236,9 +236,11 @@ class MasterDetailViewController: NSViewController {
     
     func addChildVC(childVC: NSViewController)
     {
-        if currentDetailVC != nil {
+        if let currentVC = currentDetailVC /*!= nil*/ {
             
-            currentDetailVC?.view.removeFromSuperview()
+            currentVC.view.hidden = true // 1.
+            
+            currentVC.view.removeFromSuperview()
             
             removeChildViewControllerAtIndex(0) // There should only ever be one
         }
@@ -247,12 +249,19 @@ class MasterDetailViewController: NSViewController {
         
         childVC.view.frame = self.detailPane.bounds
         
+        childVC.view.hidden = false // 1.
+        
         self.detailPane.addSubview(childVC.view)
         
         self.currentDetailVC = childVC
 
     }
-
+    /*
+    1. Michael L. Mehr - 15 Aug 2015
+    I added this mechanism so the individual VC can determine when it is visible.
+    Perhaps it is possible to do this in other ways, but I don't know how.
+    This was necessary to implement ImageVC animation feature auto timer shutoff
+    */
 
 
 }
