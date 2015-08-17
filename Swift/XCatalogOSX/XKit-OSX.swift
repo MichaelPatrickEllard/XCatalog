@@ -621,8 +621,20 @@ extension XDatePicker {
 //##  Label                                 ##
 //############################################
 
+typealias XLabel = NSTextField
 
-
+extension XLabel
+{
+    var labelText: String {
+        get {return self.stringValue}
+        set {self.stringValue = newValue}
+    }
+    
+    var tintColor: XColor {
+        get { return XColor.blueColor() }
+        set { }
+    }
+}
 
 //############################################
 //##  Page Control                          ##
@@ -811,21 +823,6 @@ extension XSwitchBox
 //############################################
 //##  TextField                             ##
 //############################################
-
-typealias XLabel = NSTextField
-
-extension XLabel
-{
-    var labelText: String {
-        get {return self.stringValue}
-        set {self.stringValue = newValue}
-    }
-    
-    var tintColor: XColor {
-        get { return XColor.blueColor() }
-        set { }
-    }
-}
 
 typealias XTextField = NSTextField
 typealias XTextFieldDelegate = NSTextFieldDelegate
