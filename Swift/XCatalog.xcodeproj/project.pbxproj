@@ -28,7 +28,6 @@
 		2200542B18BC54EC002A6E8B /* DefaultSearchBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200542518BC54EC002A6E8B /* DefaultSearchBarViewController.swift */; };
 		2200542C18BC54EC002A6E8B /* DefaultToolbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200542618BC54EC002A6E8B /* DefaultToolbarViewController.swift */; };
 		2200543D18BC54F5002A6E8B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2200542E18BC54F5002A6E8B /* Localizable.strings */; };
-		2200543F18BC54F5002A6E8B /* PageControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200543018BC54F5002A6E8B /* PageControlViewController.swift */; };
 		2200544018BC54F5002A6E8B /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200543118BC54F5002A6E8B /* PickerViewController.swift */; };
 		2200544218BC54F5002A6E8B /* SegmentedControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200543318BC54F5002A6E8B /* SegmentedControlViewController.swift */; };
 		2200544818BC54F5002A6E8B /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200543918BC54F5002A6E8B /* TextViewController.swift */; };
@@ -44,6 +43,8 @@
 		3E6AE85A196B3BBC0062A3E1 /* SearchBarEmbeddedInNavigationBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6AE859196B3BBC0062A3E1 /* SearchBarEmbeddedInNavigationBarViewController.swift */; };
 		A66F86611B7FF6F100BE26DC /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66F86601B7FF6F100BE26DC /* ImageViewController.swift */; };
 		A66F86621B7FF6F100BE26DC /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66F86601B7FF6F100BE26DC /* ImageViewController.swift */; };
+		A66F86641B82761500BE26DC /* PageControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66F86631B82761500BE26DC /* PageControlViewController.swift */; };
+		A66F86651B82761500BE26DC /* PageControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66F86631B82761500BE26DC /* PageControlViewController.swift */; };
 		A680ACCE1B52DA74006ADDBC /* ActivityIndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A680ACCD1B52DA74006ADDBC /* ActivityIndicatorViewController.swift */; };
 		A680ACCF1B52DB12006ADDBC /* ActivityIndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A680ACCD1B52DA74006ADDBC /* ActivityIndicatorViewController.swift */; };
 		A680ACD11B52E14D006ADDBC /* ButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A680ACD01B52E14D006ADDBC /* ButtonViewController.swift */; };
@@ -71,7 +72,6 @@
 		E3753BD41B518E41006FCC10 /* ButtonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3753BD21B518E41006FCC10 /* ButtonViewController.xib */; };
 		E3753BD81B518E82006FCC10 /* DatePickerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3753BD61B518E82006FCC10 /* DatePickerController.xib */; };
 		E3753BDC1B518EA2006FCC10 /* ImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3753BDA1B518EA2006FCC10 /* ImageViewController.xib */; };
-		E3753BDF1B518EBA006FCC10 /* PageControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3753BDD1B518EBA006FCC10 /* PageControlViewController.swift */; };
 		E3753BE01B518EBA006FCC10 /* PageControlViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3753BDE1B518EBA006FCC10 /* PageControlViewController.xib */; };
 		E3753BE31B518ED3006FCC10 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3753BE11B518ED3006FCC10 /* PickerViewController.swift */; };
 		E3753BE41B518ED3006FCC10 /* PickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3753BE21B518ED3006FCC10 /* PickerViewController.xib */; };
@@ -120,7 +120,6 @@
 		2200542518BC54EC002A6E8B /* DefaultSearchBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultSearchBarViewController.swift; sourceTree = "<group>"; };
 		2200542618BC54EC002A6E8B /* DefaultToolbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = DefaultToolbarViewController.swift; sourceTree = "<group>"; };
 		2200542E18BC54F5002A6E8B /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
-		2200543018BC54F5002A6E8B /* PageControlViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = PageControlViewController.swift; sourceTree = "<group>"; };
 		2200543118BC54F5002A6E8B /* PickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = PickerViewController.swift; sourceTree = "<group>"; };
 		2200543318BC54F5002A6E8B /* SegmentedControlViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = SegmentedControlViewController.swift; sourceTree = "<group>"; };
 		2200543918BC54F5002A6E8B /* TextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = TextViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +137,7 @@
 		3E6AE855196B3B490062A3E1 /* SearchPresentOverNavigationBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPresentOverNavigationBarViewController.swift; sourceTree = "<group>"; };
 		3E6AE859196B3BBC0062A3E1 /* SearchBarEmbeddedInNavigationBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBarEmbeddedInNavigationBarViewController.swift; sourceTree = "<group>"; };
 		A66F86601B7FF6F100BE26DC /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		A66F86631B82761500BE26DC /* PageControlViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageControlViewController.swift; sourceTree = "<group>"; };
 		A680ACCD1B52DA74006ADDBC /* ActivityIndicatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorViewController.swift; sourceTree = "<group>"; };
 		A680ACD01B52E14D006ADDBC /* ButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonViewController.swift; sourceTree = "<group>"; };
 		A6E82D881B6B3E0A009402A2 /* AlertControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertControllerViewController.swift; sourceTree = "<group>"; };
@@ -162,7 +162,6 @@
 		E3753BD21B518E41006FCC10 /* ButtonViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonViewController.xib; sourceTree = "<group>"; };
 		E3753BD61B518E82006FCC10 /* DatePickerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DatePickerController.xib; sourceTree = "<group>"; };
 		E3753BDA1B518EA2006FCC10 /* ImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageViewController.xib; sourceTree = "<group>"; };
-		E3753BDD1B518EBA006FCC10 /* PageControlViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageControlViewController.swift; sourceTree = "<group>"; };
 		E3753BDE1B518EBA006FCC10 /* PageControlViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PageControlViewController.xib; sourceTree = "<group>"; };
 		E3753BE11B518ED3006FCC10 /* PickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		E3753BE21B518ED3006FCC10 /* PickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PickerViewController.xib; sourceTree = "<group>"; };
@@ -269,7 +268,6 @@
 		3E1DA7601931CC99000114A9 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				2200543018BC54F5002A6E8B /* PageControlViewController.swift */,
 				2200543118BC54F5002A6E8B /* PickerViewController.swift */,
 				2200543318BC54F5002A6E8B /* SegmentedControlViewController.swift */,
 				2200543918BC54F5002A6E8B /* TextViewController.swift */,
@@ -335,7 +333,6 @@
 				E3753BD21B518E41006FCC10 /* ButtonViewController.xib */,
 				E3753BD61B518E82006FCC10 /* DatePickerController.xib */,
 				E3753BDA1B518EA2006FCC10 /* ImageViewController.xib */,
-				E3753BDD1B518EBA006FCC10 /* PageControlViewController.swift */,
 				E3753BDE1B518EBA006FCC10 /* PageControlViewController.xib */,
 				E3753BE11B518ED3006FCC10 /* PickerViewController.swift */,
 				E3753BE21B518ED3006FCC10 /* PickerViewController.xib */,
@@ -365,6 +362,7 @@
 		E3ADC97C1B51ADCA0042087B /* XCatalogShared */ = {
 			isa = PBXGroup;
 			children = (
+				A66F86631B82761500BE26DC /* PageControlViewController.swift */,
 				A66F86601B7FF6F100BE26DC /* ImageViewController.swift */,
 				A6E82D881B6B3E0A009402A2 /* AlertControllerViewController.swift */,
 				A680ACD01B52E14D006ADDBC /* ButtonViewController.swift */,
@@ -505,7 +503,6 @@
 				A680ACD11B52E14D006ADDBC /* ButtonViewController.swift in Sources */,
 				3E6AE852196B39110062A3E1 /* SearchResultsViewController.swift in Sources */,
 				E3ADC98E1B51AF4C0042087B /* XKit-iOS.swift in Sources */,
-				2200543F18BC54F5002A6E8B /* PageControlViewController.swift in Sources */,
 				3E6AE85A196B3BBC0062A3E1 /* SearchBarEmbeddedInNavigationBarViewController.swift in Sources */,
 				2200544918BC54F5002A6E8B /* TintedToolbarViewController.swift in Sources */,
 				2200544218BC54F5002A6E8B /* SegmentedControlViewController.swift in Sources */,
@@ -516,6 +513,7 @@
 				2200542018BC54E8002A6E8B /* AppDelegate.swift in Sources */,
 				2200542C18BC54EC002A6E8B /* DefaultToolbarViewController.swift in Sources */,
 				E3ADC9811B51ADCA0042087B /* XColor+ApplicationSpecific.swift in Sources */,
+				A66F86641B82761500BE26DC /* PageControlViewController.swift in Sources */,
 				3E6AE854196B39350062A3E1 /* SearchShowResultsInSourceViewController.swift in Sources */,
 				E38F2EC41B52A651000A70C7 /* SwitchViewController.swift in Sources */,
 				2200544818BC54F5002A6E8B /* TextViewController.swift in Sources */,
@@ -542,6 +540,7 @@
 				A680ACCF1B52DB12006ADDBC /* ActivityIndicatorViewController.swift in Sources */,
 				E3649B1F1B5174A6003942E0 /* PurpleViewController.swift in Sources */,
 				A6E82D8D1B702533009402A2 /* SliderViewController.swift in Sources */,
+				A66F86651B82761500BE26DC /* PageControlViewController.swift in Sources */,
 				E38F2EC51B52A82E000A70C7 /* SwitchViewController.swift in Sources */,
 				E3753BEB1B518F1C006FCC10 /* SegmentedControlViewController.swift in Sources */,
 				A680ACD21B52E14D006ADDBC /* ButtonViewController.swift in Sources */,
@@ -551,7 +550,6 @@
 				E3694A3C1B51732D0013F46D /* AppDelegate.swift in Sources */,
 				E3ADC9801B51ADCA0042087B /* DatePickerController.swift in Sources */,
 				E3753BE31B518ED3006FCC10 /* PickerViewController.swift in Sources */,
-				E3753BDF1B518EBA006FCC10 /* PageControlViewController.swift in Sources */,
 				A6E82D931B70933D009402A2 /* TextFieldViewController.swift in Sources */,
 				A6E82D8A1B6B3E0A009402A2 /* AlertControllerViewController.swift in Sources */,
 				A66F86621B7FF6F100BE26DC /* ImageViewController.swift in Sources */,

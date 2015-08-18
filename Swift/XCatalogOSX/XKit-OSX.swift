@@ -420,6 +420,15 @@ extension XButton
 
 typealias XColor = NSColor
 
+typealias XColorView = NSColorWell
+
+extension XColorView {
+    var backgroundColor: XColor {
+        get { return color }
+        set { color = newValue }
+    }
+}
+
 //############################################
 //##  Image View                            ##
 //############################################
@@ -640,6 +649,72 @@ extension XLabel
 //##  Page Control                          ##
 //############################################
 
+typealias XPageControl = NSLevelIndicator
+
+extension XPageControl {
+    /*
+    This class will emulate a UIPageControl.
+    Using NSLevelIndicator was a quick HACK that doesn't really work well.
+    The default image (a star) would be used if not specifying a bullet image in IB.
+    This control doesn't really match, because the current "level" isn't highlighted as such.
+    Also, the image is only shown up to the "level", and spaces beyond are invisible/unshown.
+    TintColor (from UIView) does not seem to be used in iOS, and will not be implemented.
+    Actually, the level indicator has no facility to change the image color either.
+    
+    Perhaps an NSMatrix of NSRadioButton objects would be better? This would need a new class ...
+    
+    In the current implementation, I chose to use the value range 0...numberOfPages.
+    However, I set the current page to map to values 1...numberOfPages since this has the desired effects of:
+    1. always leaving one level image on-screen
+    2. showing all the level images at the maximum setting
+    Thus, I use the clampValueToRange() to make sure supplied page numbers are in the range set by the supplied numberOfPages, and to readjust the value to match when either the number of pages shrinks, or the current page is set out of range. In the latter case, it is clamped to the nearest edge rather than ignored. This is consistent with the documented functionality of UIPageControl.
+    */
+    var currentPage: Int {
+        set {
+            // set the current value of the control
+            self.doubleValue = Double(newValue+1)
+            clampValueToRange()
+        }
+        get { return Int(self.doubleValue)-1 }
+    }
+    var numberOfPages: Int {
+        set {
+            // SETUP: set the minimum and maximum values of the control
+            maxValue = Double(newValue)
+            minValue = 0
+            clampValueToRange()
+        }
+        get { return Int(maxValue) }
+    }
+    private func clampValueToRange() {
+        // range check: valid page numbers are from 0 to N-1, so valid values are from 1 to N
+        let minLimit = 1.0
+        if self.doubleValue < minLimit {
+            self.doubleValue = minLimit
+        }
+        let maxLimit = maxValue
+        if self.doubleValue >= maxLimit {
+            self.doubleValue = maxLimit
+        }
+    }
+    
+    // NOTE: colors are not implemented yet
+    var tintColor: XColor {
+        set {
+        }
+        get { return XColor.whiteColor() }
+    }
+    var pageIndicatorTintColor: XColor {
+        set {
+        }
+        get { return XColor.whiteColor() }
+    }
+    var currentPageIndicatorTintColor: XColor {
+        set {
+        }
+        get { return XColor.whiteColor() }
+    }
+}
 
 //############################################
 //##  Picker View                           ##

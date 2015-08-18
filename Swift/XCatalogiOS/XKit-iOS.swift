@@ -74,6 +74,8 @@ extension XButton
 
 typealias XColor = UIColor
 
+typealias XColorView = UIView
+
 //############################################
 //##  Image View                            ##
 //############################################
@@ -127,6 +129,7 @@ extension XLabel
 //##  Page Control                          ##
 //############################################
 
+typealias XPageControl = UIPageControl
 
 //############################################
 //##  Picker View                           ##
