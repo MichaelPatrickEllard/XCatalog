@@ -11,6 +11,10 @@ import UIKit
 //##  Common constants,enums,aliases        ##
 //############################################
 
+typealias XApplication = UIApplication
+
+//var XApp = XApplication.sharedApplication()
+
 typealias XControlState = UIControlState
 
 typealias XControlEvents = UIControlEvents
@@ -284,6 +288,8 @@ extension XTableViewController {
 //##  WebView                               ##
 //############################################
 
+typealias XWebView = UIWebView
 
+typealias XWebViewDelegate = UIWebViewDelegate
 
 

@@ -12,6 +12,10 @@ import AppKit
 //##  Common constants,enums,aliases        ##
 //############################################
 
+typealias XApplication = NSApplication
+
+//var XApp = NSApp // which is NSApplication.sharedApplication()
+
 enum XControlState {
     case Normal
     case Highlighted
@@ -900,7 +904,47 @@ extension XSwitchBox
 //############################################
 
 typealias XTextField = NSTextField
-typealias XTextFieldDelegate = NSTextFieldDelegate
+
+protocol XTextFieldDelegate: NSTextFieldDelegate {
+    // simulate UITextFieldDelegate protocol
+    func textFieldShouldReturn(textField: XTextField) -> Bool
+}
+
+extension XTextField: NSTextFieldDelegate {
+    // forward NSTextFieldDelegate methods to XTextFieldDelegate protocol
+    
+    public func control(control: NSControl, textShouldBeginEditing fieldEditor: NSText) -> Bool {
+        println("func 1") // DEBUG
+        // call the XTextFieldDelegate function here if the types are correct
+        if let control = control as? XTextField,
+            delegate = delegate as? XTextFieldDelegate {
+                return delegate.textFieldShouldReturn(control)
+        }
+        return true
+    }
+    
+    public func control(control: NSControl, textShouldEndEditing fieldEditor: NSText) -> Bool {
+        println("func 2") // DEBUG
+        // call the XTextFieldDelegate function here if the types are correct
+        if let control = control as? XTextField,
+            delegate = delegate as? XTextFieldDelegate {
+                return delegate.textFieldShouldReturn(control)
+        }
+        return true
+    }
+    
+    public override func controlTextDidBeginEditing(obj: NSNotification) {
+        println("func 3") // DEBUG
+    }
+    
+    public override func controlTextDidChange(obj: NSNotification) {
+        println("func 4") // DEBUG
+    }
+    
+    public override func controlTextDidEndEditing(obj: NSNotification) {
+        println("func 5") // DEBUG
+    }
+}
 
 enum XTextAutocorrectionType {
     case Default, No, Yes
@@ -1278,13 +1322,54 @@ extension XTableViewDSDelegate: NSTableViewDelegate {
 //##  WebView                               ##
 //############################################
 
+import WebKit
 
+typealias XWebView = WebView
 
+protocol XWebViewDelegate {
+}
 
+extension NSApplication {
+    var networkActivityIndicatorVisible: Bool {
+        get { return false }
+        set { }
+    }
+}
 
+enum WebViewDetectorTypes {
+    case All
+}
 
+extension XWebView {
+    private func setup() {
+        
+    }
+    
+    func loadHTMLString( html: String, baseURL: NSURL? ) {
+        self.mainFrame.loadHTMLString(html, baseURL: baseURL)
+    }
+    
+    func loadRequest( request: NSURLRequest ) {
+        self.mainFrame.loadRequest(request)
+    }
+    
+    var dataDetectorTypes: WebViewDetectorTypes {
+        get { return .All }
+        set { setup() }
+    }
+    
+    var scalesPageToFit: Bool {
+        get { return true }
+        set { setup() }
+    }
+}
 
-
+extension XWebView {
+    var backgroundColor: XColor {
+        get { return XColor.whiteColor() }
+        set { }
+    }
+}
 
 
 

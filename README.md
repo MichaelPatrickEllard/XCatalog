@@ -34,7 +34,7 @@ The components of this project were created by:
 - SwitchViewController -- Mike Ellard
 - TextFieldViewController - Mike Mehr (partial)
 - TextViewController - TODO: Effort = ?
-- WebViewController - TODO: Effort = 2
+- WebViewController - Mike Mehr (partial, not quite working yet)
 
 This project is a hack-athon project for iOSDevCamp 2015.  iOSDevCamp is awesome!  You should go!
 

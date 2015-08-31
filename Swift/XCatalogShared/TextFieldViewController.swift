@@ -41,6 +41,7 @@ class TextFieldViewController: XTableViewController, XTextFieldDelegate {
         textField.autocorrectionType = .Yes
         textField.returnKeyType = .Done
         textField.clearButtonMode = .Never
+        textField.delegate = self
     }
     
     func configureTintedTextField() {
@@ -50,6 +51,7 @@ class TextFieldViewController: XTableViewController, XTextFieldDelegate {
         tintedTextField.placeholder = NSLocalizedString("Placeholder text", comment: "")
         tintedTextField.returnKeyType = .Done
         tintedTextField.clearButtonMode = .Never
+        tintedTextField.delegate = self
     }
     
     func configureSecureTextField() {
@@ -58,6 +60,7 @@ class TextFieldViewController: XTableViewController, XTextFieldDelegate {
         secureTextField.placeholder = NSLocalizedString("Placeholder text", comment: "")
         secureTextField.returnKeyType = .Done
         secureTextField.clearButtonMode = .Always
+        secureTextField.delegate = self
     }
     
     /// There are many different types of keyboards that you may choose to use.
@@ -68,9 +71,11 @@ class TextFieldViewController: XTableViewController, XTextFieldDelegate {
         
         specificKeyboardTextField.placeholder = NSLocalizedString("Placeholder text", comment: "")
         specificKeyboardTextField.returnKeyType = .Done
+        specificKeyboardTextField.delegate = self
     }
     
     func configureCustomTextField() {
+        customTextField.delegate = self
         // Text fields with custom image backgrounds must have no border.
         customTextField.borderStyle = .None
         
